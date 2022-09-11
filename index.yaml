@@ -15,8 +15,29 @@ entries:
     version: 0.0.1
   base:
   - apiVersion: v2
+    appVersion: 0.0.2
+    created: "2022-09-11T17:28:46.668062-06:00"
+    dependencies:
+    - condition: creditflow.enabled
+      name: creditflow
+      repository: https://creditforce.github.io/helm-chart/
+      version: 0.0.1
+    - condition: api-notification.enabled
+      name: api-notification
+      repository: https://creditforce.github.io/helm-chart/
+      version: 0.0.1
+    description: Credit Engine Base Helm chart for Kubernetes
+    digest: 967aecad74abfc653bc5f4bc44c06ff6c1d2b96e7b75e09f8a4bc4f41792f1e6
+    icon: https://avatars.githubusercontent.com/u/66394013
+    name: base
+    sources:
+    - https://creditforce.github.io/helm-chart/
+    urls:
+    - https://github.com/CreditForce/helm-chart/releases/download/base-0.0.2/base-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-11T17:25:55.980979-06:00"
+    created: "2022-09-11T17:28:46.30402-06:00"
     dependencies:
     - condition: creditflow.enabled
       name: creditflow
@@ -48,4 +69,4 @@ entries:
     urls:
     - https://github.com/CreditForce/helm-chart/releases/download/creditflow-0.0.1/creditflow-0.0.1.tgz
     version: 0.0.1
-generated: "2022-09-11T17:25:56.328848-06:00"
+generated: "2022-09-11T17:28:47.028554-06:00"
