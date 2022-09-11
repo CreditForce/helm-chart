@@ -1,0 +1,28 @@
+apiVersion: v2
+name: base
+version: 0.0.1
+description: Credit Engine Base Helm chart for Kubernetes
+sources:
+  - https://github.com/CreditForce/helm-chart
+icon:  https://avatars.githubusercontent.com/u/66394013
+appVersion: "0.0.1"
+
+dependencies:
+  - name: creditflow
+    version: 0.0.1
+    repository: "https://github.com/CreditForce/helm-chart"
+    condition: creditflow.enabled
+
+  - name: api-notification
+    version: 0.0.1
+    repository: "https://github.com/CreditForce/helm-chart"
+    condition: api-notification.enabled
+
+  # - name: api-notification
+  #   condition: api-notification.enabled
+  # - name: api-notification-engine
+  #   condition: api-notification-engine.enabled
+  # - name: api-security
+  #   condition: api-security.enabled
+  # - name: security-manager
+  #   condition: security-manager.enabled
