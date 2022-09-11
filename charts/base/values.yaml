@@ -1,0 +1,14 @@
+creditflow:
+  enabled: true
+
+api-notification:
+  enabled: true
+
+api-notification-engine:
+  enabled: true
+
+api-security:
+  enabled: true
+
+security-manager:
+  enabled: true
