@@ -1,0 +1,9 @@
+dependencies:
+- name: creditflow
+  repository: https://creditforce.github.io/helm-chart/
+  version: 0.0.1
+- name: api-notification
+  repository: https://creditforce.github.io/helm-chart/
+  version: 0.0.1
+digest: sha256:14d376424b4d9004e7b2589df83609c59b12ad7d2c5b7678c86fca0be21810f0
+generated: "2022-09-11T17:22:10.415455-06:00"

@@ -14,21 +14,16 @@ $ kubectl create secret docker-registry creditforce --docker-server=creditforce.
 $ helm repo add creditforce https://creditforce.github.io/helm-chart/
 ```
 
-### Getting Started
+### Instalar la Base
 
 ```console
 $ helm install base creditforce/base --namespace creditforce
-$ go mod download
-$ go install
+$ helm status base --namespace creditforce
 ```
 
-#### Config File
+### Remover la Base
 
-`config.yaml`:
-
-```yaml
-owner: myaccount
-repo: helm-charts
-package-path: .deploy
-token: 123456789
+```console
+$ helm uninstall base creditforce/base --namespace creditforce
+$ helm status base --namespace creditforce
 ```

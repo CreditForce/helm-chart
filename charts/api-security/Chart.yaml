@@ -1,6 +1,6 @@
 apiVersion: v2
 description: API Notification chart for Kubernetes
-name: api-notification
+name: api-security
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
