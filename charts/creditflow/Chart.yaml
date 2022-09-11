@@ -2,7 +2,7 @@ apiVersion: v2
 description: CreditFlow chart for Kubernetes
 name: creditflow
 sources:
-  - https://github.com/CreditForce/helm-chart
+  - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
 version: 0.0.1
 appVersion: "0.0.1"

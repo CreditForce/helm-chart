@@ -17,7 +17,7 @@ $ helm repo add creditforce https://creditforce.github.io/helm-chart/
 ### Getting Started
 
 ```console
-$ helm repo add creditforce https://creditforce.github.io/helm-chart/
+$ helm install base creditforce/base --namespace creditforce
 $ go mod download
 $ go install
 ```
