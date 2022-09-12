@@ -18,11 +18,17 @@ dependencies:
     repository: "https://creditforce.github.io/helm-chart/"
     condition: api-notification.enabled
 
-  # - name: api-notification
-  #   condition: api-notification.enabled
-  # - name: api-notification-engine
-  #   condition: api-notification-engine.enabled
-  # - name: api-security
-  #   condition: api-security.enabled
-  # - name: security-manager
-  #   condition: security-manager.enabled
+  - name: api-notification-engine
+    version: 0.0.1
+    repository: "https://creditforce.github.io/helm-chart/"
+    condition: api-notification-engine.enabled
+
+  - name: api-security
+    version: 0.0.1
+    repository: "https://creditforce.github.io/helm-chart/"
+    condition: api-security.enabled
+
+  - name: security-manager
+    version: 0.0.1
+    repository: "https://creditforce.github.io/helm-chart/"
+    condition: security-manager.enabled
