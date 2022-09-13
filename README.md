@@ -11,7 +11,7 @@ Se debe crear el namespace `creditforce` y agregar las credenciales del reposito
 ```console
 $ kubectl create namespace creditforce
 $ kubectl create secret docker-registry creditforce --docker-server=creditforce.azurecr.io --docker-username=<USUARIO> --docker-password=<CLAVE> --namespace creditforce
-$ kubectl create secret Opaque busconnection --BusConnection="<DSN_STRING>"
+$ kubectl create secret generic busconnection --from-literal=BusConnection="<BASE64_DSN_STRING>" --namespace creditforce
 $ helm repo add creditforce https://creditforce.github.io/helm-chart/
 ```
 
