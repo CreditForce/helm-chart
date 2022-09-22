@@ -3,9 +3,9 @@ entries:
   api-notification:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:31:10.339059-06:00"
+    created: "2022-09-22T08:32:36.004135-06:00"
     description: API Notification chart for Kubernetes
-    digest: 4738dd288a31283b47cadc914c50fd42f7243400ea7be24b9ebab099de92af66
+    digest: 62beb18c8805151fe00ff29f0eee599c42a531e167157a3cd25825d03ff8d220
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification
     sources:
@@ -28,9 +28,9 @@ entries:
   api-notification-engine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:31:11.059056-06:00"
+    created: "2022-09-22T08:32:36.724693-06:00"
     description: API Notification Engine chart for Kubernetes
-    digest: 2944890bf955733e8ded032fa23389b028e508a18da234b55bc0d54fe194b677
+    digest: d6c14fc1584b462368d84e7bd63ba352c3d0157ee0cee7aa527f427cd7b26681
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification-engine
     sources:
@@ -40,7 +40,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:31:10.705307-06:00"
+    created: "2022-09-22T08:32:36.363297-06:00"
     description: API Notification Engine chart for Kubernetes
     digest: 5c84439d10d5a4ab3912abfe625c65674961cca36f74315dbc4f78180b62ff27
     icon: https://avatars.githubusercontent.com/u/66394013
@@ -53,9 +53,9 @@ entries:
   api-security:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:31:11.799339-06:00"
+    created: "2022-09-22T08:32:37.422554-06:00"
     description: API Notification chart for Kubernetes
-    digest: ede23e8332b981cd525d3ff239a3c29483f00ffd05084d9b9fdf265ab876d285
+    digest: 17da8d5b1fec7716faa2ffdcd89575ae2ffc3630556201f4f4a65b277ddcb612
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-security
     sources:
@@ -65,7 +65,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:31:11.429008-06:00"
+    created: "2022-09-22T08:32:37.070035-06:00"
     description: API Notification chart for Kubernetes
     digest: 556be621598116bdfc182fe0cee552a555231ef15cd036db976ea1cd8e320750
     icon: https://avatars.githubusercontent.com/u/66394013
@@ -78,7 +78,7 @@ entries:
   base:
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2022-09-22T08:31:12.724572-06:00"
+    created: "2022-09-22T08:32:38.17096-06:00"
     dependencies:
     - condition: creditflow.enabled
       name: creditflow
@@ -99,7 +99,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:31:12.169871-06:00"
+    created: "2022-09-22T08:32:37.785161-06:00"
     dependencies:
     - condition: creditflow.enabled
       name: creditflow
@@ -131,4 +131,4 @@ entries:
     urls:
     - https://github.com/CreditForce/helm-chart/releases/download/creditflow-0.0.1/creditflow-0.0.1.tgz
     version: 0.0.1
-generated: "2022-09-22T08:31:13.371416-06:00"
+generated: "2022-09-22T08:32:38.549805-06:00"
