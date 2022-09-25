@@ -3,9 +3,9 @@ entries:
   api-notification:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:55:18.470288-06:00"
+    created: "2022-09-25T16:03:04.250133-06:00"
     description: API Notification chart for Kubernetes
-    digest: 4a651fc244686a3fb32abd3f54e3f0af843a575b258b2435ea0e8a6829d354b0
+    digest: 9a93160e7ed40931983c2cd0d93828f6075745e2c4ed07db1d605f5fba523bed
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification
     sources:
@@ -28,9 +28,9 @@ entries:
   api-notification-engine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:55:18.832974-06:00"
+    created: "2022-09-25T16:03:04.668691-06:00"
     description: API Notification Engine chart for Kubernetes
-    digest: 6f051ef705d8110456f2240b3d0154721fc71b63fbef849eaea670cbb761297c
+    digest: f546f00c6d5f1c733b6a81777b003ce63ae94743755165556644e3337dca2a89
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification-engine
     sources:
@@ -41,9 +41,9 @@ entries:
   api-security:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:55:19.183332-06:00"
+    created: "2022-09-25T16:03:05.808867-06:00"
     description: API Notification chart for Kubernetes
-    digest: 93b353a62e5ca003a019eeb3bd9f547fdfa743fbfaed00f6ad2c0928fd6f1189
+    digest: 276a2dd651e15842bc736f137a1b1ae1ab0dde373cd6e10534913fff85da8b5b
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-security
     sources:
@@ -53,8 +53,8 @@ entries:
     version: 0.0.2
   base:
   - apiVersion: v2
-    appVersion: 0.0.2
-    created: "2022-09-22T08:55:19.539048-06:00"
+    appVersion: 0.0.3
+    created: "2022-09-25T16:03:06.221775-06:00"
     dependencies:
     - condition: creditflow.enabled
       name: creditflow
@@ -77,14 +77,14 @@ entries:
       repository: https://creditforce.github.io/helm-chart
       version: 0.0.2
     description: Credit Engine Base Helm chart for Kubernetes
-    digest: 134e24873b22f671f8e9521ff1d9441269b536865a6d5227b0f8eb4bdaee7d65
+    digest: 164c866a1779a4de0cd7cdfa8aaf89908472d8d327c2a4d3db47f0e0cd2bbfb8
     icon: https://avatars.githubusercontent.com/u/66394013
     name: base
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/base-0.0.2/base-0.0.2.tgz
-    version: 0.0.2
+    - https://github.com/CreditForce/helm-chart/releases/download/base-0.0.3/base-0.0.3.tgz
+    version: 0.0.3
   creditflow:
   - apiVersion: v2
     appVersion: 0.0.1
@@ -101,9 +101,9 @@ entries:
   security-manager:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-22T08:55:20.288215-06:00"
+    created: "2022-09-25T16:03:07.036022-06:00"
     description: API Notification chart for Kubernetes
-    digest: 1a031ed1f92473568cbc49d4ca4fac5b4d75b2d906b816818f1bc9975c02a5c4
+    digest: 3d3b808b9d2b86702cef021ee9c72f034c00f60a153280a187efeaaea4043b2b
     icon: https://avatars.githubusercontent.com/u/66394013
     name: security-manager
     sources:
@@ -111,4 +111,4 @@ entries:
     urls:
     - https://github.com/CreditForce/helm-chart/releases/download/security-manager-0.0.2/security-manager-0.0.2.tgz
     version: 0.0.2
-generated: "2022-09-22T08:55:20.288227-06:00"
+generated: "2022-09-25T16:03:07.036036-06:00"
