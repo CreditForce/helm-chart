@@ -12,8 +12,8 @@ image:
 imagePullSecrets:
   - name: creditforce
 
-nameOverride: ""
-fullnameOverride: ""
+nameOverride: "api-notification-engine-app"
+fullnameOverride: "api-notification-engine"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -22,7 +22,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
+  name: "api-notification-engine"
 
 podAnnotations: {}
 

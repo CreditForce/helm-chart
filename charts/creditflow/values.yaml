@@ -12,6 +12,7 @@ image:
 imagePullSecrets:
   - name: creditforce
 
+# Agregar busconnection
 nameOverride: "bus-app"
 fullnameOverride: "bus"
 
