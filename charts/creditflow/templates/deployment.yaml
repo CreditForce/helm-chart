@@ -38,13 +38,11 @@ spec:
               containerPort: 80
               protocol: TCP
           livenessProbe:
-            httpGet:
-              path: /favicon.ico
-              port: http
+            tcpSocket:
+              port: 80
           readinessProbe:
-            httpGet:
-              path: /favicon.ico
-              port: http
+            tcpSocket:
+              port: 80
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

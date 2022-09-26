@@ -3,9 +3,9 @@ entries:
   api-notification:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-26T09:18:09.400389-06:00"
+    created: "2022-09-26T09:24:27.918698-06:00"
     description: API Notification chart for Kubernetes
-    digest: 5a538558720a0b445c391bd0bc2eddf3cbc3a0612e0f17ef99100c2874a3bda8
+    digest: ecec4582cc08ecb1145b3f5efe357460f542f426f78f06939b9bdad7ec3facff
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification
     sources:
@@ -28,9 +28,9 @@ entries:
   api-notification-engine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-26T09:18:09.775663-06:00"
+    created: "2022-09-26T09:24:28.310613-06:00"
     description: API Notification Engine chart for Kubernetes
-    digest: cec23e5ac95640c2500da5f60978070c4d72dcf64c120fbbcd54897af09335c1
+    digest: 12e26ad81d9ffdf9b6bb632f53086c2a4bed653d90249ab276d3a6030d75fda2
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification-engine
     sources:
@@ -41,9 +41,9 @@ entries:
   api-security:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-26T09:18:10.150987-06:00"
+    created: "2022-09-26T09:24:28.683233-06:00"
     description: API Notification chart for Kubernetes
-    digest: 0623140161ac0101cdb713ff81edb41a0fe86807f9289aea025b9ce51456354f
+    digest: d11f9bd24d1a613099838c2652909ea34f07b97e433e4cf2ffabf884b8e941b5
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-security
     sources:
@@ -54,12 +54,12 @@ entries:
   base:
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2022-09-26T09:18:10.55696-06:00"
+    created: "2022-09-26T09:24:29.06395-06:00"
     dependencies:
     - condition: creditflow.enabled
       name: creditflow
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.9
+      version: 0.0.10
     - condition: api-notification.enabled
       name: api-notification
       repository: https://creditforce.github.io/helm-chart
@@ -77,27 +77,27 @@ entries:
       repository: https://creditforce.github.io/helm-chart
       version: 0.0.9
     description: Credit Engine Base Helm chart for Kubernetes
-    digest: 27078dba8868e49acdb7686dd277c48ce736b21ed997a869640890a63dd64c84
+    digest: 322d0fe8177b194ef9d760f94e152620f8477b7ba911b1dab337c8db3b9fb291
     icon: https://avatars.githubusercontent.com/u/66394013
     name: base
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/base-0.0.9/base-0.0.9.tgz
-    version: 0.0.9
+    - https://github.com/CreditForce/helm-chart/releases/download/base-0.0.10/base-0.0.10.tgz
+    version: 0.0.10
   creditflow:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-26T09:18:10.921664-06:00"
+    created: "2022-09-26T09:24:29.425397-06:00"
     description: CreditFlow chart for Kubernetes
-    digest: cdfa7b40020b37de573cf7fb587216177fc17db854b8c7dcea9bdb0c2ea993cf
+    digest: f3366bd8ce43ea136e3455903dca46b7a8e249c9c7c8de0532d808a1f63c2725
     icon: https://avatars.githubusercontent.com/u/66394013
     name: creditflow
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/creditflow-0.0.9/creditflow-0.0.9.tgz
-    version: 0.0.9
+    - https://github.com/CreditForce/helm-chart/releases/download/creditflow-0.0.10/creditflow-0.0.10.tgz
+    version: 0.0.10
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2022-09-11T16:52:15.417408-06:00"
@@ -113,9 +113,9 @@ entries:
   security-manager:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-09-26T09:18:11.315772-06:00"
+    created: "2022-09-26T09:24:29.793352-06:00"
     description: API Notification chart for Kubernetes
-    digest: f122d27fcb290e590e7f173ffcba41cd8856694e8b5e00bdf60e5be713d72c39
+    digest: 9a06d1a8b7dc977d44eabf13377852832188e18febf32a732349f62019a88abe
     icon: https://avatars.githubusercontent.com/u/66394013
     name: security-manager
     sources:
@@ -123,4 +123,4 @@ entries:
     urls:
     - https://github.com/CreditForce/helm-chart/releases/download/security-manager-0.0.9/security-manager-0.0.9.tgz
     version: 0.0.9
-generated: "2022-09-26T09:18:11.315788-06:00"
+generated: "2022-09-26T09:24:29.793371-06:00"
