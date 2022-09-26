@@ -18,7 +18,7 @@ $ kubectl create secret docker-registry creditforce \
 $ kubectl create secret generic busconnection \
 --from-literal=BusConnection="<BASE64_DSN_STRING>" \
 --namespace creditforce
-$ kubectl create secret tls my-tls-secret \
+$ kubectl create secret tls creditforce-tls-secret \
 --key <ARCHIVO_LLAVE_PRIVADA> \
 --cert <ARCHIVO_CERTIFICADO>
 $ helm repo add creditforce https://creditforce.github.io/helm-chart/
