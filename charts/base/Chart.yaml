@@ -20,7 +20,7 @@ dependencies:
     condition: api-notification.enabled
 
   - name: api-notification-engine
-    version: 0.0.4
+    version: 0.0.5
     repository: "https://creditforce.github.io/helm-chart"
     condition: api-notification-engine.enabled
 
