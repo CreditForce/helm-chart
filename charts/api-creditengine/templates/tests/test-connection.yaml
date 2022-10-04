@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "api-creditengine.fullname" . }}-test-connection"
+  labels:
+    {{- include "api-creditengine.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "api-creditengine.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

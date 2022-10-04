@@ -1,0 +1,8 @@
+apiVersion: v2
+description: Workflow Dashboard Simulador chart for Kubernetes
+name: workflow-dashboard-simulator
+sources:
+  - https://creditforce.github.io/helm-chart/
+icon:  https://avatars.githubusercontent.com/u/66394013
+version: 0.0.1
+appVersion: "0.0.1"

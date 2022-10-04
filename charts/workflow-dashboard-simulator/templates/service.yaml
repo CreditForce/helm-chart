@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "workflow-dashboard-simulator.fullname" . }}
+  labels:
+    {{- include "workflow-dashboard-simulator.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "workflow-dashboard-simulator.selectorLabels" . | nindent 4 }}

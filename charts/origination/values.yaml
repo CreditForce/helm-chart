@@ -1,0 +1,5 @@
+api-creditorigination:
+  enabled: true 
+
+origination-manager:
+  enabled: true  

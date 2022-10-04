@@ -1,0 +1,20 @@
+apiVersion: v2
+name: collection
+version: 0.0.1
+description: CreditForce Collection Helm chart for Kubernetes
+sources:
+  - https://creditforce.github.io/helm-chart/
+icon:  https://avatars.githubusercontent.com/u/66394013
+appVersion: "0.0.1"
+
+dependencies:
+
+  - name: api-creditcollection
+    version: 0.0.1
+    repository: "https://creditforce.github.io/helm-chart"
+    condition: api-creditcollection.enabled
+
+  - name: creditcollection
+    version: 0.0.1
+    repository: "https://creditforce.github.io/helm-chart"
+    condition: creditcollection-engine.enabled  

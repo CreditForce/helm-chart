@@ -1,0 +1,9 @@
+api-rules:
+  enabled: true 
+
+api-rules-engine:
+  enabled: true 
+
+rules-manager:
+  enabled: true  
+ 
