@@ -30,9 +30,9 @@ $ kubectl create secret generic notificationconnection   \
 --namespace creditforce 
 $ kubectl create secret generic security  \
 --from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \\
---from-literal=LoginName="<USERNAME>" \\
---from-literal=PasswordHash="<PASSWORD>" \\
+--from-literal=CompanyName="<COMPANY>" \
+--from-literal=LoginName="<USERNAME>" \
+--from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
 --namespace creditforce 
 $ kubectl create secret tls creditforce-tls-secret \
@@ -62,9 +62,9 @@ $ helm status base --namespace creditforce
 ```console
 $ kubectl create secret generic creditorigination  \
 --from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \\
---from-literal=LoginName="<USERNAME>" \\
---from-literal=PasswordHash="<PASSWORD>" \\
+--from-literal=CompanyName="<COMPANY>" \
+--from-literal=LoginName="<USERNAME>" \
+--from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
 --namespace creditforce
 ```
@@ -82,9 +82,9 @@ $ helm status origination --namespace creditforce
 ```console
 $ kubectl create secret generic creditengine  \
 --from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \\
---from-literal=LoginName="<USERNAME>" \\
---from-literal=PasswordHash="<PASSWORD>" \\
+--from-literal=CompanyName="<COMPANY>" \
+--from-literal=LoginName="<USERNAME>" \
+--from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
 --namespace creditforce
 ```
@@ -102,9 +102,9 @@ $ helm status portfolio --namespace creditforce
 ```console
 $ kubectl create secret generic creditstore  \
 --from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \\
---from-literal=LoginName="<USERNAME>" \\
---from-literal=PasswordHash="<PASSWORD>" \\
+--from-literal=CompanyName="<COMPANY>" \
+--from-literal=LoginName="<USERNAME>" \
+--from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
 --namespace creditforce
 ```
@@ -123,9 +123,9 @@ $ helm status store --namespace creditforce
 ```console
 $ kubectl create secret generic creditcollection   \
 --from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \\
---from-literal=LoginName="<USERNAME>" \\
---from-literal=PasswordHash="<PASSWORD>" \\
+--from-literal=CompanyName="<COMPANY>" \
+--from-literal=LoginName="<USERNAME>" \
+--from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
 --namespace creditforce
 ```
@@ -143,9 +143,9 @@ $ helm status collection --namespace creditforce
 ```console
 $ kubectl create secret generic rulesmanager   \
 --from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \\
---from-literal=LoginName="<USERNAME>" \\
---from-literal=PasswordHash="<PASSWORD>" \\
+--from-literal=CompanyName="<COMPANY>" \
+--from-literal=LoginName="<USERNAME>" \
+--from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
 --from-literal=RulesEngineUrl="<URL_API>" \
 --namespace creditforce
@@ -165,9 +165,9 @@ $ helm status rules --namespace creditforce
 ```console
 $ kubectl create secret generic workflow    \
 --from-literal=API_ADMIN="<URL_API>" \
---from-literal=API_AUTH="<URL_API>" \\
---from-literal=API_DASHBOARD="<URL_API>" \\
---from-literal=API_INTERACTION="<URL_API>" \\
+--from-literal=API_AUTH="<URL_API>" \
+--from-literal=API_DASHBOARD="<URL_API>" \
+--from-literal=API_INTERACTION="<URL_API>" \
 --from-literal=DBConnection="<STRING_CONNECTION>" \
 --from-literal=ValidDashBoardSites="<STRING>" \
 --namespace creditforce
