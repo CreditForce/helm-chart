@@ -18,6 +18,16 @@ $ kubectl create secret docker-registry creditforce \
 $ kubectl create secret generic busconnection \
 --from-literal=BusConnection="<BASE64_DSN_STRING>" \
 --namespace creditforce
+$ kubectl create secret generic dataprotection \
+--from-literal=BusConnection="<BASE64_DSN_STRING>" \
+--namespace creditforce
+$ kubectl create secret generic notificationconnection \
+--from-literal=BusConnection="<BASE64_DSN_STRING>" \
+--namespace creditforce
+$ kubectl create secret generic security \
+--from-literal=BusConnection="<BASE64_DSN_STRING>" \
+--namespace creditforce
+
 $ kubectl create secret tls creditforce-tls-secret \
 --key <ARCHIVO_LLAVE_PRIVADA> \
 --cert <ARCHIVO_CERTIFICADO>
