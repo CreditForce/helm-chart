@@ -12,6 +12,16 @@ image:
 imagePullSecrets:
   - name: creditforce
 
+envFrom:
+  - secretRef:
+      name: busconnection
+  - secretRef:
+      name: dataprotection
+  - secretRef:
+      name: notificationconnection
+  - secretRef:
+      name: rulesmanager
+
 nameOverride: "rules-manager-app"
 fullnameOverride: "rules-manager"
 
@@ -69,7 +79,7 @@ resources: {}
   #   memory: 128Mi
 
 autoscaling:
-  enabled: false
+  enabled: true
   minReplicas: 1
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80

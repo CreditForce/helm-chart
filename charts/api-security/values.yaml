@@ -15,6 +15,10 @@ imagePullSecrets:
 envFrom:
   - secretRef:
       name: busconnection
+  - secretRef:
+      name: dataprotection
+  - secretRef:
+      name: notificationconnection
 
 nameOverride: "api-security-app"
 fullnameOverride: "api-security"

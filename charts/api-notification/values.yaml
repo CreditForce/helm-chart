@@ -15,6 +15,10 @@ imagePullSecrets:
 envFrom:
   - secretRef:
       name: busconnection
+  - secretRef:
+      name: dataprotection
+  - secretRef:
+      name: notificationconnection
 
 nameOverride: "api-notification-app"
 fullnameOverride: "api-notification"
@@ -46,7 +50,7 @@ service:
   port: 80
 
 ingress:
-  enabled: true
+  enabled: false
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"

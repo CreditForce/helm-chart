@@ -16,7 +16,11 @@ envFrom:
   - secretRef:
       name: busconnection
   - secretRef:
+      name: dataprotection
+  - secretRef:
       name: notificationconnection
+  - secretRef:
+      name: security
 
 nameOverride: "security-manager-app"
 fullnameOverride: "security-manager"
