@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "workflow-dashboard-simulator.fullname" . }}-test-connection"
+  labels:
+    {{- include "workflow-dashboard-simulator.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "workflow-dashboard-simulator.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

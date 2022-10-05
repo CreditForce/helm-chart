@@ -1,0 +1,27 @@
+workflow-api-admin:
+  enabled: true 
+
+workflow-api-auth:
+  enabled: true 
+
+workflow-api-dashboard:
+  enabled: true  
+
+workflow-api-designer:
+  enabled: true  
+
+workflow-api-interaction:
+  enabled: true  
+
+workflow-base-web:
+  enabled: true  
+
+workflow-dashboard:
+  enabled: true  
+
+workflow-dashboard-simulator:
+  enabled: true  
+
+workflow-admin:
+  enabled: true   
+ 

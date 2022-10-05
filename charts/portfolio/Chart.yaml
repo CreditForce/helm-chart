@@ -1,0 +1,25 @@
+apiVersion: v2
+name: portfolio
+version: 0.0.11
+description: CreditForce Portfolio Helm chart for Kubernetes
+sources:
+  - https://creditforce.github.io/helm-chart/
+icon:  https://avatars.githubusercontent.com/u/66394013
+appVersion: "0.0.1"
+
+dependencies:
+
+  - name: api-creditengine
+    version: 0.0.1
+    repository: "https://creditforce.github.io/helm-chart"
+    condition: api-creditengine.enabled
+
+  - name: productmodeler
+    version: 0.0.1
+    repository: "https://creditforce.github.io/helm-chart"
+    condition: productmodeler-engine.enabled 
+
+  - name: customerservice
+    version: 0.0.1
+    repository: "https://creditforce.github.io/helm-chart"
+    condition: customerservice-engine.enabled 

@@ -1,0 +1,8 @@
+api-creditengine:
+  enabled: true 
+
+productmodeler:
+  enabled: true  
+
+customerservice:
+  enabled: true  
