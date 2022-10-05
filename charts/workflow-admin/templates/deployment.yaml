@@ -30,8 +30,8 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           envFrom:
-          {{- with .Values.envFrom }}
-            {{- toYaml . | nindent 8 }}
+          {{- if .Values.envFrom }}
+          {{- toYaml .Values.envFrom | nindent 10}}
           {{- end }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
