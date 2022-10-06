@@ -17,7 +17,7 @@ $ kubectl create secret docker-registry creditforce \
 --namespace creditforce
 $ kubectl create secret generic busconnection \
 --from-literal=BusConnection="<STRING>" \
---from-literal=ServiceBusUrl="<URL_API>" \\
+--from-literal=ServiceBusUrl="<URL_API>" \
 --from-literal=AuthorizationServiceBusUrl="<URL_API>" \
 --namespace creditforce
 $ kubectl create secret generic dataprotection  \
