@@ -30,9 +30,9 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           envFrom:
-          {{- if .Values.envFrom }}
-          {{- toYaml .Values.envFrom | nindent 10}}
-          {{- end }}
+            {{- if .Values.envFrom }}
+            {{- toYaml .Values.envFrom | nindent 10}}
+            {{- end }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"

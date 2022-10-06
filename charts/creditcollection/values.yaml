@@ -14,13 +14,13 @@ imagePullSecrets:
 
 envFrom:
   - secretRef:
-    name: busconnection
+      name: busconnection
   - secretRef:
-    name: dataprotection
+      name: dataprotection
   - secretRef:
-    name: notificationconnection
+      name: notificationconnection
   - secretRef:
-    name: creditcollection
+      name: creditcollection
 
 nameOverride: "creditcollection-app"
 fullnameOverride: "creditcollection"

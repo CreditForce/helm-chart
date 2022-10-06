@@ -3,68 +3,68 @@ entries:
   api-creditcollection:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:27.992786-06:00"
+    created: "2022-10-06T08:06:26.703697-06:00"
     description: API CreditCollection chart for Kubernetes
-    digest: de6e8188fa2e1c98e69a50d720ed1eece5f271fd6ec1c0108d23f9807d12a1d4
+    digest: a7b91e863886cb03385d5ce4472e7ffdc7bacb49a8ae238d563b2e4dd1270730
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-creditcollection
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-creditcollection-0.0.14/api-creditcollection-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-creditcollection-0.0.15/api-creditcollection-0.0.15.tgz
+    version: 0.0.15
   api-creditengine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:28.353496-06:00"
+    created: "2022-10-06T08:06:27.06661-06:00"
     description: API CrediEngine chart for Kubernetes
-    digest: b933597b35456a7edbe4942202f25122d1e6aeb3d615666304f231a4db0ac1a0
+    digest: 0472321bcb93e4817883882fbbf1d9c10f3a4bc24c959b6abe08b5c8acb364e2
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-creditengine
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-creditengine-0.0.14/api-creditengine-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-creditengine-0.0.15/api-creditengine-0.0.15.tgz
+    version: 0.0.15
   api-creditorigination:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:28.710126-06:00"
+    created: "2022-10-06T08:06:27.435238-06:00"
     description: API CreditOrigination chart for Kubernetes
-    digest: f91e72de7aaccdd4628b81eb9b72096999c7e100603d7a12ac8eff13cfd70a19
+    digest: afa948a7a84e4f62cd4e1dee4d663e0e742f0209de0eff080046be63b63269c0
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-creditorigination
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-creditorigination-0.0.14/api-creditorigination-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-creditorigination-0.0.15/api-creditorigination-0.0.15.tgz
+    version: 0.0.15
   api-creditstore:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:29.055276-06:00"
+    created: "2022-10-06T08:06:27.818644-06:00"
     description: API CreditStore chart for Kubernetes
-    digest: 31d87871670cac81ca24b5344f44fc34c3f611b0ec0d9bfd146a7fdbea237867
+    digest: 90425484c416764d782feff748a0d1e4e643a848461f165f8832ce375ce9fc17
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-creditstore
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-creditstore-0.0.14/api-creditstore-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-creditstore-0.0.15/api-creditstore-0.0.15.tgz
+    version: 0.0.15
   api-notification:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:29.407423-06:00"
+    created: "2022-10-06T08:06:28.181919-06:00"
     description: API Notification chart for Kubernetes
-    digest: 0ef7099f3670bdea475eb64db025f2d6478121cefbe0381aabbf260ed3cf4590
+    digest: 4b4c1fa746b8aa6a54a950d8190fbc449b7c473a9fa5218ff00a07bab7dd1751
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-notification-0.0.14/api-notification-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-notification-0.0.15/api-notification-0.0.15.tgz
+    version: 0.0.15
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2022-09-11T16:52:15.079205-06:00"
@@ -80,137 +80,137 @@ entries:
   api-notification-engine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:29.769465-06:00"
+    created: "2022-10-06T08:06:28.570898-06:00"
     description: API Notification Engine chart for Kubernetes
-    digest: c4e34ca41fa5ec86a9eeea6b419c16f60fd4d80c0d59a04608c53111c9440cc4
+    digest: 4a7c3ca303d8a0cbde917657f475c0b1c53977bb10fa457e067b70d3a0819eba
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification-engine
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-notification-engine-0.0.14/api-notification-engine-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-notification-engine-0.0.15/api-notification-engine-0.0.15.tgz
+    version: 0.0.15
   api-rules:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:30.129994-06:00"
+    created: "2022-10-06T08:06:28.947304-06:00"
     description: API Rules chart for Kubernetes
-    digest: f498783d6033da0f0b02e4f6efe2e2a1c1f3c3e542c5572d16ee4dbc33472063
+    digest: f711177e23931ca85afd43e4d1bcd953182dd84daca71840e7f04be7d282ae42
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-rules
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-rules-0.0.14/api-rules-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-rules-0.0.15/api-rules-0.0.15.tgz
+    version: 0.0.15
   api-rules-engine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:30.507208-06:00"
+    created: "2022-10-06T08:06:29.318272-06:00"
     description: API Rules Engine chart for Kubernetes
-    digest: 1ea4185ac2bd9b409e00d565b57998e837ede03915c93b64f0e56b1edc2292f7
+    digest: 7679fe2e71d6ce8d04f354472db218e68b15f3d12e1210e8d16866fa704c362b
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-rules-engine
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-rules-engine-0.0.14/api-rules-engine-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-rules-engine-0.0.15/api-rules-engine-0.0.15.tgz
+    version: 0.0.15
   api-security:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:30.869642-06:00"
+    created: "2022-10-06T08:06:29.691753-06:00"
     description: API Notification chart for Kubernetes
-    digest: 5fe90aa62cbf07a1c67604074ccefe8ae3dda026fd6e58b1f33593543ea187a5
+    digest: 15ec0f67c980588125241ede8a23b7ede937bece9581e180959b6883a752d20a
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-security
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/api-security-0.0.14/api-security-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/api-security-0.0.15/api-security-0.0.15.tgz
+    version: 0.0.15
   base:
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2022-10-05T12:59:31.239577-06:00"
+    created: "2022-10-06T08:06:30.093372-06:00"
     dependencies:
     - condition: creditflow.enabled
       name: creditflow
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: api-notification.enabled
       name: api-notification
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: api-notification-engine.enabled
       name: api-notification-engine
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: api-security.enabled
       name: api-security
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: security-manager.enabled
       name: security-manager
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     description: Credit Engine Base Helm chart for Kubernetes
-    digest: 856a3d4c8e993962fb893d088321147b288e55a0198812fd86b7128a497adfdb
+    digest: 156f438a681f23e8cf2adc3b4995fcfdcd79b7d6ef0ef7ed57becd55fc62cca7
     icon: https://avatars.githubusercontent.com/u/66394013
     name: base
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/base-0.0.14/base-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/base-0.0.15/base-0.0.15.tgz
+    version: 0.0.15
   collection:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:31.608083-06:00"
+    created: "2022-10-06T08:06:30.608758-06:00"
     dependencies:
     - condition: api-creditcollection.enabled
       name: api-creditcollection
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: creditcollection-engine.enabled
       name: creditcollection
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     description: CreditForce Collection Helm chart for Kubernetes
-    digest: 5f7222f1688997ca8e76ce5323b4b475a200b96240d7ff3ad9314efb8f761f0c
+    digest: ae25a384a699278069abbc66cd9b02f1863cb1cb8cadade7f1326ecf616c51aa
     icon: https://avatars.githubusercontent.com/u/66394013
     name: collection
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/collection-0.0.14/collection-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/collection-0.0.15/collection-0.0.15.tgz
+    version: 0.0.15
   creditcollection:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:31.974439-06:00"
+    created: "2022-10-06T08:06:30.952842-06:00"
     description: CreditCollection chart for Kubernetes
-    digest: 9ff817e2a4be41525461ca379896b0e1250ef80684fe1f4d19e8e98e29e0161e
+    digest: d954fb9a130092e51ee7d866b832ada0d51ab68db99e6016a160dc352257ffef
     icon: https://avatars.githubusercontent.com/u/66394013
     name: creditcollection
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/creditcollection-0.0.14/creditcollection-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/creditcollection-0.0.15/creditcollection-0.0.15.tgz
+    version: 0.0.15
   creditflow:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:32.341478-06:00"
+    created: "2022-10-06T08:06:31.304673-06:00"
     description: CreditFlow chart for Kubernetes
-    digest: 4a9b350ebe819701f44bc16c4630438695caa447d88bc76c4288c513fbf297cc
+    digest: 00fffed7516f0fd888fa0eaee0b7b6b8e5fa9d658835be4d066ee51326deb74e
     icon: https://avatars.githubusercontent.com/u/66394013
     name: creditflow
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/creditflow-0.0.14/creditflow-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/creditflow-0.0.15/creditflow-0.0.15.tgz
+    version: 0.0.15
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2022-09-11T16:52:15.417408-06:00"
@@ -226,342 +226,342 @@ entries:
   creditstore:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:32.706767-06:00"
+    created: "2022-10-06T08:06:31.660586-06:00"
     description: CreditStore chart for Kubernetes
-    digest: 46c6939fb12be4719e4826848b9067800f76bf143e1eb69c209bb2a9c1422bd0
+    digest: fe3b582c5a1294fd347f1f473fc08d63feb4aeac3f665f6e4fb2e27a576374e3
     icon: https://avatars.githubusercontent.com/u/66394013
     name: creditstore
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/creditstore-0.0.14/creditstore-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/creditstore-0.0.15/creditstore-0.0.15.tgz
+    version: 0.0.15
   customerservice:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:33.221386-06:00"
+    created: "2022-10-06T08:06:32.035605-06:00"
     description: Customer Service chart for Kubernetes
-    digest: 224e931074748644ce9f6b24137f6110f685895b67848915cc55c9f77b85e5a8
+    digest: b7272d2927bfb72fc839a5f63ab69a83762519f717966c744df9c29b01376d70
     icon: https://avatars.githubusercontent.com/u/66394013
     name: customerservice
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/customerservice-0.0.14/customerservice-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/customerservice-0.0.15/customerservice-0.0.15.tgz
+    version: 0.0.15
   origination:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:33.723462-06:00"
+    created: "2022-10-06T08:06:32.419102-06:00"
     dependencies:
     - condition: api-creditorigination.enabled
       name: api-creditorigination
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: origination-manager-engine.enabled
       name: origination-manager
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     description: CreditForce Origination Helm chart for Kubernetes
-    digest: c3191550bcb53572ebfe897754ac75fc33fedf2714792019777b1a35250107c3
+    digest: 3ebae2772ccd1301e70a29f2c24b238cff53e600dc40a2e059d1ba7c7707c908
     icon: https://avatars.githubusercontent.com/u/66394013
     name: origination
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/origination-0.0.14/origination-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/origination-0.0.15/origination-0.0.15.tgz
+    version: 0.0.15
   origination-manager:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:34.081551-06:00"
+    created: "2022-10-06T08:06:32.851359-06:00"
     description: Origination Manager chart for Kubernetes
-    digest: a169ec285964f71a2820ab8540bba3c4ac2346afbe0e0501fadb647fdbd11d33
+    digest: 81d65658da8f58dd590dff4da9ea3f3e27e555a13269c075020074e3c8d8936d
     icon: https://avatars.githubusercontent.com/u/66394013
     name: origination-manager
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/origination-manager-0.0.14/origination-manager-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/origination-manager-0.0.15/origination-manager-0.0.15.tgz
+    version: 0.0.15
   portfolio:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:34.447853-06:00"
+    created: "2022-10-06T08:06:33.217099-06:00"
     dependencies:
     - condition: api-creditengine.enabled
       name: api-creditengine
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: productmodeler-engine.enabled
       name: productmodeler
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: customerservice-engine.enabled
       name: customerservice
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     description: CreditForce Portfolio Helm chart for Kubernetes
-    digest: 1677c328f0e705689a72bc502d0dacd4db8195ccbc59eb43ec3ad8a7ba448ec9
+    digest: 87e5dd689bbc051fee0f07bb538fac4067c140d4dd07c5bd5822b496917af66f
     icon: https://avatars.githubusercontent.com/u/66394013
     name: portfolio
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/portfolio-0.0.14/portfolio-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/portfolio-0.0.15/portfolio-0.0.15.tgz
+    version: 0.0.15
   productmodeler:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:34.884345-06:00"
+    created: "2022-10-06T08:06:33.572623-06:00"
     description: Product Modeler chart for Kubernetes
-    digest: 1ed5c8bbf5df6395b2de524bc191e14e60a02aae84d772da36c1abefd54c7b68
+    digest: 452684245bc29db38a2c445772e2890567bdd8bead27cc1a7402c0e255117708
     icon: https://avatars.githubusercontent.com/u/66394013
     name: productmodeler
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/productmodeler-0.0.14/productmodeler-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/productmodeler-0.0.15/productmodeler-0.0.15.tgz
+    version: 0.0.15
   rules:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:35.257731-06:00"
+    created: "2022-10-06T08:06:33.9356-06:00"
     dependencies:
     - condition: api-rules.enabled
       name: api-rules
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: api-rules-engine.enabled
       name: api-rules-engine
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: rules-manager-engine.enabled
       name: rules-manager
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     description: CreditForce Rules Helm chart for Kubernetes
-    digest: 33bfed1394a9e79298c843bf088d61f87825e06d9c0baed862d2017b4be46ec2
+    digest: 25ca047c5258d0c5881d6f6a0ddd857899af7c9043aa54588237735047a7cde1
     icon: https://avatars.githubusercontent.com/u/66394013
     name: rules
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/rules-0.0.14/rules-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/rules-0.0.15/rules-0.0.15.tgz
+    version: 0.0.15
   rules-manager:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:35.61975-06:00"
+    created: "2022-10-06T08:06:34.302802-06:00"
     description: Rules Manager chart for Kubernetes
-    digest: 43d1774adb539f6d4cbfcbcb1af3eee3b797f0cf613e9111fccdedf0a698f313
+    digest: 721f87acfb2fe4bc7a9db01691889ba022e513617ccbbc719f42773df2ee1bf8
     icon: https://avatars.githubusercontent.com/u/66394013
     name: rules-manager
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/rules-manager-0.0.14/rules-manager-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/rules-manager-0.0.15/rules-manager-0.0.15.tgz
+    version: 0.0.15
   security-manager:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:35.987186-06:00"
+    created: "2022-10-06T08:06:34.655073-06:00"
     description: API Security Manager chart for Kubernetes
-    digest: df4af2cfb109ac2bf12e9644f27f45e469e85fd41a204f118b59f9cba561427c
+    digest: ad44f496ce68dddf2b03d8f6cae6f29a5a4dc18bb3350690b445a84486fb20f1
     icon: https://avatars.githubusercontent.com/u/66394013
     name: security-manager
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/security-manager-0.0.14/security-manager-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/security-manager-0.0.15/security-manager-0.0.15.tgz
+    version: 0.0.15
   store:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:36.360402-06:00"
+    created: "2022-10-06T08:06:34.992584-06:00"
     dependencies:
     - condition: api-creditstore.enabled
       name: api-creditstore
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: creditstore.enabled
       name: creditstore
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     description: CreditForce Store Helm chart for Kubernetes
-    digest: b82ebd5a881d69da2f4fd6611ec655cb69708619a49cf1fff7e649cb3dc9887f
+    digest: 59225e04b88cc2a6b5210076475a27db1b4c23e22dae5598c6b7d534cd2885f4
     icon: https://avatars.githubusercontent.com/u/66394013
     name: store
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/store-0.0.14/store-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/store-0.0.15/store-0.0.15.tgz
+    version: 0.0.15
   workflow:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:36.739078-06:00"
+    created: "2022-10-06T08:06:35.353684-06:00"
     dependencies:
     - condition: workflow-api-admin.enabled
       name: workflow-api-admin
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: workflow-api-auth.enabled
       name: workflow-api-auth
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: workflow-api-dashboard.enabled
       name: workflow-api-dashboard
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: workflow-api-designer.enabled
       name: workflow-api-designer
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: workflow-api-interaction.enabled
       name: workflow-api-interaction
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: workflow-base-web.enabled
       name: workflow-base-web
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: workflow-dashboard.enabled
       name: workflow-dashboard
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: workflow-dashboard-simulator-engine.enabled
       name: workflow-dashboard-simulator
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     - condition: workflow-admin.enabled
       name: workflow-admin
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.14
+      version: 0.0.15
     description: CreditForce Workflow Helm chart for Kubernetes
-    digest: 3bf83bd8a36dac005560d830db0dcb0aff67faec4fc5e8479fff6e51e2270a30
+    digest: 05e57253e92c66df2a2a0e39e9f02bb394a6e36b477e06c96ccd3665dd4790cf
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-0.0.14/workflow-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-0.0.15/workflow-0.0.15.tgz
+    version: 0.0.15
   workflow-admin:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:37.103489-06:00"
+    created: "2022-10-06T08:06:35.717463-06:00"
     description: API Workflow Admin chart for Kubernetes
-    digest: 71b3468aa8da8e677f64f7617bd96ae1e21793de05cff3bcd4ec53dcea6cbe83
+    digest: aea9edba45382ce32c6f8e9a3b99cbed19e32eed09bd6f5aefed24423ad77ca3
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-admin
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-admin-0.0.14/workflow-admin-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-admin-0.0.15/workflow-admin-0.0.15.tgz
+    version: 0.0.15
   workflow-api-admin:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:37.453359-06:00"
+    created: "2022-10-06T08:06:36.100184-06:00"
     description: API Workflow Admin chart for Kubernetes
-    digest: 81f4c8fcb4edd097511d6813c242efefe5b1792d2538e9d3d21fe7fb8c89b1a9
+    digest: 98651207268a05e088ffe4dc1430e042cc31101d0beeeca3314ab1dc2d9b3dd5
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-admin
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-admin-0.0.14/workflow-api-admin-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-admin-0.0.15/workflow-api-admin-0.0.15.tgz
+    version: 0.0.15
   workflow-api-auth:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:37.803286-06:00"
+    created: "2022-10-06T08:06:36.461335-06:00"
     description: API Workflow Auth chart for Kubernetes
-    digest: 6aacfaecdcd0faca9f9608932c54f7bc35340d6e890485bb6b389b59f98fdf53
+    digest: 34c7d40a823b6dde0d2a8b8ff4fd398f9f208dc7469d23a76ac78b8bd0536481
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-auth
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-auth-0.0.14/workflow-api-auth-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-auth-0.0.15/workflow-api-auth-0.0.15.tgz
+    version: 0.0.15
   workflow-api-dashboard:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:38.185698-06:00"
+    created: "2022-10-06T08:06:36.833896-06:00"
     description: API Workflow Dashboard chart for Kubernetes
-    digest: a16603067204aab27b4175835164ce5a72da1372ed350d35a198d54e353e52ab
+    digest: 9b96b9c22de56e11807607259ca4a91b328f3a660ef63d12c87112d0e31d21a1
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-dashboard
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-dashboard-0.0.14/workflow-api-dashboard-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-dashboard-0.0.15/workflow-api-dashboard-0.0.15.tgz
+    version: 0.0.15
   workflow-api-designer:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:38.555634-06:00"
+    created: "2022-10-06T08:06:37.192169-06:00"
     description: API Workflow Designer chart for Kubernetes
-    digest: e7374a9467d5e72327f474704d4ffc9390178034563af76d26d2ce7b60a2b6b8
+    digest: 0b0d2f57acb3c90dfbcb96f6e109fc2bf43fb57da40a9244404d7aa2954d0013
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-designer
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-designer-0.0.14/workflow-api-designer-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-designer-0.0.15/workflow-api-designer-0.0.15.tgz
+    version: 0.0.15
   workflow-api-interaction:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:38.924295-06:00"
+    created: "2022-10-06T08:06:37.5484-06:00"
     description: API Workflow Interaction chart for Kubernetes
-    digest: 62dc4c88363a3c15a989123727bdc879a63fded7ba182293b995683668c8b37c
+    digest: cf8bd813d2f80b7191d0fec16e01c615cc456b4e677fb875a569936cd1239166
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-interaction
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-interaction-0.0.14/workflow-api-interaction-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-api-interaction-0.0.15/workflow-api-interaction-0.0.15.tgz
+    version: 0.0.15
   workflow-base-web:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:39.297273-06:00"
+    created: "2022-10-06T08:06:37.890551-06:00"
     description: Workflow Base Web chart for Kubernetes
-    digest: a882e83f3b17b43de11de42df2b957b16e5cffd8c42e8a360472dc1a1794824e
+    digest: 806420c774f0d811359343ca69ae222b86c22c6ba72a2224cca4d9e07053083e
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-base-web
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-base-web-0.0.14/workflow-base-web-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-base-web-0.0.15/workflow-base-web-0.0.15.tgz
+    version: 0.0.15
   workflow-dashboard:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:39.667489-06:00"
+    created: "2022-10-06T08:06:38.25874-06:00"
     description: API Workflow Dashboard chart for Kubernetes
-    digest: 91cf7dedf34b53f1d37d6b28fe6d9b06e10cec2c22593ef5d34b9e240ccfc197
+    digest: 116a9f898db4792e5918d7636b90ffb33a1ccf737fc9180ea145b138d379d41c
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-dashboard
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-dashboard-0.0.14/workflow-dashboard-0.0.14.tgz
-    version: 0.0.14
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-dashboard-0.0.15/workflow-dashboard-0.0.15.tgz
+    version: 0.0.15
   workflow-dashboard-simulator:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-05T12:59:40.03901-06:00"
+    created: "2022-10-06T08:06:38.644284-06:00"
     description: Workflow Dashboard Simulador chart for Kubernetes
-    digest: 3f5c5a4cc596bbb2480340965c56d821e2100c6c13fbd99793d9e30d44921c58
+    digest: c92255a60788f61df737e4348d216e36777f4cc22cb6785c3eb073fb860faaa4
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-dashboard-simulator
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/workflow-dashboard-simulator-0.0.14/workflow-dashboard-simulator-0.0.14.tgz
-    version: 0.0.14
-generated: "2022-10-05T12:59:40.039048-06:00"
+    - https://github.com/CreditForce/helm-chart/releases/download/workflow-dashboard-simulator-0.0.15/workflow-dashboard-simulator-0.0.15.tgz
+    version: 0.0.15
+generated: "2022-10-06T08:06:38.644309-06:00"
