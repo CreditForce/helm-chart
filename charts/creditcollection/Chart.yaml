@@ -4,5 +4,5 @@ name: creditcollection
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.0.18
+version: 0.0.19
 appVersion: "0.0.1"
