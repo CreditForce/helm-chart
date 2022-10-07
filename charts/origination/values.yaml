@@ -1,13 +1,3 @@
-envFrom:
-  - secretRef:
-      name: busconnection
-  - secretRef:
-      name: dataprotection
-  - secretRef:
-      name: notificationconnection
-  - secretRef:
-      name: creditorigination
-      
 api-creditorigination:
   enabled: true
 
