@@ -4,6 +4,8 @@
 
 replicas: 1
 
+domain: "localdomain"
+
 image:
   repository: creditforce.azurecr.io/security-manager
   tag: 4898
@@ -58,14 +60,14 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   className: nginx
   hosts:
-    - host: security-manager.local
+    - host: security-manager
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
-  #      - chart-example.local
+  #      - chart-example
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
