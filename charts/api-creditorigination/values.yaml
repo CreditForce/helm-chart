@@ -4,8 +4,6 @@
 
 replicas: 1
 
-domain: "localdomain"
-
 image:
   repository: creditforce.azurecr.io/api-creditorigination
   tag: 4882

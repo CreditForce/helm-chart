@@ -4,8 +4,6 @@
 
 replicas: 1
 
-domain: "localdomain"
-
 image:
   repository: creditforce.azurecr.io/origination-manager
   tag: 4883
