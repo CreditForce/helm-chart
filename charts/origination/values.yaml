@@ -3,3 +3,5 @@ api-creditorigination:
 
 origination-manager:
   enabled: true
+
+domain: "localdomain"
