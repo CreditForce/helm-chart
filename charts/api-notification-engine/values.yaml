@@ -4,7 +4,8 @@
 
 replicas: 1
 
-domain: "localdomain"
+global:
+  domain: "localdomain"
 
 image:
   repository: creditforce.azurecr.io/api-notification-engine
@@ -29,7 +30,7 @@ serviceAccount:
   # Specifies whether a service account should be created
   create: true
   # Annotations to add to the service account
-  annotations: {}
+  annotations:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: "api-notification-engine"
@@ -53,9 +54,9 @@ service:
 
 ingress:
   enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  className: nginx
   hosts:
     - host: chart-example
       paths:

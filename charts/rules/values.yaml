@@ -1,9 +1,12 @@
 api-rules:
-  enabled: true 
+  enabled: true
 
 api-rules-engine:
-  enabled: true 
+  enabled: true
 
 rules-manager:
-  enabled: true  
- 
+  enabled: true
+
+global:
+  global:
+  domain: "localdomain"  

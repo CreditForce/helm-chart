@@ -1,6 +1,9 @@
 api-creditstore:
-  enabled: true 
+  enabled: true
 
 creditstore:
-  enabled: true  
- 
+  enabled: true
+
+global:
+  global:
+  domain: "localdomain"

@@ -12,3 +12,7 @@ api-security:
 
 security-manager:
   enabled: true
+
+global:
+  global:
+  domain: "localdomain"

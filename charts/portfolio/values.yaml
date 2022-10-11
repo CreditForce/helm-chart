@@ -1,8 +1,12 @@
 api-creditengine:
-  enabled: true 
+  enabled: true
 
 productmodeler:
-  enabled: true  
+  enabled: true
 
 customerservice:
-  enabled: true  
+  enabled: true
+
+global:
+  global:
+  domain: "localdomain"  

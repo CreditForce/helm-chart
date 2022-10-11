@@ -1,27 +1,30 @@
 workflow-api-admin:
-  enabled: true 
+  enabled: true
 
 workflow-api-auth:
-  enabled: true 
+  enabled: true
 
 workflow-api-dashboard:
-  enabled: true  
+  enabled: true
 
 workflow-api-designer:
-  enabled: true  
+  enabled: true
 
 workflow-api-interaction:
-  enabled: true  
+  enabled: true
 
 workflow-base-web:
-  enabled: true  
+  enabled: true
 
 workflow-dashboard:
-  enabled: true  
+  enabled: true
 
 workflow-dashboard-simulator:
-  enabled: true  
+  enabled: true
 
 workflow-admin:
-  enabled: true   
- 
+  enabled: true
+
+global:
+  global:
+  domain: "localdomain"
