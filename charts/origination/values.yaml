@@ -4,4 +4,5 @@ api-creditorigination:
 origination-manager:
   enabled: true
 
-domain: "localdomain"
+global:
+  domain: "localdomain"
