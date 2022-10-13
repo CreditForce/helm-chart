@@ -7,3 +7,4 @@ creditstore:
 global:
   global:
   domain: "localdomain"
+  certificateName:

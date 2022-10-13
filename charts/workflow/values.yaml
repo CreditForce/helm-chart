@@ -28,3 +28,4 @@ workflow-admin:
 global:
   global:
   domain: "localdomain"
+  certificateName:

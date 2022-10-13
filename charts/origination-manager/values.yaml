@@ -6,6 +6,7 @@ replicas: 1
 
 global:
   domain: "localdomain"
+  certificateName:
 
 image:
   repository: creditforce.azurecr.io/origination-manager
@@ -35,6 +36,7 @@ serviceAccount:
   annotations:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
+
   name: "origination-manager"
 
 podAnnotations: {}
@@ -57,17 +59,18 @@ service:
 ingress:
   enabled: true
   annotations:
-    kubernetes.io/ingress.class: nginx
-
+    # kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  className: nginx
   hosts:
     - host: origination-manager
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example
+  tls:
+  - hosts:
+    - origination-manager
+    secretName: origination-manager-tls
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

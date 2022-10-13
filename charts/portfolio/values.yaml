@@ -9,4 +9,5 @@ customerservice:
 
 global:
   global:
-  domain: "localdomain"  
+  domain: "localdomain"
+  certificateName:  

@@ -9,4 +9,5 @@ rules-manager:
 
 global:
   global:
-  domain: "localdomain"  
+  domain: "localdomain"
+  certificateName:  

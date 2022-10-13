@@ -16,3 +16,4 @@ security-manager:
 global:
   global:
   domain: "localdomain"
+  certificateName:

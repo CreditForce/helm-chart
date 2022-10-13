@@ -30,11 +30,11 @@ for chrt in api-creditcollection \
             workflow-dashboard \
             workflow-dashboard-simulator
 do
-  helm lint charts/$GITHUB_TOKEN
+  helm lint charts/$chrt
   helm package charts/$chrt --destination .deploy
 done
 echo -e "\n\nUPLOADING CHARTS..."
-cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t GITHUB_TOKEN
+cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
 # cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t GITHUB_TOKEN
 # git add index.yaml
 # git commit -am"Update Helm chart repo index with new charts"
@@ -55,8 +55,8 @@ do
   helm package charts/$pckg --destination .deploy
 done
 echo -e "\n\nUPDATING HELM REPO..."
-cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t GITHUB_TOKEN
-cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t GITHUB_TOKEN
+cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
+cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t $GITHUB_TOKEN
 git add index.yaml
 git commit -am"Update Helm chart repo index with new packages"
 git push
