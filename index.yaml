@@ -3,9 +3,9 @@ entries:
   api-creditcollection:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:32.261011-06:00"
+    created: "2022-10-12T22:58:16.675236-06:00"
     description: API CreditCollection chart for Kubernetes
-    digest: 112dc688b42bba66041d8d557074491c7f61a4437364b72d3b150f57deb7d505
+    digest: a6be7eade21055a25a9c39ed323e50b8b2ebf1a4a21578d8eff6a79541b03f30
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-creditcollection
     sources:
@@ -16,9 +16,9 @@ entries:
   api-creditengine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:32.627407-06:00"
+    created: "2022-10-12T22:58:17.02512-06:00"
     description: API CrediEngine chart for Kubernetes
-    digest: a3398c7813eea531e257ab5a033a9d1840a2d148ff408f37a3826c711a58a522
+    digest: 1aa9ccae730818900c869ddf024a3c081631bac6397945a97163a24cd9ece0fe
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-creditengine
     sources:
@@ -29,9 +29,9 @@ entries:
   api-creditorigination:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:32.981253-06:00"
+    created: "2022-10-12T22:58:17.370176-06:00"
     description: API CreditOrigination chart for Kubernetes
-    digest: d130271b6c12fbf7c10068b8c210f5f2a7299ba0620dc2f6de625b78442986e1
+    digest: 34b0a2837ee1ffd326e0da8068125fd21fcbbdc8a498e0f4f497d7c4a624e85b
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-creditorigination
     sources:
@@ -42,9 +42,9 @@ entries:
   api-creditstore:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:33.341501-06:00"
+    created: "2022-10-12T22:58:18.04098-06:00"
     description: API CreditStore chart for Kubernetes
-    digest: 9c6f8b3e115be58b0a55c414b4101a18788a88f7212954477b901d4b7377473c
+    digest: 2455c9f7e792fde76c1598234c7cc6bc7a504cde2289369443e02fd6c977040c
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-creditstore
     sources:
@@ -55,9 +55,9 @@ entries:
   api-notification:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:33.692492-06:00"
+    created: "2022-10-12T22:58:18.403035-06:00"
     description: API Notification chart for Kubernetes
-    digest: 29944b44b6b0923e8137d9e1bd0ee0c3ad197ced293276cba6271c6bbcadece8
+    digest: 34d03d4c1b4b5087f559c099321c1bd035eba46efb329fbd2c37379936815eb9
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification
     sources:
@@ -80,9 +80,9 @@ entries:
   api-notification-engine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:34.039178-06:00"
+    created: "2022-10-12T22:58:18.761247-06:00"
     description: API Notification Engine chart for Kubernetes
-    digest: 3b4bb50563c9e3cc3f8ba2c952cf5a6eb6570ff028ceee443c90257fddf705e4
+    digest: 96b32d58c68f38e9a4943fa332bfbb4f9ea99b2f6f7d8d7d8541337a7b952f9d
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-notification-engine
     sources:
@@ -93,9 +93,9 @@ entries:
   api-rules:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:34.405857-06:00"
+    created: "2022-10-12T22:58:19.129757-06:00"
     description: API Rules chart for Kubernetes
-    digest: 19c535147fda45e662f968f48e5ba0bf6d0681339bd64aca4279345d815d389e
+    digest: b3cec933ff831c941e13cbcbc57a77362462088cc5813b30f88e17f20b89a683
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-rules
     sources:
@@ -106,9 +106,9 @@ entries:
   api-rules-engine:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:34.843852-06:00"
+    created: "2022-10-12T22:58:19.470758-06:00"
     description: API Rules Engine chart for Kubernetes
-    digest: aabd61c08735fbefa8ca446948acd5c0fbd2f8c0f4d98cbcaa47f8746bb9deaf
+    digest: 6f8a3f600b6ebc58277c5d996d5bc3bc577f723812ccda5c80f1c93146f95d47
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-rules-engine
     sources:
@@ -119,9 +119,9 @@ entries:
   api-security:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:35.195161-06:00"
+    created: "2022-10-12T22:58:19.823044-06:00"
     description: API Notification chart for Kubernetes
-    digest: 01672a21ebacf60ed5ab628659ba5cfd9deb9cb2216a137eb2a27221a17c7152
+    digest: eb6b8f8b9c4cfd2c7f61432a1bb36e23867eb9e7e6044fa48d41a2af363138c3
     icon: https://avatars.githubusercontent.com/u/66394013
     name: api-security
     sources:
@@ -132,7 +132,7 @@ entries:
   base:
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2022-10-12T22:49:35.5552-06:00"
+    created: "2022-10-12T22:58:20.168732-06:00"
     dependencies:
     - condition: creditflow.enabled
       name: creditflow
@@ -155,7 +155,7 @@ entries:
       repository: https://creditforce.github.io/helm-chart
       version: 0.0.31
     description: Credit Engine Base Helm chart for Kubernetes
-    digest: 9feb2952959791e7396875cc4dd35476d21296aebd427258a09e6ce503c80cbd
+    digest: 1ce3b5ef9a91e9c5c8b0b48994f56037f4f6d3c9ed4a5181537f66c2922dd673
     icon: https://avatars.githubusercontent.com/u/66394013
     name: base
     sources:
@@ -166,7 +166,7 @@ entries:
   collection:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:35.920286-06:00"
+    created: "2022-10-12T22:58:20.531481-06:00"
     dependencies:
     - condition: api-creditcollection.enabled
       name: api-creditcollection
@@ -177,7 +177,7 @@ entries:
       repository: https://creditforce.github.io/helm-chart
       version: 0.0.31
     description: CreditForce Collection Helm chart for Kubernetes
-    digest: 32ef0e575edc692526f65aa7a739580ff4862ff30695566ef11cdb893402a19d
+    digest: 989756e0798cdacb1a7929159c795d5f478d10c8b1da8fd2a11d0a6bbe604a67
     icon: https://avatars.githubusercontent.com/u/66394013
     name: collection
     sources:
@@ -188,9 +188,9 @@ entries:
   creditcollection:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:36.267496-06:00"
+    created: "2022-10-12T22:58:20.887523-06:00"
     description: CreditCollection chart for Kubernetes
-    digest: 26c6ea9804d2a0f9a62ef87cab5ae881635ce5cc10bd7d33888ec28b4a001059
+    digest: 3b747895b89b0110c4df580459b51bd0837a1fb00605bb605de120ebacd5c40b
     icon: https://avatars.githubusercontent.com/u/66394013
     name: creditcollection
     sources:
@@ -201,9 +201,9 @@ entries:
   creditflow:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:36.627498-06:00"
+    created: "2022-10-12T22:58:21.245886-06:00"
     description: CreditFlow chart for Kubernetes
-    digest: 08e56a7a79ef8b8264b09b9aac3732047bbcf258eb119ffcb5d22a89b0c67ad6
+    digest: ecc1dd020c167c8f4d9cdd54327094d85b8d874a4f9f6989b54d215395fa8164
     icon: https://avatars.githubusercontent.com/u/66394013
     name: creditflow
     sources:
@@ -226,9 +226,9 @@ entries:
   creditstore:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:36.993808-06:00"
+    created: "2022-10-12T22:58:21.59402-06:00"
     description: CreditStore chart for Kubernetes
-    digest: 20b85a3d0649b15c5c73ba9a8d478ae58218a21ad06c6400ce87c926a2e6cebd
+    digest: 02b2f827ea4acfd13c3300b285ba19bba89d481cade8ffe2e510f1628dc5ff79
     icon: https://avatars.githubusercontent.com/u/66394013
     name: creditstore
     sources:
@@ -239,9 +239,9 @@ entries:
   customerservice:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:37.341348-06:00"
+    created: "2022-10-12T22:58:21.933905-06:00"
     description: Customer Service chart for Kubernetes
-    digest: 93578d97f8c86c3e93726b6a3205f91b6eb722a91e5fbd564ab3fff42279ae48
+    digest: 4de81da49d9c7da594bdad158c6bbcbc4dce9f99309346b2f0519bd4b44a564e
     icon: https://avatars.githubusercontent.com/u/66394013
     name: customerservice
     sources:
@@ -252,7 +252,7 @@ entries:
   origination:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:37.698605-06:00"
+    created: "2022-10-12T22:58:22.288691-06:00"
     dependencies:
     - condition: api-creditorigination.enabled
       name: api-creditorigination
@@ -261,33 +261,33 @@ entries:
     - condition: origination-manager-engine.enabled
       name: origination-manager
       repository: https://creditforce.github.io/helm-chart
-      version: 0.0.31
+      version: 0.0.32
     description: CreditForce Origination Helm chart for Kubernetes
-    digest: 34287e9800ab210a95848a72869de4b9a6e930947b62a7260dbb47837fcd8139
+    digest: 1f137f6dd35ba2617600fa4da915824d7320c5abd664b7be8b7a6a29b64bc4f4
     icon: https://avatars.githubusercontent.com/u/66394013
     name: origination
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/origination-0.0.31/origination-0.0.31.tgz
-    version: 0.0.31
+    - https://github.com/CreditForce/helm-chart/releases/download/origination-0.0.32/origination-0.0.32.tgz
+    version: 0.0.32
   origination-manager:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:38.077606-06:00"
+    created: "2022-10-12T22:58:22.653327-06:00"
     description: Origination Manager chart for Kubernetes
-    digest: e88b70438c9c7d3347621fa8b2852643ac77d6daff092d1f03a459803c6015fa
+    digest: e5d5f9b6014641c795069bab71836621bb598b538dd5d4f620225e3a27b7fd46
     icon: https://avatars.githubusercontent.com/u/66394013
     name: origination-manager
     sources:
     - https://creditforce.github.io/helm-chart/
     urls:
-    - https://github.com/CreditForce/helm-chart/releases/download/origination-manager-0.0.31/origination-manager-0.0.31.tgz
-    version: 0.0.31
+    - https://github.com/CreditForce/helm-chart/releases/download/origination-manager-0.0.32/origination-manager-0.0.32.tgz
+    version: 0.0.32
   portfolio:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:38.451456-06:00"
+    created: "2022-10-12T22:58:22.99943-06:00"
     dependencies:
     - condition: api-creditengine.enabled
       name: api-creditengine
@@ -302,7 +302,7 @@ entries:
       repository: https://creditforce.github.io/helm-chart
       version: 0.0.31
     description: CreditForce Portfolio Helm chart for Kubernetes
-    digest: 78c60cff92a640735112ca4412244d8c8d19a3044dfc9806f9bdbac00834fce2
+    digest: fd563be44f22dac6703e23626fbc3aee6af54daa2fa371dde126efb62b36b1e9
     icon: https://avatars.githubusercontent.com/u/66394013
     name: portfolio
     sources:
@@ -313,9 +313,9 @@ entries:
   productmodeler:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:38.802544-06:00"
+    created: "2022-10-12T22:58:23.353561-06:00"
     description: Product Modeler chart for Kubernetes
-    digest: b07447772c41732d21b0cd6aeb301647e0147e1e03334d83469c3c5e583bb54d
+    digest: 9ef765c097c3c51c031b3fc1120d6c3f511f60d1156e41d0ea74474c15f91bb8
     icon: https://avatars.githubusercontent.com/u/66394013
     name: productmodeler
     sources:
@@ -326,7 +326,7 @@ entries:
   rules:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:39.160474-06:00"
+    created: "2022-10-12T22:58:23.70571-06:00"
     dependencies:
     - condition: api-rules.enabled
       name: api-rules
@@ -341,7 +341,7 @@ entries:
       repository: https://creditforce.github.io/helm-chart
       version: 0.0.31
     description: CreditForce Rules Helm chart for Kubernetes
-    digest: 151c051324087ebad14377c4a8f1f8ad9b304ef457d0cd1ba7f15100073758e2
+    digest: 52ccc7583d4fb2e20509dfb529dbcc30d86789c1db7793a4e21cefa761ec5ac9
     icon: https://avatars.githubusercontent.com/u/66394013
     name: rules
     sources:
@@ -352,9 +352,9 @@ entries:
   rules-manager:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:39.541605-06:00"
+    created: "2022-10-12T22:58:24.056882-06:00"
     description: Rules Manager chart for Kubernetes
-    digest: a4c53c81b4ecb6476847e253e54a1222a45697cd0c86930844045b38ec18af72
+    digest: ac62dfc172a88c8729b7ba9eb1d373e9bdb49ae0ec959652278f70937100e764
     icon: https://avatars.githubusercontent.com/u/66394013
     name: rules-manager
     sources:
@@ -365,9 +365,9 @@ entries:
   security-manager:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:39.889834-06:00"
+    created: "2022-10-12T22:58:24.412889-06:00"
     description: API Security Manager chart for Kubernetes
-    digest: 3a95ffd9212965bb6bcfbf2ff0ba87a46dc7b66c7f4f7ce9474b93b49e897299
+    digest: 7ba5f4416cc244af92cdd7ed805a3e7279b4a221784a9883768d08a7b79a5f41
     icon: https://avatars.githubusercontent.com/u/66394013
     name: security-manager
     sources:
@@ -378,7 +378,7 @@ entries:
   store:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:40.242108-06:00"
+    created: "2022-10-12T22:58:24.766584-06:00"
     dependencies:
     - condition: api-creditstore.enabled
       name: api-creditstore
@@ -389,7 +389,7 @@ entries:
       repository: https://creditforce.github.io/helm-chart
       version: 0.0.31
     description: CreditForce Store Helm chart for Kubernetes
-    digest: 7208d16cf9162d1a0d133cf812fd98ebb43acfcadd480b4e1f3823241a195e70
+    digest: e7c9bfc98b2fa5f36b0e909d8b1fd878fc17f69fe1f30e6b9ba4a7e0f15567bf
     icon: https://avatars.githubusercontent.com/u/66394013
     name: store
     sources:
@@ -400,7 +400,7 @@ entries:
   workflow:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:40.622036-06:00"
+    created: "2022-10-12T22:58:25.122162-06:00"
     dependencies:
     - condition: workflow-api-admin.enabled
       name: workflow-api-admin
@@ -439,7 +439,7 @@ entries:
       repository: https://creditforce.github.io/helm-chart
       version: 0.0.31
     description: CreditForce Workflow Helm chart for Kubernetes
-    digest: 733566a39203d9246bc8dad5f619e7c2849c0481e47c4f001d48bf11b7a8e46f
+    digest: 891079a4e4560d1274e3a319925c3ece245411f59d794a34ba8511fb8cf6cff7
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow
     sources:
@@ -450,9 +450,9 @@ entries:
   workflow-admin:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:40.989993-06:00"
+    created: "2022-10-12T22:58:25.474142-06:00"
     description: API Workflow Admin chart for Kubernetes
-    digest: 4444db894f373db91209590192663290b7f091af716c726e094eaad630d21006
+    digest: 9f815ae0116ceb18f726f70f3cdaa00119541abfea2e112b9f270f9649e4bf3f
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-admin
     sources:
@@ -463,9 +463,9 @@ entries:
   workflow-api-admin:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:41.340708-06:00"
+    created: "2022-10-12T22:58:25.817368-06:00"
     description: API Workflow Admin chart for Kubernetes
-    digest: c365335bb56201f547f30a21d4511abbecb276a639f97cb62a41bce1b5d4cf84
+    digest: ba07b32a0f546236d180a154feeb95162de480c91254a6b0de9c5ea21a4a5365
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-admin
     sources:
@@ -476,9 +476,9 @@ entries:
   workflow-api-auth:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:41.693966-06:00"
+    created: "2022-10-12T22:58:26.172383-06:00"
     description: API Workflow Auth chart for Kubernetes
-    digest: 67f3b3d4349ee7b9428749ed4495f60d429d69fcaa4113d8c3c8eb2b6a578a4b
+    digest: 0313c0b87e738cd26c1570495d9a0e4c515cb57aeeaee1deba26d435abe77e11
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-auth
     sources:
@@ -489,9 +489,9 @@ entries:
   workflow-api-dashboard:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:42.060987-06:00"
+    created: "2022-10-12T22:58:26.527569-06:00"
     description: API Workflow Dashboard chart for Kubernetes
-    digest: c5d7afa221d12b647dd001c6fe73e1d605dfb3db39054d656c8ee34f7953b808
+    digest: e282da161d0d33b1aad40e4d1737ba8829c4f6687b406750ce3da5699adfa59d
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-dashboard
     sources:
@@ -502,9 +502,9 @@ entries:
   workflow-api-designer:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:42.415049-06:00"
+    created: "2022-10-12T22:58:26.880537-06:00"
     description: API Workflow Designer chart for Kubernetes
-    digest: 6504f2b51bf0a41080bf99b4c04f4d0e8df71e419decb4bbc9476c1fe6142fe5
+    digest: 9c2812af2a98231c39d9ce600d49b30a147c5203da1d63a6e27bfc69bc7a7919
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-designer
     sources:
@@ -515,9 +515,9 @@ entries:
   workflow-api-interaction:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:42.769311-06:00"
+    created: "2022-10-12T22:58:27.23487-06:00"
     description: API Workflow Interaction chart for Kubernetes
-    digest: ef59a43317a50c2b18ff00109c3b37390647f490c588f93800fa900214ce3df6
+    digest: 29e6628e6db241bded06ba3bf9df78a0ac5e72362b0e362e727efc325ab69d2c
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-api-interaction
     sources:
@@ -528,9 +528,9 @@ entries:
   workflow-base-web:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:43.123456-06:00"
+    created: "2022-10-12T22:58:27.596516-06:00"
     description: Workflow Base Web chart for Kubernetes
-    digest: 66714eec12487f4ec2093e4f67da9ac1bfdede51817cc153985c321d0e6e7d98
+    digest: 6055ba350713a5863bc5317907605e73b869015fb7e08b3299a2380aab54ef07
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-base-web
     sources:
@@ -541,9 +541,9 @@ entries:
   workflow-dashboard:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:43.470725-06:00"
+    created: "2022-10-12T22:58:27.951402-06:00"
     description: API Workflow Dashboard chart for Kubernetes
-    digest: 751d344e9ca810ecea9d88e5b1812ad36dee69b952b9a27fea5d1e13ed3915f0
+    digest: 210ceb2e07a029b62fbe553fbd7673817b08221d764fb08c059872c5e2fc0527
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-dashboard
     sources:
@@ -554,9 +554,9 @@ entries:
   workflow-dashboard-simulator:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-10-12T22:49:43.825356-06:00"
+    created: "2022-10-12T22:58:28.309005-06:00"
     description: Workflow Dashboard Simulador chart for Kubernetes
-    digest: e6a26bf33b7030b6c18483a90b4c35d318fc3149ddf3ec7158a7a3c37f256f05
+    digest: af1f8dc928df4a088dbc1340f9cdb2aa814eef573a1298f6f41eb7ea47d2ae88
     icon: https://avatars.githubusercontent.com/u/66394013
     name: workflow-dashboard-simulator
     sources:
@@ -564,4 +564,4 @@ entries:
     urls:
     - https://github.com/CreditForce/helm-chart/releases/download/workflow-dashboard-simulator-0.0.31/workflow-dashboard-simulator-0.0.31.tgz
     version: 0.0.31
-generated: "2022-10-12T22:49:43.825381-06:00"
+generated: "2022-10-12T22:58:28.309029-06:00"
