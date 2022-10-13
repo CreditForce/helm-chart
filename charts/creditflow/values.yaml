@@ -53,19 +53,17 @@ ingress:
   enabled: true
   annotations:
     # kubernetes.io/ingress.class: nginx
-
-
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   className: nginx
-  hosts:  
+  hosts:
     - host: api
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: []
-  #  - secretName: chart-example-tls
-  #    className: nginx
-  hosts:  
-  #      - chart-example
+  tls:
+  - hosts:
+    - api
+    secretName: api-tls
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

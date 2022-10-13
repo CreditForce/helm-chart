@@ -6,5 +6,4 @@ origination-manager:
 
 global:
   domain: "localdomain"
-  certificateName:
   certificateName: null

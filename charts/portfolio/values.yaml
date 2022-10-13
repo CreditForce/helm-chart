@@ -8,6 +8,5 @@ customerservice:
   enabled: true
 
 global:
-  global:
   domain: "localdomain"
-  certificateName:  
+  certificateName: null

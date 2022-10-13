@@ -40,8 +40,8 @@ cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOK
 # git commit -am"Update Helm chart repo index with new charts"
 # git push
 # echo -e "\n\nSLEEP 60..."
-# sleep 60
-# helm repo update
+sleep 60
+helm repo update
 echo -e "\n\nBUILDING PACKGES CHARTS..."
 for pckg in base \
             collection \
