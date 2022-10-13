@@ -63,9 +63,9 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
   tls:
-  - hosts:
-    - workflow-base-web
-    secretName: workflow-base-web-tls
+    - hosts:
+      - workflow-base-web
+      secretName: workflow-base-web-tls
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

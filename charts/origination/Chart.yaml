@@ -10,7 +10,7 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-creditorigination
-    version: 0.0.33
+    version: 0.0.34
     repository: "https://creditforce.github.io/helm-chart"
     condition: api-creditorigination.enabled
 
