@@ -68,7 +68,7 @@ ingress:
           pathType: ImplementationSpecific
   tls:
     - hosts:
-      - customerservice
+        - customerservice
       secretName: customerservice-tls
 
 resources: {}

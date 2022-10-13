@@ -69,7 +69,7 @@ ingress:
           pathType: ImplementationSpecific
   tls:
     - hosts:
-      - origination-manager
+        - origination-manager
       secretName: origination-manager-tls
 
 resources: {}

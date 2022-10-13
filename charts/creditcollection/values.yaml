@@ -68,7 +68,7 @@ ingress:
           pathType: ImplementationSpecific
   tls:
     - hosts:
-      - creditcollection
+        - creditcollection
       secretName: creditcollection-tls
 
 resources: {}

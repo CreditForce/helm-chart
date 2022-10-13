@@ -64,7 +64,7 @@ ingress:
           pathType: ImplementationSpecific
   tls:
     - hosts:
-      - workflow-base-web
+        - workflow-base-web
       secretName: workflow-base-web-tls
 
 resources: {}

@@ -68,7 +68,7 @@ ingress:
           pathType: ImplementationSpecific
   tls:
     - hosts:
-      - rules-manager
+        - rules-manager
       secretName: rules-manager-tls
 
 resources: {}

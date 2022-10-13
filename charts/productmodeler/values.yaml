@@ -68,7 +68,7 @@ ingress:
           pathType: ImplementationSpecific
   tls:
     - hosts:
-      - productmodeler
+        - productmodeler
       secretName: productmodeler-tls
 
 resources: {}

@@ -62,7 +62,7 @@ ingress:
           pathType: ImplementationSpecific
   tls:
     - hosts:
-      - api
+        - api
       secretName: api-tls
 
 resources: {}
