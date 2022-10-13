@@ -6,4 +6,4 @@ creditstore:
 
 global:
   domain: "localdomain"
-  certificateName: null
+  certificateName: 

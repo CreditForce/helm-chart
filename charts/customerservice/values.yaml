@@ -67,9 +67,9 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
   tls:
-  - hosts:
-    - customerservice
-    secretName: customerservice-tls
+    - hosts:
+      - customerservice
+      secretName: customerservice-tls
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

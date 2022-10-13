@@ -15,4 +15,4 @@ security-manager:
 
 global:
   domain: "localdomain"
-  certificateName: null
+  certificateName: 

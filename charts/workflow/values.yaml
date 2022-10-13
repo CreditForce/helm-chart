@@ -27,4 +27,4 @@ workflow-admin:
 
 global:
   domain: "localdomain"
-  certificateName: null
+  certificateName:
