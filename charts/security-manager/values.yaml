@@ -2,15 +2,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicas: 1
-
 global:
   domain: "localdomain"
   certificateName:
 
+replicas: 1
+
 image:
   repository: creditforce.azurecr.io/security-manager
-  tag: 4898
+  tag: 5146
   pullPolicy: Always
 
 imagePullSecrets:
@@ -59,8 +59,7 @@ ingress:
   enabled: true
   annotations:
     # kubernetes.io/ingress.class: nginx
-
-
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   className: nginx
   hosts:
     - host: security-manager

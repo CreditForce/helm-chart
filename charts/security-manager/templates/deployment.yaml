@@ -30,9 +30,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           envFrom:
-          {{- if .Values.envFrom }}
-          {{- toYaml .Values.envFrom | nindent 10}}
-          {{- end }}
+            {{- toYaml .Values.envFrom | nindent 10}}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
@@ -43,12 +41,14 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /favicon.ico
-              port: http
+              path: /Health
+              port: 80
+              scheme: HTTP
           readinessProbe:
             httpGet:
-              path: /favicon.ico
-              port: http
+              path: /Health
+              port: 80
+              scheme: HTTP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

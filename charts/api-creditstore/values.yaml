@@ -2,15 +2,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicas: 1
-
 global:
   domain: "localdomain"
   certificateName:
 
+replicas: 1
+
 image:
   repository: creditforce.azurecr.io/api-creditstore
-  tag: 4906
+  tag: 5122
   pullPolicy: Always
 
 imagePullSecrets:
@@ -23,6 +23,8 @@ envFrom:
       name: dataprotection
   - secretRef:
       name: notificationconnection
+  - secretRef:
+      name: creditstore
 
 nameOverride: "api-creditstore-app"
 fullnameOverride: "api-creditstore"
@@ -64,11 +66,10 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: []
-  #  - secretName: chart-example-tls
-  #    className: nginx
-  hosts:  
-  #      - chart-example
+  tls:
+    - hosts:
+        - api-creditstore
+      secretName: api-creditstore-tls
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

@@ -2,15 +2,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicas: 1
-
 global:
   domain: "localdomain"
   certificateName:
 
+replicas: 1
+
 image:
   repository: creditforce.azurecr.io/creditstore
-  tag: 4907
+  tag: 5123
   pullPolicy: Always
 
 imagePullSecrets:
