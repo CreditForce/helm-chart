@@ -3,13 +3,59 @@ name: cf-chart-release
 on: [pull_request]
 
 jobs:
-  cf_action:
+  cf_install:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Run index.sh script
+    - name: Install Helm Chart Releaser
       run: |
-         chmod +x ./index.sh
-         ./index.sh
+         wget https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz
+         tar -zxcf helm-v3.10.1-linux-amd64.tar.gz
+         wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
+         tar -zxcf chart-releaser_1.4.1_linux_amd64.tar.gz
+      shell: bash
+  cf_build_packages:
+    runs-on: ubuntu-latest
+    steps:
+    - name: CLEANING UP DEPLOY DIR...
+      run: |
+          rm -Rf .deploy/*
+      shell: bash
+    - name: BUILDING CHARTS..
+      run: |
+          for chrt in api-creditcollection \
+                      api-creditengine \
+                      api-creditorigination \
+                      api-creditstore \
+                      api-notification \
+                      api-notification-engine \
+                      api-rules \
+                      api-rules-engine \
+                      api-security \
+                      creditcollection \
+                      creditflow \
+                      creditstore \
+                      customerservice \
+                      origination-manager \
+                      productmodeler \
+                      rules-manager \
+                      security-manager \
+                      workflow-admin \
+                      workflow-api-admin \
+                      workflow-api-auth \
+                      workflow-api-dashboard \
+                      workflow-api-designer \
+                      workflow-api-interaction \
+                      workflow-base-web \
+                      workflow-dashboard \
+                      workflow-dashboard-simulator
+          do
+            helm lint charts/$chrt
+            helm package charts/$chrt --destination .deploy
+          done
+      shell: bash
+    - name: UPLOADING CHARTS...
+      run: |
+          # cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
       shell: bash
 
