@@ -16,14 +16,7 @@ jobs:
       run: |
          wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
          tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
-         pwd
-         ls -la
       shell: bash
-  build_charts:
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
     - name: BUILDING CHARTS..
       run: |
           for chrt in api-creditcollection \
@@ -62,10 +55,6 @@ jobs:
       run: |
           cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
       shell: bash
-  build_packages:
-    needs: [install, build_charts]
-    runs-on: ubuntu-latest
-    steps:
     - uses: actions/checkout@v3
     - name: BUILDING PACKAGES..
       run: |
