@@ -17,7 +17,7 @@ jobs:
          wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
          tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
       shell: bash
-  build_packages:
+  build_charts:
     needs: install
     runs-on: ubuntu-latest
     steps:
@@ -59,4 +59,27 @@ jobs:
       run: |
           # cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
       shell: bash
-
+  build_packages:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: BUILDING CHARTS..
+      run: |
+          helm repo add creditforce https://creditforce.github.io/helm-chart/ 
+          for pckg in base \
+                      collection \
+                      origination \
+                      portfolio \
+                      rules \
+                      store \
+                      workflow
+          do
+            helm dependency update charts/$pckg
+            helm package charts/$pckg --destination .deploy
+          done
+          cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
+          cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t $GHP_TOKEN
+          git add index.yaml
+          git commit -am"Update Helm chart repo index with new packages"
+          git push
