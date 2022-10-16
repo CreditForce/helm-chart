@@ -53,8 +53,10 @@ jobs:
           done
       shell: bash
     - name: Upload Charts...
+      env:
+        GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
       run: |
-          ./cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
+          ./cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
       shell: bash
     - uses: actions/checkout@v3
     - name: Build Packages..
@@ -73,6 +75,8 @@ jobs:
             helm package charts/$pckg --destination .deploy
           done
     - name: Upload Packages...
+      env:
+        GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
       run: |
         ./cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
         ./cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t $GHP_TOKEN
