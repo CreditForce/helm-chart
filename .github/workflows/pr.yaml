@@ -7,7 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Heml Lint Chart
+    - name: Install Helm
+      run: |
+         wget https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz
+         tar -zxf helm-v3.10.1-linux-amd64.tar.gz
+      shell: bash
+    - name: Helm Lint Chart
       run: |
           for d in charts/*/ ; do
             echo -e "Processing: $d"
