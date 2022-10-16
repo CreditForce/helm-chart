@@ -6,7 +6,7 @@ jobs:
   install:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Install Helm
       run: |
          wget https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz
@@ -21,7 +21,7 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: BUILDING CHARTS..
       run: |
           for chrt in api-creditcollection \
@@ -63,7 +63,7 @@ jobs:
     needs: [install, build_charts]
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: BUILDING CHARTS..
       run: |
           helm repo add creditforce https://creditforce.github.io/helm-chart/ 
@@ -80,6 +80,8 @@ jobs:
           done
           cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
           cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t $GHP_TOKEN
-          git add index.yaml
-          git commit -am"Update Helm chart repo index with new packages"
-          git push
+          # git add index.yaml
+          # git commit -am"Update Helm chart repo index with new packages"
+          # git push
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
