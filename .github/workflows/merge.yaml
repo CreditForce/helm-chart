@@ -62,7 +62,6 @@ jobs:
       run: |
           ./cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
       shell: bash
-    - uses: actions/checkout@v3
     - name: Build Packages..
       run: |
           helm repo add creditforce https://creditforce.github.io/helm-chart/ 
