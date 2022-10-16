@@ -1,4 +1,8 @@
 #!/bin/bash
+echo -e "\nDOWNLOAD CHART RELEASER..."
+wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
+tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
+
 echo -e "\nCLEANING UP DEPLOY DIR..."
 rm -Rf .deploy/*
 
@@ -34,8 +38,8 @@ do
   helm package charts/$chrt --destination .deploy
 done
 echo -e "\n\nUPLOADING CHARTS..."
-cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
-# cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t GITHUB_TOKEN
+cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
+# cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t GHP_TOKEN
 # git add index.yaml
 # git commit -am"Update Helm chart repo index with new charts"
 # git push
@@ -55,8 +59,12 @@ do
   helm package charts/$pckg --destination .deploy
 done
 echo -e "\n\nUPDATING HELM REPO..."
-cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
-cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t $GITHUB_TOKEN
+cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
+cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t $GHP_TOKEN
 git add index.yaml
 git commit -am"Update Helm chart repo index with new packages"
 git push
+
+
+
+

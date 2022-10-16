@@ -4,6 +4,6 @@ api-creditcollection:
 creditcollection:
   enabled: true
 
- global:
+global:
    domain: "localdomain"
    certificateName: 
