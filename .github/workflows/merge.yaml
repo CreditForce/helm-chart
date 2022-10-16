@@ -82,9 +82,4 @@ jobs:
         GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
       run: |
         ./cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
-        ./cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart -t $GHP_TOKEN
-        # git add index.yaml
-        # git commit -am"Update Helm chart repo index with new packages"
-        # git push
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v9
+        ./cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart --push -t $GHP_TOKEN
