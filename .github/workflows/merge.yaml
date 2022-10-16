@@ -82,6 +82,7 @@ jobs:
                       workflow
           do
             echo -e "\nPacking: $pckg..."
+            helm dependency update charts/$pckg
             helm package charts/$pckg --destination .deploy
           done
     - name: Upload Packages...
