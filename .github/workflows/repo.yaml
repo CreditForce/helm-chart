@@ -16,6 +16,8 @@ jobs:
       run: |
          wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
          tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
+         pwd
+         ls -la
       shell: bash
   build_charts:
     needs: install
@@ -51,7 +53,7 @@ jobs:
                       workflow-dashboard \
                       workflow-dashboard-simulator
           do
-            echo -e "\nPROCESSING: $chrt...\n"
+            echo -e "\nPROCESSING: $chrt..."
             helm lint charts/$chrt
             helm package charts/$chrt --destination .deploy
           done
@@ -76,7 +78,7 @@ jobs:
                       store \
                       workflow
           do
-            echo -e "\nPROCESSING: $pckg...\n"
+            echo -e "\nPROCESSING: $pckg..."
             helm dependency update charts/$pckg
             helm package charts/$pckg --destination .deploy
           done
