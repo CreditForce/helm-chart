@@ -10,7 +10,6 @@ jobs:
     - name: Heml Lint Chart
       run: |
           for d in charts/*/ ; do
-            echo -e "\nPROCESSING: $d..."
             helm dependency update $d
             helm lint $d
           done
