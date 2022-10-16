@@ -21,10 +21,7 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-    - name: CLEANING UP DEPLOY DIR...
-      run: |
-          rm -Rf .deploy/*
-      shell: bash
+    - uses: actions/checkout@v2
     - name: BUILDING CHARTS..
       run: |
           for chrt in api-creditcollection \
