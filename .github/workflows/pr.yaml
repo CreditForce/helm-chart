@@ -1,0 +1,17 @@
+name: pull_request
+
+on: [pull_request]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Heml Lint Chart
+      run: |
+          for d in charts/*/ ; do
+            echo -e "\nPROCESSING: $d..."
+            helm lint $d
+          done
+      shell: bash   
+ 
