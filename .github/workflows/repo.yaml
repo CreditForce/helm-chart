@@ -22,7 +22,7 @@ jobs:
       run: |
           for d in charts/*/ ; do
             echo -e "\nPROCESSING: $d..."
-            helm lint charts/$d
+            helm lint $d
           done
       shell: bash   
     - name: Build Charts..
