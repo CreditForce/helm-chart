@@ -53,6 +53,7 @@ jobs:
                       workflow-dashboard-simulator
           do
             echo -e "\nPacking: $chrt..."
+            helm lint charts/$chrt
             helm package charts/$chrt --destination .deploy
           done
       shell: bash
@@ -75,6 +76,7 @@ jobs:
           do
             echo -e "\nPacking: $pckg..."
             helm dependency update charts/$pckg
+            helm lint charts/$pckg
             helm package charts/$pckg --destination .deploy
           done
     - name: Upload Packages...
