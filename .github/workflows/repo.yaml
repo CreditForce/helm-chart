@@ -51,20 +51,21 @@ jobs:
                       workflow-dashboard \
                       workflow-dashboard-simulator
           do
+            echo -e "\nPROCESSING: $chrt...\n"
             helm lint charts/$chrt
             helm package charts/$chrt --destination .deploy
           done
       shell: bash
     - name: UPLOADING CHARTS...
       run: |
-          # cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
+          cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
       shell: bash
   build_packages:
     needs: [install, build_charts]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: BUILDING CHARTS..
+    - name: BUILDING PACKAGES..
       run: |
           helm repo add creditforce https://creditforce.github.io/helm-chart/ 
           for pckg in base \
@@ -75,6 +76,7 @@ jobs:
                       store \
                       workflow
           do
+            echo -e "\nPROCESSING: $pckg...\n"
             helm dependency update charts/$pckg
             helm package charts/$pckg --destination .deploy
           done
