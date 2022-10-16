@@ -3,18 +3,22 @@ name: cf-chart-release
 on: [pull_request]
 
 jobs:
-  cf_install:
+  install:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install Helm Chart Releaser
+    - name: Install Helm
       run: |
          wget https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz
          tar -zxf helm-v3.10.1-linux-amd64.tar.gz
+      shell: bash
+    - name: Install Helm Chart Releaser
+      run: |
          wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
          tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
       shell: bash
-  cf_build_packages:
+  build_packages:
+    needs: install
     runs-on: ubuntu-latest
     steps:
     - name: CLEANING UP DEPLOY DIR...
