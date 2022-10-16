@@ -10,9 +10,9 @@ jobs:
     - name: Install Helm Chart Releaser
       run: |
          wget https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz
-         tar -zxcf helm-v3.10.1-linux-amd64.tar.gz
+         tar -zxf helm-v3.10.1-linux-amd64.tar.gz
          wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
-         tar -zxcf chart-releaser_1.4.1_linux_amd64.tar.gz
+         tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
       shell: bash
   cf_build_packages:
     runs-on: ubuntu-latest
