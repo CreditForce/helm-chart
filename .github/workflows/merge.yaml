@@ -80,6 +80,10 @@ jobs:
     - name: Upload Packages...
       env:
         GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
+        GH_USERNAME: ${{ secrets.GH_USERNAME }}
+        GH_EMAIL: ${{ secrets.GH_EMAIL }}
       run: |
+        git config user.name $GH_USERNAME
+        git config user.email $GH_EMAIL
         ./cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
         ./cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart --push -t $GHP_TOKEN
