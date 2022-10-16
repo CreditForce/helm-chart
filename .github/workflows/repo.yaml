@@ -60,7 +60,7 @@ jobs:
           # cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GITHUB_TOKEN
       shell: bash
   build_packages:
-    needs: install
+    needs: [install, build_charts]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
