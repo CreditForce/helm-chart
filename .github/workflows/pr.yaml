@@ -9,10 +9,11 @@ jobs:
     - uses: actions/checkout@v3
     - name: Helm Lint Chart
       run: |
+          helm version
           for d in charts/*/ ; do
             echo -e "Processing: $d"
-            ./helm dependency update $d
-            ./helm lint $d
+            helm dependency update $d
+            helm lint $d
           done
       shell: bash   
  
