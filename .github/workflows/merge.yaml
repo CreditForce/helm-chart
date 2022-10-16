@@ -22,14 +22,7 @@ jobs:
          wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
          tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
          ls -la
-      shell: bash
-    - name: Heml Lint Chart
-      run: |
-          for d in charts/*/ ; do
-            echo -e "\nPROCESSING: $d..."
-            helm lint $d
-          done
-      shell: bash   
+      shell: bash 
     - name: Build Charts..
       run: |
           for chrt in api-creditcollection \
