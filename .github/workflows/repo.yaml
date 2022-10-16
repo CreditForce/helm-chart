@@ -18,6 +18,13 @@ jobs:
          tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
          ls -la
       shell: bash
+    - name: Heml Lint Chart
+      run: |
+          for d in charts/*/ ; do
+            echo -e "\nPROCESSING: $d..."
+            helm lint charts/$d
+          done
+      shell: bash   
     - name: Build Charts..
       run: |
           for chrt in api-creditcollection \
@@ -47,8 +54,7 @@ jobs:
                       workflow-dashboard \
                       workflow-dashboard-simulator
           do
-            echo -e "\nPROCESSING: $chrt..."
-            helm lint charts/$chrt
+            echo -e "\nPacking: $chrt..."
             helm package charts/$chrt --destination .deploy
           done
       shell: bash
@@ -70,8 +76,7 @@ jobs:
                       store \
                       workflow
           do
-            echo -e "\nPROCESSING: $pckg..."
-            helm dependency update charts/$pckg
+            echo -e "\nPacking: $pckg..."
             helm package charts/$pckg --destination .deploy
           done
     - name: Upload Packages...
