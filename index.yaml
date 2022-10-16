@@ -163,6 +163,28 @@ entries:
     urls:
     - https://github.com/CreditForce/helm-chart/releases/download/base-0.0.35/base-0.0.35.tgz
     version: 0.0.35
+  collection:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-10-16T04:06:42.45264135Z"
+    dependencies:
+    - condition: api-creditcollection.enabled
+      name: api-creditcollection
+      repository: https://creditforce.github.io/helm-chart
+      version: 0.0.35
+    - condition: creditcollection-engine.enabled
+      name: creditcollection
+      repository: https://creditforce.github.io/helm-chart
+      version: 0.0.35
+    description: CreditForce Collection Helm chart for Kubernetes
+    digest: cd9a7f38f6710d396f944bc8bd61de7007c9e853fb41a84d801eb08775d9b846
+    icon: https://avatars.githubusercontent.com/u/66394013
+    name: collection
+    sources:
+    - https://creditforce.github.io/helm-chart/
+    urls:
+    - https://github.com/CreditForce/helm-chart/releases/download/collection-0.0.35/collection-0.0.35.tgz
+    version: 0.0.35
   creditcollection:
   - apiVersion: v2
     appVersion: 0.0.1
@@ -542,4 +564,4 @@ entries:
     urls:
     - https://github.com/CreditForce/helm-chart/releases/download/workflow-dashboard-simulator-0.0.35/workflow-dashboard-simulator-0.0.35.tgz
     version: 0.0.35
-generated: "2022-10-14T16:29:27.892761-06:00"
+generated: "2022-10-16T04:06:45.066038703Z"
