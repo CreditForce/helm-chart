@@ -10,10 +10,35 @@ jobs:
     - name: Helm Lint Chart
       run: |
           helm version
-          for d in charts/*/ ; do
-            echo -e "Processing: $d"
-            helm dependency update $d
-            helm lint $d
+          for chrt in api-creditcollection \
+                      api-creditengine \
+                      api-creditorigination \
+                      api-creditstore \
+                      api-notification \
+                      api-notification-engine \
+                      api-rules \
+                      api-rules-engine \
+                      api-security \
+                      creditcollection \
+                      creditflow \
+                      creditstore \
+                      customerservice \
+                      origination-manager \
+                      productmodeler \
+                      rules-manager \
+                      security-manager \
+                      workflow-admin \
+                      workflow-api-admin \
+                      workflow-api-auth \
+                      workflow-api-dashboard \
+                      workflow-api-designer \
+                      workflow-api-interaction \
+                      workflow-base-web \
+                      workflow-dashboard \
+                      workflow-dashboard-simulator
+          do
+            echo -e "\nPacking: $chrt..."
+            helm lint charts/$chrt
           done
       shell: bash   
  
