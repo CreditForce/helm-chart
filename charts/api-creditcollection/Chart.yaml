@@ -1,5 +1,5 @@
 apiVersion: v2
-description: API CreditCollection chart for Kubernetes
+description: api-creditcollection chart for Kubernetes
 name: api-creditcollection
 sources:
   - https://creditforce.github.io/helm-chart/
