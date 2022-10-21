@@ -10,26 +10,26 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: creditflow
-    version: 0.0.36
+    version: 0.0.35
     repository: "https://creditforce.github.io/helm-chart"
     condition: creditflow.enabled
 
   - name: api-notification
-    version: 0.0.36
+    version: 0.0.35
     repository: "https://creditforce.github.io/helm-chart"
     condition: api-notification.enabled
 
   - name: api-notification-engine
-    version: 0.0.36
+    version: 0.0.35
     repository: "https://creditforce.github.io/helm-chart"
     condition: api-notification-engine.enabled
 
   - name: api-security
-    version: 0.0.36
+    version: 0.0.35
     repository: "https://creditforce.github.io/helm-chart"
     condition: api-security.enabled
 
   - name: security-manager
-    version: 0.0.36
+    version: 0.0.35
     repository: "https://creditforce.github.io/helm-chart"
     condition: security-manager.enabled
