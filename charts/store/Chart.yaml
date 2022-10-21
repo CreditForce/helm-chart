@@ -10,11 +10,11 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-creditstore
-    version: 0.0.35
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition: api-creditstore.enabled
 
   - name: creditstore
-    version: 0.0.35
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition: creditstore.enabled  
