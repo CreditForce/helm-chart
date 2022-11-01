@@ -1,6 +1,6 @@
 apiVersion: v2
 name: workflow
-version: 0.0.40
+version: 0.0.38
 description: CreditForce Workflow Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,46 +10,46 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: workflow-api-admin
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition: workflow-api-admin.enabled
 
   - name: workflow-api-auth
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition: workflow-api-auth.enabled
 
   - name:  workflow-api-dashboard
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition:  workflow-api-dashboard.enabled  
 
   - name:  workflow-api-designer
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition:  workflow-api-designer.enabled  
 
   - name:  workflow-api-interaction
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition:  workflow-api-interaction.enabled  
 
   - name:  workflow-base-web
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition:  workflow-base-web.enabled  
 
   - name:  workflow-dashboard
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition:  workflow-dashboard.enabled  
 
   - name:  workflow-dashboard-simulator
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition:  workflow-dashboard-simulator-engine.enabled  
 
   - name:  workflow-admin
-    version: 0.0.38
+    version: 0.0.37
     repository: "https://creditforce.github.io/helm-chart"
     condition:  workflow-admin.enabled  
