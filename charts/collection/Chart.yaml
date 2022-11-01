@@ -1,7 +1,7 @@
 apiVersion: v2
 name: collection
 version: 0.0.39
-description: CreditForce Collection Helm chart for Kubernetes
+description: CreditForce Collection Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
