@@ -1,6 +1,6 @@
 apiVersion: v2
 name: store
-version: 0.0.39
+version: 0.0.40
 description: CreditForce Store Helm chart for Kubernetes
 sources:
   - https://creditforce.github.io/helm-chart/
