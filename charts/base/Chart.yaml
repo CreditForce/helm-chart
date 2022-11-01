@@ -1,7 +1,7 @@
 apiVersion: v2
 name: base
 version: 0.0.39
-description: Credit Engine Base Helm chart for Kubernetes
+description: Credit Engine Base Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
