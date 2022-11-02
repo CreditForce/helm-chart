@@ -10,11 +10,9 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-creditorigination
-    version: 0.0.38
-    repository: "https://creditforce.github.io/helm-chart"
+    version: 0.0.39
     condition: api-creditorigination.enabled
 
   - name: origination-manager
-    version: 0.0.38
-    repository: "https://creditforce.github.io/helm-chart"
+    version: 0.0.39
     condition: origination-manager-engine.enabled
