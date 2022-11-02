@@ -11,10 +11,10 @@ dependencies:
 
   - name: api-creditorigination
     version: 0.0.39
-    repository: "file://../"
+    repository: "file://../api-creditorigination/"
     condition: api-creditorigination.enabled
 
   - name: origination-manager
     version: 0.0.39
-    repository: "file://../"
+    repository: "file://../origination-manager/"
     condition: origination-manager-engine.enabled
