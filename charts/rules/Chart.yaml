@@ -1,6 +1,6 @@
 apiVersion: v2
 name: rules
-version: 0.0.38
+version: 0.0.39
 description: CreditForce Rules Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,16 +10,16 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-rules
-    version: 0.0.38
+    version: 0.0.39
     repository: "file://../api-rules/"
     condition: api-rules.enabled
 
   - name: api-rules-engine
-    version: 0.0.38
+    version: 0.0.39
     repository: "file://../api-rules-engine/"
     condition: api-rules-engine.enabled
 
   - name: rules-manager
-    version: 0.0.38
+    version: 0.0.39
     repository: "file://../rules-manager/"
     condition: rules-manager-engine.enabled  
