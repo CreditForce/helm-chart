@@ -173,6 +173,18 @@ entries:
   api-creditorigination:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-11-16T17:31:49.849627024Z"
+    description: API CreditOrigination chart for Kubernetes
+    digest: a81b76bd847380ebb8d8c265b0423a14af0f7fd965d5d2c12aceacd313c732fe
+    icon: https://avatars.githubusercontent.com/u/66394013
+    name: api-creditorigination
+    sources:
+    - https://creditforce.github.io/helm-chart/
+    urls:
+    - https://github.com/CreditForce/helm-chart/releases/download/api-creditorigination-0.0.43/api-creditorigination-0.0.43.tgz
+    version: 0.0.43
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-11-16T14:43:10.720126341Z"
     description: API CreditOrigination chart for Kubernetes
     digest: b82f38584584af60b2f1142ce875fcaebff97a59b9b1e05c75a6bc38f1418c16
@@ -1524,6 +1536,27 @@ entries:
   origination:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-11-16T17:31:52.289561939Z"
+    dependencies:
+    - condition: api-creditorigination.enabled
+      name: api-creditorigination
+      repository: file://../api-creditorigination/
+      version: 0.0.43
+    - condition: origination-manager-engine.enabled
+      name: origination-manager
+      repository: file://../origination-manager/
+      version: 0.0.43
+    description: CreditForce Origination Helm chart for Kubernetes
+    digest: b88346141586012982635fb2cf8d089cfdeefeba33df40794bac75b21e1608e5
+    icon: https://avatars.githubusercontent.com/u/66394013
+    name: origination
+    sources:
+    - https://creditforce.github.io/helm-chart/
+    urls:
+    - https://github.com/CreditForce/helm-chart/releases/download/origination-0.0.43/origination-0.0.43.tgz
+    version: 0.0.43
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-11-16T14:43:12.57916425Z"
     dependencies:
     - condition: api-creditorigination.enabled
@@ -1691,6 +1724,18 @@ entries:
     - https://github.com/CreditForce/helm-chart/releases/download/origination-0.0.35/origination-0.0.35.tgz
     version: 0.0.35
   origination-manager:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-11-16T17:31:52.480477729Z"
+    description: Origination Manager chart for Kubernetes
+    digest: 0d85168a005550c5eba9454617cd88aa1b35d438bc01a5c5f262e7695adb2a71
+    icon: https://avatars.githubusercontent.com/u/66394013
+    name: origination-manager
+    sources:
+    - https://creditforce.github.io/helm-chart/
+    urls:
+    - https://github.com/CreditForce/helm-chart/releases/download/origination-manager-0.0.43/origination-manager-0.0.43.tgz
+    version: 0.0.43
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2022-11-16T14:43:12.699086897Z"
@@ -3651,4 +3696,4 @@ entries:
     urls:
     - https://github.com/CreditForce/helm-chart/releases/download/workflow-dashboard-simulator-0.0.35/workflow-dashboard-simulator-0.0.35.tgz
     version: 0.0.35
-generated: "2022-11-16T14:43:14.83372471Z"
+generated: "2022-11-16T17:31:55.427561508Z"
