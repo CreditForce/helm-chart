@@ -19,9 +19,11 @@ metadata:
   labels:
     {{- include "origination-manager.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
-  annotations:
-    {{- toYaml . | nindent 4 }}
-  {{- end }}
+  annotations:  
+    {{- with $.Values.global.certificateName }}
+    {{- else }}
+    {{- toYaml . | nindent 4 }} 
+    {{- end }}
 spec:
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
   ingressClassName: {{ .Values.ingress.className }}
