@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/origination-manager
-  tag: 5765
+  tag: 6067
   pullPolicy: Always
 
 imagePullSecrets:
