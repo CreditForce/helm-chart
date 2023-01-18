@@ -35,6 +35,7 @@ $ kubectl create secret generic security  \
 --from-literal=LoginName="<USERNAME>" \
 --from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
+--from-literal=Theme="<Theme>" \
 --namespace creditforce
 $ kubectl create secret tls creditforce-tls-secret \
 --key <ARCHIVO_LLAVE_PRIVADA> \
