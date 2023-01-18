@@ -67,6 +67,7 @@ $ kubectl create secret generic creditorigination  \
 --from-literal=LoginName="<USERNAME>" \
 --from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
+--from-literal=Theme="<Theme>" \
 --namespace creditforce
 ```
 ### Instalar
@@ -87,6 +88,7 @@ $ kubectl create secret generic creditengine  \
 --from-literal=LoginName="<USERNAME>" \
 --from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
+--from-literal=Theme="<Theme>" \
 --namespace creditforce
 ```
 ### Instalar
@@ -107,6 +109,7 @@ $ kubectl create secret generic creditstore  \
 --from-literal=LoginName="<USERNAME>" \
 --from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
+--from-literal=Theme="<Theme>" \
 --namespace creditforce
 ```
 
@@ -128,6 +131,7 @@ $ kubectl create secret generic creditcollection   \
 --from-literal=LoginName="<USERNAME>" \
 --from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
+--from-literal=Theme="<Theme>" \
 --namespace creditforce
 ```
 ### Instalar
@@ -149,6 +153,7 @@ $ kubectl create secret generic rulesmanager   \
 --from-literal=PasswordHash="<PASSWORD>" \
 --from-literal=Target="<TARGET>" \
 --from-literal=RulesEngineUrl="<URL_API>" \
+--from-literal=Theme="<Theme>" \
 --namespace creditforce
 ```
 
