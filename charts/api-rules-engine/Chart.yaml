@@ -4,5 +4,5 @@ name: api-rules-engine
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.0.46
+version: 0.0.48
 appVersion: "0.0.1"
