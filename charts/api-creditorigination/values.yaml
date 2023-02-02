@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/api-creditorigination
-  tag: 6478
+  tag: 6592
   pullPolicy: Always
 
 imagePullSecrets:
