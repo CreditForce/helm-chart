@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/creditflow
-  tag: 6849
+  tag: 6850
   pullPolicy: IfNotPresent
 
 imagePullSecrets:
