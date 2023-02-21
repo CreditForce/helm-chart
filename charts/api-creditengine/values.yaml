@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/creditengine
-  tag: 6770
+  tag: 6872
   pullPolicy: Always
 
 imagePullSecrets:
