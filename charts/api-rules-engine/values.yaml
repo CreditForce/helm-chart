@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/api-rules-engine
-  tag: 6904
+  tag: 6940
   pullPolicy: Always
 
 imagePullSecrets:
