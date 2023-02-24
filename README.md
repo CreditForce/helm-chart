@@ -155,6 +155,7 @@ $ kubectl create secret generic rulesmanager   \
 --from-literal=Target="<TARGET>" \
 --from-literal=RulesEngineUrl="<URL_API>" \
 --from-literal=Theme="<Theme>" \
+--from-literal=RulesConnection="<DB RULES CONNECTION>" \
 --namespace creditforce
 ```
 
