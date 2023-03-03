@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/api-rules-engine
-  tag: 6963
+  tag: 7018
   pullPolicy: Always
 
 imagePullSecrets:
@@ -77,15 +77,15 @@ resources:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
-    cpu: 450m
-    memory: 512Mi
+    cpu: 100m
+    memory: 128Mi
   requests:
-    cpu: 200m
-    memory: 256Mi
+    cpu: 100m
+    memory: 128Mi
 
 autoscaling:
   enabled: true
-  minReplicas: 3
+  minReplicas: 2
   maxReplicas: 6
   targetCPUUtilizationPercentage: 70
   targetMemoryUtilizationPercentage: 70
