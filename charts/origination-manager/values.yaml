@@ -69,7 +69,7 @@ ingress:
   tls:
     - hosts:
         - origination-manager
-      secretName: creditforce-wildcard
+      secretName: origination-manager-tls
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
