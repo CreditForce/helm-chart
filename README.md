@@ -16,26 +16,26 @@ $ kubectl create secret docker-registry creditforce \
 --docker-password=<CLAVE> \
 --namespace creditforce
 $ kubectl create secret generic busconnection \
---from-literal=BusConnection="<STRING>" \
---from-literal=ServiceBusUrl="<URL_API>" \
---from-literal=AuthorizationServiceBusUrl="<URL_API>" \
+--from-literal=BusConnection='<STRING>' \
+--from-literal=ServiceBusUrl='<URL_API>' \
+--from-literal=AuthorizationServiceBusUrl='<URL_API>' \
 --namespace creditforce
 $ kubectl create secret generic dataprotection  \
---from-literal=BlobName="<BlobName>" \
---from-literal=BlobStorage="<BlobStorage>" \
---from-literal=ContainerName="<ContainerName>" \
+--from-literal=BlobName='<BlobName>' \
+--from-literal=BlobStorage='<BlobStorage>' \
+--from-literal=ContainerName='<ContainerName>' \
 --namespace creditforce
 $ kubectl create secret generic notificationconnection   \
---from-literal=NotificationConnection="<NotificationConnection>" \
---from-literal=NotificationServiceBusUrl="<URL_API>" \
+--from-literal=NotificationConnection='<NotificationConnection>' \
+--from-literal=NotificationServiceBusUrl='<URL_API>' \
 --namespace creditforce
 $ kubectl create secret generic security  \
---from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \
---from-literal=LoginName="<USERNAME>" \
---from-literal=PasswordHash="<PASSWORD>" \
---from-literal=Target="<TARGET>" \
---from-literal=Theme="<Theme>" \
+--from-literal=AuthProvider='<AUTH>' \
+--from-literal=CompanyName='<COMPANY>' \
+--from-literal=LoginName='<USERNAME>' \
+--from-literal=PasswordHash='<PASSWORD>' \
+--from-literal=Target='<TARGET>' \
+--from-literal=Theme='<Theme>' \
 --namespace creditforce
 $ kubectl create secret tls creditforce-tls-secret \
 --key <ARCHIVO_LLAVE_PRIVADA> \
@@ -46,7 +46,7 @@ $ helm repo add creditforce https://creditforce.github.io/helm-chart/
 ### Instalar la Base
 
 ```console
-$ helm install base creditforce/base --namespace creditforce --set "global.domain=your.domain.com"
+$ helm install base creditforce/base --namespace creditforce --set 'global.domain=your.domain.com'
 $ helm status base --namespace creditforce
 ```
 
@@ -63,18 +63,18 @@ $ helm status base --namespace creditforce
 
 ```console
 $ kubectl create secret generic creditorigination  \
---from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \
---from-literal=LoginName="<USERNAME>" \
---from-literal=PasswordHash="<PASSWORD>" \
---from-literal=Target="<TARGET>" \
---from-literal=Theme="<Theme>" \
+--from-literal=AuthProvider='<AUTH>' \
+--from-literal=CompanyName='<COMPANY>' \
+--from-literal=LoginName='<USERNAME>' \
+--from-literal=PasswordHash='<PASSWORD>' \
+--from-literal=Target='<TARGET>' \
+--from-literal=Theme='<Theme>' \
 --namespace creditforce
 ```
 ### Instalar
 
 ```console
-$ helm install base creditforce/origination --namespace creditforce --set "global.domain=your.domain.com"
+$ helm install base creditforce/origination --namespace creditforce --set 'global.domain=your.domain.com'
 $ helm status origination --namespace creditforce
 ```
 
@@ -84,18 +84,18 @@ $ helm status origination --namespace creditforce
 
 ```console
 $ kubectl create secret generic creditengine  \
---from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \
---from-literal=LoginName="<USERNAME>" \
---from-literal=PasswordHash="<PASSWORD>" \
---from-literal=Target="<TARGET>" \
---from-literal=Theme="<Theme>" \
+--from-literal=AuthProvider='<AUTH>' \
+--from-literal=CompanyName='<COMPANY>' \
+--from-literal=LoginName='<USERNAME>' \
+--from-literal=PasswordHash='<PASSWORD>' \
+--from-literal=Target='<TARGET>' \
+--from-literal=Theme='<Theme>' \
 --namespace creditforce
 ```
 ### Instalar
 
 ```console
-$ helm install base creditforce/portfolio --namespace creditforce --set "global.domain=your.domain.com"
+$ helm install base creditforce/portfolio --namespace creditforce --set 'global.domain=your.domain.com'
 $ helm status portfolio --namespace creditforce
 ```
 
@@ -105,19 +105,19 @@ $ helm status portfolio --namespace creditforce
 
 ```console
 $ kubectl create secret generic creditstore  \
---from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \
---from-literal=LoginName="<USERNAME>" \
---from-literal=PasswordHash="<PASSWORD>" \
---from-literal=Target="<TARGET>" \
---from-literal=Theme="<Theme>" \
+--from-literal=AuthProvider='<AUTH>' \
+--from-literal=CompanyName='<COMPANY>' \
+--from-literal=LoginName='<USERNAME>' \
+--from-literal=PasswordHash='<PASSWORD>' \
+--from-literal=Target='<TARGET>' \
+--from-literal=Theme='<Theme>' \
 --namespace creditforce
 ```
 
 ### Instalar
 
 ```console
-$ helm install base creditforce/store --namespace creditforce --set "global.domain=your.domain.com"
+$ helm install base creditforce/store --namespace creditforce --set 'global.domain=your.domain.com'
 $ helm status store --namespace creditforce
 ```
 
@@ -127,18 +127,18 @@ $ helm status store --namespace creditforce
 
 ```console
 $ kubectl create secret generic creditcollection   \
---from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \
---from-literal=LoginName="<USERNAME>" \
---from-literal=PasswordHash="<PASSWORD>" \
---from-literal=Target="<TARGET>" \
---from-literal=Theme="<Theme>" \
+--from-literal=AuthProvider='<AUTH>' \
+--from-literal=CompanyName='<COMPANY>' \
+--from-literal=LoginName='<USERNAME>' \
+--from-literal=PasswordHash='<PASSWORD>' \
+--from-literal=Target='<TARGET>' \
+--from-literal=Theme='<Theme>' \
 --namespace creditforce
 ```
 ### Instalar
 
 ```console
-$ helm install base creditforce/collection --namespace creditforce --set "global.domain=your.domain.com"
+$ helm install base creditforce/collection --namespace creditforce --set 'global.domain=your.domain.com'
 $ helm status collection --namespace creditforce
 ```
 
@@ -148,21 +148,21 @@ $ helm status collection --namespace creditforce
 
 ```console
 $ kubectl create secret generic rulesmanager   \
---from-literal=AuthProvider="<AUTH>" \
---from-literal=CompanyName="<COMPANY>" \
---from-literal=LoginName="<USERNAME>" \
---from-literal=PasswordHash="<PASSWORD>" \
---from-literal=Target="<TARGET>" \
---from-literal=RulesEngineUrl="<URL_API>" \
---from-literal=Theme="<Theme>" \
---from-literal=RulesConnection="<DB RULES CONNECTION>" \
+--from-literal=AuthProvider='<AUTH>' \
+--from-literal=CompanyName='<COMPANY>' \
+--from-literal=LoginName='<USERNAME>' \
+--from-literal=PasswordHash='<PASSWORD>' \
+--from-literal=Target='<TARGET>' \
+--from-literal=RulesEngineUrl='<URL_API>' \
+--from-literal=Theme='<Theme>' \
+--from-literal=RulesConnection='<DB RULES CONNECTION>' \
 --namespace creditforce
 ```
 
 ### Instalar
 
 ```console
-$ helm install base creditforce/rules --namespace creditforce --set "global.domain=your.domain.com"
+$ helm install base creditforce/rules --namespace creditforce --set 'global.domain=your.domain.com'
 $ helm status rules --namespace creditforce
 ```
 
@@ -172,17 +172,17 @@ $ helm status rules --namespace creditforce
 
 ```console
 $ kubectl create secret generic workflow    \
---from-literal=API_ADMIN="<URL_API>" \
---from-literal=API_AUTH="<URL_API>" \
---from-literal=API_DASHBOARD="<URL_API>" \
---from-literal=API_INTERACTION="<URL_API>" \
---from-literal=DBConnection="<STRING_CONNECTION>" \
---from-literal=ValidDashBoardSites="<STRING>" \
+--from-literal=API_ADMIN='<URL_API>' \
+--from-literal=API_AUTH='<URL_API>' \
+--from-literal=API_DASHBOARD='<URL_API>' \
+--from-literal=API_INTERACTION='<URL_API>' \
+--from-literal=DBConnection='<STRING_CONNECTION>' \
+--from-literal=ValidDashBoardSites='<STRING>' \
 --namespace creditforce
 ```
 ### Instalar
 
 ```console
-$ helm install base creditforce/workflow --namespace creditforce  --set "global.domain=your.domain.com"
+$ helm install base creditforce/workflow --namespace creditforce  --set 'global.domain=your.domain.com'
 $ helm status workflow --namespace creditforce
 ```
