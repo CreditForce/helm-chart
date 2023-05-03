@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/api-notification
-  tag: 6521
+  tag: 7211
   pullPolicy: Always
 
 imagePullSecrets:
