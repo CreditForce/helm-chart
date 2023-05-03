@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/workflow-api-admin
-  tag: 4859
+  tag: 7413
   pullPolicy: Always
 
 imagePullSecrets:
