@@ -21,6 +21,9 @@ metadata:
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
+    {{- if not $.Values.global.certificateName }}
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    {{- end }} 
   {{- end }}
 spec:
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
