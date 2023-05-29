@@ -4,5 +4,5 @@ name: creditstore
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.0.84
+version: 0.0.85
 appVersion: "0.0.1"
