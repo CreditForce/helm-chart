@@ -46,7 +46,7 @@ $ helm repo add creditforce https://creditforce.github.io/helm-chart/
 ### Instalar la Base
 
 ```console
-$ helm install base creditforce/base --namespace creditforce --set 'global.domain=your.domain.com'
+$ helm install base creditforce/base --namespace creditforce --set 'global.domain=your.domain.com' --set "global.certificateName=creditforce-tls"
 $ helm status base --namespace creditforce
 ```
 
@@ -74,7 +74,7 @@ $ kubectl create secret generic creditorigination  \
 ### Instalar
 
 ```console
-$ helm install base creditforce/origination --namespace creditforce --set 'global.domain=your.domain.com'
+$ helm install base creditforce/origination --namespace creditforce --set 'global.domain=your.domain.com' --set "global.certificateName=creditforce-tls"
 $ helm status origination --namespace creditforce
 ```
 
@@ -95,7 +95,7 @@ $ kubectl create secret generic creditengine  \
 ### Instalar
 
 ```console
-$ helm install base creditforce/portfolio --namespace creditforce --set 'global.domain=your.domain.com'
+$ helm install base creditforce/portfolio --namespace creditforce --set 'global.domain=your.domain.com' --set "global.certificateName=creditforce-tls"
 $ helm status portfolio --namespace creditforce
 ```
 
@@ -117,7 +117,7 @@ $ kubectl create secret generic creditstore  \
 ### Instalar
 
 ```console
-$ helm install base creditforce/store --namespace creditforce --set 'global.domain=your.domain.com'
+$ helm install base creditforce/store --namespace creditforce --set 'global.domain=your.domain.com' --set "global.certificateName=creditforce-tls"
 $ helm status store --namespace creditforce
 ```
 
@@ -138,7 +138,7 @@ $ kubectl create secret generic creditcollection   \
 ### Instalar
 
 ```console
-$ helm install base creditforce/collection --namespace creditforce --set 'global.domain=your.domain.com'
+$ helm install base creditforce/collection --namespace creditforce --set 'global.domain=your.domain.com' --set "global.certificateName=creditforce-tls"
 $ helm status collection --namespace creditforce
 ```
 
@@ -162,7 +162,7 @@ $ kubectl create secret generic rulesmanager   \
 ### Instalar
 
 ```console
-$ helm install base creditforce/rules --namespace creditforce --set 'global.domain=your.domain.com'
+$ helm install base creditforce/rules --namespace creditforce --set 'global.domain=your.domain.com' --set "global.certificateName=creditforce-tls"
 $ helm status rules --namespace creditforce
 ```
 
@@ -183,6 +183,6 @@ $ kubectl create secret generic workflow    \
 ### Instalar
 
 ```console
-$ helm install base creditforce/workflow --namespace creditforce  --set 'global.domain=your.domain.com'
+$ helm install base creditforce/workflow --namespace creditforce  --set 'global.domain=your.domain.com' --set "global.certificateName=creditforce-tls"
 $ helm status workflow --namespace creditforce
 ```
