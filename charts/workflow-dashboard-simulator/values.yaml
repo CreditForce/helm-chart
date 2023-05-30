@@ -55,7 +55,7 @@ ingress:
   enabled: true
   annotations:
     # kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
   className: nginx
   hosts:
     - host: workflow-dashboard-simulator
