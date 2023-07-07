@@ -4,5 +4,5 @@ name: workflow-api-designer
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.0.99
+version: 0.1.00
 appVersion: "0.0.1"
