@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/productmodeler
-  tag: 8343
+  tag: 8371
   pullPolicy: Always
 
 imagePullSecrets:
