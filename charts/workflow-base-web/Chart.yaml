@@ -4,5 +4,5 @@ name: workflow-base-web
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.1.15
+version: 0.1.16
 appVersion: "0.0.1"
