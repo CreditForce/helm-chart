@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/api-creditstore
-  tag: 8526
+  tag: 8536
   pullPolicy: Always
 
 imagePullSecrets:
