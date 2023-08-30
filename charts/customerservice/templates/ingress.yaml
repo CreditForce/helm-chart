@@ -20,8 +20,8 @@ metadata:
     {{- include "customerservice.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
-    {{- toYaml . | nindent 4 }} 
-    {{- if eq $.Values.global.certificateName "-" }}
+    {{- toYaml . | nindent 4 }}
+    {{- if eq "localcert" $.Values.global.certificateName }}
     cert-manager.io/cluster-issuer: letsencrypt-prod
     {{- end }} 
   {{- end }}

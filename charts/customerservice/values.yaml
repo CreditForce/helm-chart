@@ -4,7 +4,7 @@
 
 global:
   domain: "localdomain"
-  certificateName: "-"
+  certificateName: "localcert"
 
 replicas: 1
 
