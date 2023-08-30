@@ -21,7 +21,7 @@ metadata:
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
-    {{- if eq "localcert" $.Values.global.certificateName }}
+    {{- if not $.Values.global.certificateName }}
     cert-manager.io/cluster-issuer: letsencrypt-prod
     {{- end }} 
   {{- end }}
