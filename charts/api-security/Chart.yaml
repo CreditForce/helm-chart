@@ -4,5 +4,5 @@ name: api-security
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.1.40
+version: 0.1.41
 appVersion: "0.0.1"
