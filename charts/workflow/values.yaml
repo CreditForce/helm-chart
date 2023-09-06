@@ -13,6 +13,9 @@ workflow-api-designer:
 workflow-api-interaction:
   enabled: true
 
+workflow-api-engine:
+  enabled: true
+
 workflow-base-web:
   enabled: true
 
