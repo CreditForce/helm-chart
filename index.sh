@@ -29,6 +29,8 @@ for chrt in api-creditcollection \
             workflow-api-auth \
             workflow-api-dashboard \
             workflow-api-designer \
+            workflow-api-engine \
+            workflow-api-scripts \
             workflow-api-interaction \
             workflow-base-web \
             workflow-dashboard \
