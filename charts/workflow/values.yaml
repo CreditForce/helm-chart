@@ -10,6 +10,12 @@ workflow-api-dashboard:
 workflow-api-designer:
   enabled: true
 
+workflow-api-engine:
+  enabled: true
+
+workflow-api-scripts:
+  enabled: true
+
 workflow-api-interaction:
   enabled: true
 
