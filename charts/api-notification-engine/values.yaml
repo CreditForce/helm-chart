@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/api-notification-engine
-  tag: 8284
+  tag: 9015
   pullPolicy: IfNotPresent
 
 imagePullSecrets:
