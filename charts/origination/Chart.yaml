@@ -1,6 +1,6 @@
 apiVersion: v2
 name: origination
-version: 0.1.55
+version: 0.1.56
 description: CreditForce Origination Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,11 +10,11 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-creditorigination
-    version: 0.1.55
+    version: 0.1.56
     repository: "file://../api-creditorigination/"
     condition: api-creditorigination.enabled
 
   - name: origination-manager
-    version: 0.1.55
+    version: 0.1.56
     repository: "file://../origination-manager/"
     condition: origination-manager-engine.enabled
