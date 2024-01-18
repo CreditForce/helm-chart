@@ -4,5 +4,5 @@ name: workflow-dashboard
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.1.183
+version: 0.1.184
 appVersion: "0.0.1"
