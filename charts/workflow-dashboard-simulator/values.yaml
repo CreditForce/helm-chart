@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/workflow-dashboard-simulator
-  tag: 9028
+  tag: 9706
   pullPolicy: Always
 
 imagePullSecrets:
