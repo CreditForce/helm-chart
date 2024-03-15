@@ -1,6 +1,6 @@
 apiVersion: v2
 name: workflow
-version: 0.1.228
+version: 0.1.229
 description: CreditForce Workflow Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,56 +10,56 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: workflow-api-admin
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-api-admin/"
     condition: workflow-api-admin.enabled
 
   - name: workflow-api-auth
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-api-auth/"
     condition: workflow-api-auth.enabled
 
   - name:  workflow-api-dashboard
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-api-dashboard/"
     condition:  workflow-api-dashboard.enabled  
 
   - name:  workflow-api-designer
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-api-designer/"
     condition:  workflow-api-designer.enabled  
 
   - name:  workflow-api-engine
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-api-engine/"
     condition:  workflow-api-engine.enabled  
 
   - name:  workflow-api-scripts
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-api-scripts/"
     condition:  workflow-api-scripts.enabled  
 
   - name:  workflow-api-interaction
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-api-interaction/"
     condition:  workflow-api-interaction.enabled  
 
   - name:  workflow-base-web
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-base-web/"
     condition:  workflow-base-web.enabled  
 
   - name:  workflow-dashboard
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-dashboard/"
     condition:  workflow-dashboard.enabled  
 
   - name:  workflow-dashboard-simulator
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-dashboard-simulator/"
     condition:  workflow-dashboard-simulator-engine.enabled  
 
   - name:  workflow-admin
-    version: 0.1.228
+    version: 0.1.229
     repository: "file://../workflow-admin/"
     condition:  workflow-admin.enabled  
