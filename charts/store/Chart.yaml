@@ -1,6 +1,6 @@
 apiVersion: v2
 name: store
-version: 0.1.236
+version: 0.1.237
 description: CreditForce Store Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,11 +10,11 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-creditstore
-    version: 0.1.236
+    version: 0.1.237
     repository: "file://../api-creditstore/"
     condition: api-creditstore.enabled
 
   - name: creditstore
-    version: 0.1.236
+    version: 0.1.237
     repository: "file://../creditstore/"
     condition: creditstore.enabled  
