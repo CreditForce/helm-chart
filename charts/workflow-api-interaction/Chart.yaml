@@ -4,5 +4,5 @@ name: workflow-api-interaction
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.1.242
+version: 0.1.243
 appVersion: "0.0.1"
