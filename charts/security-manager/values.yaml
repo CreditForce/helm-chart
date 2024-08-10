@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/security-manager
-  tag: 14003
+  tag: 14045
   pullPolicy: Always
 
 imagePullSecrets:
