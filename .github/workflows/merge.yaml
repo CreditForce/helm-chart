@@ -52,7 +52,9 @@ jobs:
                       workflow-api-interaction \
                       workflow-base-web \
                       workflow-dashboard \
-                      workflow-dashboard-simulator
+                      workflow-dashboard-simulator \
+                      api-core \
+                      web-core
           do
             echo -e "\nPacking: $chrt..."
             helm lint charts/$chrt
@@ -74,7 +76,8 @@ jobs:
                       portfolio \
                       rules \
                       store \
-                      workflow
+                      workflow \
+                      core
           do
             echo -e "\nPacking: $pckg..."
             helm dependency update charts/$pckg
