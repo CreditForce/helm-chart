@@ -34,7 +34,7 @@ spec:
     {{- range .Values.ingress.tls }}
     - hosts:
         {{- range .hosts }}
-        - "{{ . }}.{{ $.Values.global.domain}}"
+        - "{{ $.Values.global.domain}}"
         {{- end }}
       {{- with $.Values.global.certificateName }}
       secretName: {{ $.Values.global.certificateName }}
@@ -45,7 +45,7 @@ spec:
   {{- end }}
   rules:
     {{- range .Values.ingress.hosts }}
-    - host: "{{ .host }}.{{ $.Values.global.domain}}"
+    - host: "{{ $.Values.global.domain}}"
       http:
         paths:
           {{- range .paths }}
