@@ -37,7 +37,9 @@ jobs:
                       workflow-api-interaction \
                       workflow-base-web \
                       workflow-dashboard \
-                      workflow-dashboard-simulator
+                      workflow-dashboard-simulator \
+                      web-core \
+                      api-core
           do
             echo -e "\nPacking: $chrt..."
             helm lint charts/$chrt
