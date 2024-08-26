@@ -34,7 +34,9 @@ for chrt in api-creditcollection \
             workflow-api-interaction \
             workflow-base-web \
             workflow-dashboard \
-            workflow-dashboard-simulator
+            workflow-dashboard-simulator \
+            api-core \
+            web-core
 do
   helm lint charts/$chrt
   helm package charts/$chrt --destination .deploy
@@ -55,7 +57,8 @@ for pckg in base \
             portfolio \
             rules \
             store \
-            workflow
+            workflow \
+            core
 do
   helm dependency update charts/$pckg
   helm package charts/$pckg --destination .deploy

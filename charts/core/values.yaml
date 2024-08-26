@@ -1,0 +1,9 @@
+api-core:
+  enabled: true
+
+web-core:
+  enabled: true
+
+global:
+  domain: "localdomain"
+  certificateName: 
