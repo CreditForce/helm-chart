@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\charts",
+    "\\charts\\api-creditstore",
+    "\\charts\\api-security",
+    "\\charts\\creditstore",
+    "\\charts\\origination-manager",
+    "\\charts\\portfolio",
+    "\\charts\\security-manager",
+    "\\charts\\store"
+  ],
+  "SelectedNode": "\\charts\\api-security\\values.yaml",
+  "PreviewInSolutionExplorer": false
+}
