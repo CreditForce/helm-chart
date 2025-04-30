@@ -42,7 +42,7 @@ for chrt in api-creditcollection \
             api-bus \
             api-notification-hub \
             engine-notification-hub \
-            api-security \
+            api-auth  \
             web-security 
 
 do
