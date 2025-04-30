@@ -1,7 +1,10 @@
-api-core:
+api-origin:
   enabled: true
 
-web-core:
+api-store:
+  enabled: true
+
+web-origin:
   enabled: true
 
 global:

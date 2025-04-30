@@ -1,7 +1,7 @@
-api-core:
+api-security:
   enabled: true
 
-web-core:
+web-security:
   enabled: true
 
 global:

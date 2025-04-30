@@ -1,0 +1,35 @@
+apiVersion: v2
+name: bus-suite
+version: 1.0.1
+description: Base Suite Helm chart for Kubernetes 
+sources:
+  - https://creditforce.github.io/helm-chart/
+icon:  https://images8.webydo.com/96/9628253/3958/F6AD13C0-3367-06E4-3434-7E46130909F9.png
+appVersion: "1.0.1"
+
+dependencies:
+
+  - name: api-bus
+    version: 1.0.1
+    repository: "file://../api-bus/"
+    condition: api-bus.enabled
+
+  - name: api-notification-hub
+    version: 1.0.1
+    repository: "file://../api-notification-hub/"
+    condition: api-notification-hub.enabled
+
+  - name: engine-notification-hub
+    version: 1.0.1
+    repository: "file://../engine-notification-hub/"
+    condition: engine-notification-hubenabled
+
+  - name: api-security
+    version: 1.0.1
+    repository: "file://../api-security/"
+    condition: api-security.enabled
+
+  - name: web-security
+    version: 1.0.1
+    repository: "file://../web-security/"
+    condition: web-security.enabled

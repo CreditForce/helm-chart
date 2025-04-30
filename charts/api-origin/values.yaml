@@ -1,4 +1,4 @@
-# Default values for api-core.
+# Default values for creditengine.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -9,8 +9,8 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/api-core
-  tag: 18140
+  repository: acrcreditforce.azurecr.io/api-creditorigination
+  tag: 16406
   pullPolicy: Always
 
 imagePullSecrets:
@@ -18,10 +18,16 @@ imagePullSecrets:
 
 envFrom:
   - secretRef:
-      name: suite-base
+      name: busconnection
+  - secretRef:
+      name: dataprotection
+  - secretRef:
+      name: notificationconnection
+  - secretRef:
+      name: creditorigination
 
-nameOverride: "api-core"
-fullnameOverride: "api-core"
+nameOverride: "api-origin-app"
+fullnameOverride: "api-origin"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -30,7 +36,7 @@ serviceAccount:
   annotations:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "api-core"
+  name: "api-origin"
 
 podAnnotations: {}
 
@@ -56,16 +62,16 @@ ingress:
 
   className: nginx
   hosts:  
-    - host: api-core
+    - host: api-origin
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - api-core
-      secretName: api-core-tls
+        - api-origin
+      secretName: api-origin-tls
 
-resources: 
+resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
