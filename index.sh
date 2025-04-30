@@ -36,7 +36,15 @@ for chrt in api-creditcollection \
             workflow-dashboard \
             workflow-dashboard-simulator \
             api-core \
-            web-core
+            web-core \
+            api-origin \
+            web-origin \
+            api-bus \
+            api-notification-hub \
+            engine-notification-hub \
+            api-security \
+            web-security 
+
 do
   helm lint charts/$chrt
   helm package charts/$chrt --destination .deploy
@@ -58,7 +66,11 @@ for pckg in base \
             rules \
             store \
             workflow \
-            core
+            core \
+            origin \
+            base-suite \
+            notification-hub \
+            security 
 do
   helm dependency update charts/$pckg
   helm package charts/$pckg --destination .deploy

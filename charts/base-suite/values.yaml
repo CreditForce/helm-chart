@@ -1,0 +1,18 @@
+api-bus:
+  enabled: true
+
+api-notification-hub:
+  enabled: true
+
+engine-notification-hub:
+  enabled: true
+
+api-security:
+  enabled: true
+
+web-security:
+  enabled: true
+
+global:
+  domain: "localdomain"
+  certificateName: 
