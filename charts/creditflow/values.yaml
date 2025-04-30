@@ -9,7 +9,7 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce .azurecr.io/creditflow
+  repository: acrcreditforce.azurecr.io/creditflow
   tag: 16275
   pullPolicy: IfNotPresent
 
