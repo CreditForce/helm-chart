@@ -25,7 +25,7 @@ dependencies:
     condition: api-notification-engine.enabled
 
   - name: api-security
-    version: 0.1.262
+    version: 1.0.2
     repository: "file://../api-security/"
     condition: api-security.enabled
 
