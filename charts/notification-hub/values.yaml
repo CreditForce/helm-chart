@@ -1,0 +1,9 @@
+api-notification-hub:
+  enabled: true
+
+engine-notification-hub:
+  enabled: true
+
+global:
+  domain: "localdomain"
+  certificateName: 
