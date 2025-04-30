@@ -9,10 +9,10 @@ appVersion: "0.0.1"
 
 dependencies:
 
-  - name: api-core
-    version: 0.0.3
-    repository: "file://../api-core/"
-    condition: api-core.enabled
+  - name: api-creditengine
+    version: 0.1.262
+    repository: "file://../api-creditengine/"
+    condition: api-creditengine.enabled
 
   - name: web-core
     version: 0.0.3
