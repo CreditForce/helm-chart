@@ -7,7 +7,7 @@ api-notification-hub:
 engine-notification-hub:
   enabled: true
 
-api-security:
+api-auth:
   enabled: true
 
 web-security:

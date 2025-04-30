@@ -1,4 +1,4 @@
-api-security:
+api-auth:
   enabled: true
 
 web-security:

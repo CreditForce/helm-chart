@@ -24,10 +24,10 @@ dependencies:
     repository: "file://../engine-notification-hub/"
     condition: engine-notification-hubenabled
 
-  - name: api-security
+  - name: api-auth
     version: 1.0.1
-    repository: "file://../api-security/"
-    condition: api-security.enabled
+    repository: "file://../api-auth/"
+    condition: api-auth.enabled
 
   - name: web-security
     version: 1.0.1
