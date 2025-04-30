@@ -61,7 +61,7 @@ jobs:
                       api-notification-hub \
                       engine-notification-hub \
                       api-auth \
-                      web-security |
+                      web-security
           do
             echo -e "\nPacking: $chrt..."
             helm lint charts/$chrt
