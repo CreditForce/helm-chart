@@ -1,4 +1,4 @@
-api-core:
+api-creditengine:
   enabled: true
 
 web-core:
