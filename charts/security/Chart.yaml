@@ -10,7 +10,7 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-security
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../api-security/"
     condition: api-security.enabled
 
