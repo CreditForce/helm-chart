@@ -1,5 +1,5 @@
 apiVersion: v2
-name: bus-suite
+name: base-suite
 version: 1.0.1
 description: Base Suite Helm chart for Kubernetes 
 sources:
