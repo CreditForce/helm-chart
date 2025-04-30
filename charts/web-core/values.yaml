@@ -18,7 +18,13 @@ imagePullSecrets:
 
 envFrom:
   - secretRef:
-      name: suite-base
+      name: busconnection
+  - secretRef:
+      name: dataprotection
+  - secretRef:
+      name: notificationconnection
+  - secretRef:
+      name: creditengine
 
 nameOverride: "web-core"
 fullnameOverride: "web-core"
