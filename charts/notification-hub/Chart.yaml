@@ -10,11 +10,11 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-notification-hub
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../api-notification-hub/"
     condition: api-notification-hub.enabled
 
   - name: engine-notification-hub
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../engine-notification-hub/"
     condition: engine-notification-hub.enabled
