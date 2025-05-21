@@ -10,11 +10,11 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-core
-    version: 1.0.3
+    version: 1.0.4
     repository: "file://../api-core/"
     condition: api-core.enabled
 
   - name: web-core
-    version: 1.0.3
+    version: 1.0.4
     repository: "file://../web-core/"
     condition: web-core.enabled
