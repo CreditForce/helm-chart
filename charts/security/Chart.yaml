@@ -1,6 +1,6 @@
 apiVersion: v2
 name: security
-version: 0.0.1
+version: 1.0.2
 description: CreditForce Security Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,7 +10,7 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-auth
-    version: 1.0.1
+    version: 1.0.3
     repository: "file://../api-auth/"
     condition: api-auth.enabled
 
