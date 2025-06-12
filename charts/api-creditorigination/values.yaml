@@ -9,8 +9,8 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/api-creditorigination
-  tag: 16406
+  repository: creditforce.azurecr.io/api-creditorigination
+  tag: 12754
   pullPolicy: Always
 
 imagePullSecrets:
@@ -76,12 +76,12 @@ resources:
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
 
 autoscaling:
   enabled: true
