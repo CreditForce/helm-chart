@@ -61,7 +61,9 @@ jobs:
                       api-notification-hub \
                       engine-notification-hub \
                       api-auth \
-                      web-security
+                      web-security \
+                      api-mobile-collect \
+                      api-mobile-proxy-collect
           do
             echo -e "\nPacking: $chrt..."
             helm lint charts/$chrt
@@ -88,7 +90,8 @@ jobs:
                       origin \
                       base-suite \
                       notification-hub \
-                      security 
+                      security \
+                      mobile-collect
           do
             echo -e "\nPacking: $pckg..."
             helm dependency update charts/$pckg
