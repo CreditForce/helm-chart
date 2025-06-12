@@ -1,20 +1,20 @@
 apiVersion: v2
 name: mobile-collect
-version: 1.0.1
+version: 1.0.2
 description: CreditForce mobile-collect Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://images8.webydo.com/96/9628253/3958/F6AD13C0-3367-06E4-3434-7E46130909F9.png
-appVersion: "0.0.1"
+appVersion: "1.0.1"
 
 dependencies:
 
   - name: api-mobile-collect
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../api-mobile-collect/"
     condition: api-mobile-collect.enabled
 
   - name: api-mobile-proxy-collect
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../api-mobile-proxy-collect/"
     condition: api-mobile-proxy-collect.enabled
