@@ -1,0 +1,9 @@
+api-mobile-collect:
+  enabled: true
+
+api-mobile-proxy-collect:
+  enabled: true
+
+global:
+  domain: "localdomain"
+  certificateName: 
