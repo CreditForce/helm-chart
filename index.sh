@@ -43,7 +43,10 @@ for chrt in api-creditcollection \
             api-notification-hub \
             engine-notification-hub \
             api-auth  \
-            web-security 
+            web-security \
+            api-mobile-collect \
+            api-mobile-proxy-collect
+            
 
 do
   helm lint charts/$chrt
@@ -70,7 +73,8 @@ for pckg in base \
             origin \
             base-suite \
             notification-hub \
-            security 
+            security \
+            mobile-collect
 do
   helm dependency update charts/$pckg
   helm package charts/$pckg --destination .deploy
