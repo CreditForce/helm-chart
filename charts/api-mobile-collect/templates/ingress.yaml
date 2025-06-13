@@ -1,4 +1,4 @@
-{{- if .Values.ingress.enabled -}}
+{{- if .Values.ingress.enabled }}
 
   {{- if not (and .Values.ingress.hosts (gt (len .Values.ingress.hosts) 0)) }}
   {{- fail "Debe definir al menos un host en ingress.hosts para api-mobile-collect" }}
@@ -26,10 +26,10 @@ metadata:
   name: {{ $fullName }}
   labels:
     {{- include "api-mobile-collect.labels" . | nindent 4 }}
-  {{- with .Values.ingress.annotations }}
+  {{- if .Values.ingress.annotations }}
   annotations:
-    {{- toYaml . | nindent 4 }}
-    {{- if not $.Values.global.certificateName }}
+    {{- toYaml .Values.ingress.annotations | nindent 4 }}
+    {{- if not .Values.global.certificateName }}
     cert-manager.io/cluster-issuer: letsencrypt-prod
     {{- end }}
   {{- end }}
@@ -39,18 +39,18 @@ spec:
   ingressClassName: {{ .Values.ingress.className }}
   {{- end }}
 
-  {{- if .Values.ingress.tls }}
+  {{- if and .Values.ingress.tls (kindIs "slice" .Values.ingress.tls) }}
   tls:
     {{- range .Values.ingress.tls }}
     - hosts:
-        {{- range .hosts }}
-        - "{{ . }}{{ if $.Values.global.domain }}.{{ $.Values.global.domain }}{{ end }}"
+        {{- if and .hosts (kindIs "slice" .hosts) }}
+          {{- range .hosts }}
+          - "{{ . }}{{ if $.Values.global.domain }}.{{ $.Values.global.domain }}{{ end }}"
+          {{- end }}
+        {{- else }}
+          {{- fail "Cada entrada en ingress.tls debe tener una lista de hosts" }}
         {{- end }}
-      {{- if $.Values.global.certificateName }}
-      secretName: {{ $.Values.global.certificateName }}
-      {{- else }}
-      secretName: {{ .secretName }}
-      {{- end }}
+      secretName: {{ $.Values.global.certificateName | default .secretName }}
     {{- end }}
   {{- end }}
 
