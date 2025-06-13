@@ -1,6 +1,6 @@
 apiVersion: v2
 name: origin
-version: 1.0.5
+version: 1.0.6
 description: CreditForce Origin Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,16 +10,16 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-origin
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../api-origin/"
     condition: api-origin.enabled
 
   - name: api-store
-    version: 1.0.5
+    version: 1.0.6
     repository: "file://../api-store/"
     condition: api-store.enabled
 
   - name: web-origin
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../web-origin/"
     condition: web-origin.enabled
