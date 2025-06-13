@@ -30,6 +30,6 @@ dependencies:
     condition: api-auth.enabled
 
   - name: web-security
-    version: 1.0.2
+    version: 1.0.3
     repository: "file://../web-security/"
     condition: web-security.enabled
