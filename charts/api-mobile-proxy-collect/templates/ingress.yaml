@@ -31,4 +31,15 @@ spec:
   {{- end }}
 
   rules:
-    - host: {{ printf "%s.%s" .Values.ingress.host $
+    - host: {{ printf "%s.%s" .Values.ingress.host $domain | quote }}
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: {{ $fullName }}
+                port:
+                  number: {{ $svcPort }}
+
+{{- end }}
