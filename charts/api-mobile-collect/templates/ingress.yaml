@@ -10,13 +10,14 @@ metadata:
   name: {{ $fullName }}
   labels:
     {{- include "api-mobile-collect.labels" . | nindent 4 }}
-  {{- with .Values.ingress.annotations }}
   annotations:
-    {{- toYaml . | nindent 4 }}
-  {{- else if not .Values.global.certificateName }}
-  annotations:
+    {{- if .Values.ingress.annotations }}
+    {{- toYaml .Values.ingress.annotations | nindent 4 }}
+    {{- end }}
+    {{- if not .Values.global.certificateName }}
     cert-manager.io/cluster-issuer: letsencrypt-prod
-  {{- end }}
+    {{- end }}
+
 spec:
   {{- if .Values.ingress.className }}
   ingressClassName: {{ .Values.ingress.className }}
