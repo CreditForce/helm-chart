@@ -1,11 +1,12 @@
 global:
-  domain: "localdomain"        # Dominio base
-  certificateName: ""          # Puedes usar cert-manager aquí si aplicas TLS
+  domain: "localdomain"
+  certificateName:
 
 api-mobile-collect:
   enabled: true
   ingress:
-    host: api-mobile-collect   # <--- Esto generará api-mobile-collect.localdomain
+    enabled: true
+    host: "api-mobile-collect"
     tls:
       enabled: true
       secretName: api-mobile-collect-tls
@@ -13,7 +14,8 @@ api-mobile-collect:
 api-mobile-proxy-collect:
   enabled: true
   ingress:
-    host: proxy-mobile-collect # <--- Esto generará proxy-mobile-collect.localdomain
+    enabled: true
+    host: "proxy-mobile-collect"
     tls:
       enabled: true
       secretName: proxy-mobile-collect-tls
