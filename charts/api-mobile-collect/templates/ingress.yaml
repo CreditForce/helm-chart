@@ -1,80 +1,44 @@
 {{- if .Values.ingress.enabled }}
 
-  {{- if not (and .Values.ingress.hosts (gt (len .Values.ingress.hosts) 0)) }}
-  {{- fail "Debe definir al menos un host en ingress.hosts para api-mobile-collect" }}
-  {{- end }}
+{{- $fullName := include "api-mobile-collect.fullname" . -}}
+{{- $svcPort := .Values.service.port | default 80 -}}
+{{- $domain := .Values.global.domain | default "localdomain" -}}
 
-  {{- $fullName := include "api-mobile-collect.fullname" . -}}
-  {{- $svcPort := .Values.service.port -}}
-
-  {{- if and .Values.ingress.className (not (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion)) }}
-    {{- if not (hasKey .Values.ingress.annotations "kubernetes.io/ingress.class") }}
-    {{- $_ := set .Values.ingress.annotations "kubernetes.io/ingress.class" .Values.ingress.className }}
-    {{- end }}
-  {{- end }}
-
-  {{- if semverCompare ">=1.19-0" .Capabilities.KubeVersion.GitVersion }}
 apiVersion: networking.k8s.io/v1
-  {{- else if semverCompare ">=1.14-0" .Capabilities.KubeVersion.GitVersion }}
-apiVersion: networking.k8s.io/v1beta1
-  {{- else }}
-apiVersion: extensions/v1beta1
-  {{- end }}
-
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
     {{- include "api-mobile-collect.labels" . | nindent 4 }}
-  {{- if .Values.ingress.annotations }}
+  {{- with .Values.ingress.annotations }}
   annotations:
-    {{- toYaml .Values.ingress.annotations | nindent 4 }}
-    {{- if not .Values.global.certificateName }}
+    {{- toYaml . | nindent 4 }}
+  {{- else if not .Values.global.certificateName }}
+  annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    {{- end }}
   {{- end }}
-
 spec:
-  {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
+  {{- if .Values.ingress.className }}
   ingressClassName: {{ .Values.ingress.className }}
   {{- end }}
 
-  {{- if and .Values.ingress.tls (kindIs "slice" .Values.ingress.tls) }}
+  {{- if .Values.ingress.tls.enabled }}
   tls:
-    {{- range .Values.ingress.tls }}
     - hosts:
-        {{- if and .hosts (kindIs "slice" .hosts) }}
-          {{- range .hosts }}
-          - "{{ . }}{{ if $.Values.global.domain }}.{{ $.Values.global.domain }}{{ end }}"
-          {{- end }}
-        {{- else }}
-          {{- fail "Cada entrada en ingress.tls debe tener una lista de hosts" }}
-        {{- end }}
-      secretName: {{ $.Values.global.certificateName | default .secretName }}
-    {{- end }}
+        - {{ printf "%s.%s" .Values.ingress.host $domain | quote }}
+      secretName: {{ .Values.ingress.tls.secretName | default .Values.global.certificateName }}
   {{- end }}
 
   rules:
-    {{- range .Values.ingress.hosts }}
-    - host: "{{ .host }}{{ if $.Values.global.domain }}.{{ $.Values.global.domain }}{{ end }}"
+    - host: {{ printf "%s.%s" .Values.ingress.host $domain | quote }}
       http:
         paths:
-          {{- range .paths }}
-          - path: {{ .path }}
-            {{- if and .pathType (semverCompare ">=1.18-0" $.Capabilities.KubeVersion.GitVersion) }}
-            pathType: {{ .pathType }}
-            {{- end }}
+          - path: /
+            pathType: ImplementationSpecific
             backend:
-              {{- if semverCompare ">=1.19-0" $.Capabilities.KubeVersion.GitVersion }}
               service:
                 name: {{ $fullName }}
                 port:
                   number: {{ $svcPort }}
-              {{- else }}
-              serviceName: {{ $fullName }}
-              servicePort: {{ $svcPort }}
-              {{- end }}
-          {{- end }}
-    {{- end }}
 
 {{- end }}
