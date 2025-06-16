@@ -1,6 +1,6 @@
 global:
   domain: "localdomain"
-  certificateName:
+  certificateName: # opcional, puede quedar vacío para usar los secretName específicos
 
 api-mobile-collect:
   enabled: true

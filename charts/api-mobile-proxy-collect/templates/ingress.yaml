@@ -17,13 +17,12 @@ metadata:
     {{- if not .Values.global.certificateName }}
     cert-manager.io/cluster-issuer: letsencrypt-prod
     {{- end }}
-
 spec:
   {{- if .Values.ingress.className }}
   ingressClassName: {{ .Values.ingress.className }}
   {{- end }}
 
-  {{- if .Values.ingress.tls.enabled }}
+  {{- if and .Values.ingress.tls.enabled .Values.ingress.host }}
   tls:
     - hosts:
         - {{ printf "%s.%s" .Values.ingress.host $domain | quote }}
