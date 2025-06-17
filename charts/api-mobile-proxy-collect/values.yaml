@@ -5,8 +5,8 @@ global:
 replicas: 1
 
 image:
-  repository: acrdevelopment01.azurecr.io/api-mobile-proxy-collect
-  tag: 18666
+  repository: acrcreditforce.azurecr.io/api-mobile-proxy-collect
+  tag: 18950
   pullPolicy: Always
 
 imagePullSecrets:
