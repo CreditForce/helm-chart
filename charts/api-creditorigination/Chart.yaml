@@ -4,5 +4,5 @@ name: api-creditorigination
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 0.1.263
+version: 0.1.264
 appVersion: "0.0.1"
