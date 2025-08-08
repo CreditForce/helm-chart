@@ -1,4 +1,4 @@
-# Default values for creditengine.
+# Default values for web-subscription.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -9,8 +9,8 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/api-security
-  tag: 19627
+  repository: acrcreditforce.azurecr.io/web-subscription
+  tag: 19641
   pullPolicy: Always
 
 imagePullSecrets:
@@ -24,10 +24,12 @@ envFrom:
   - secretRef:
       name: notificationconnection
   - secretRef:
-      name: security
+      name: subscription
+  - secretRef:
+    name: workflow
 
-nameOverride: "api-auth-app"
-fullnameOverride: "api-auth"
+nameOverride: "web-subscription"
+fullnameOverride: "web-subscription"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -36,7 +38,7 @@ serviceAccount:
   annotations:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "api-auth"
+  name: "web-subscription"
 
 podAnnotations: {}
 
@@ -56,20 +58,13 @@ service:
   port: 80
 
 ingress:
-  enabled: false
-  annotations:
-    # kubernetes.io/ingress.class: nginx
-
+  enabled: true
+  annotations: {}
   className: nginx
-  hosts:  
-    - host: api-auth
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  host: "web-subscription"               # Simple, no array
   tls:
-    - hosts:
-        - api-auth
-      secretName: api-auth-tls
+    enabled: true                         # Simple flag
+    secretName: "web-subscription" # Simple secret name
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -77,10 +72,10 @@ resources:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
-    cpu: 200m
+    cpu: 400m
     memory: 256Mi
   requests:
-    cpu: 100m
+    cpu: 250m
     memory: 128Mi
 
 autoscaling:

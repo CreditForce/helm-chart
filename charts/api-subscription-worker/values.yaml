@@ -9,9 +9,9 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/api-security
-  tag: 19627
-  pullPolicy: Always
+  repository: acrcreditforce.azurecr.io/api-subscription-worker
+  tag: 19643
+  pullPolicy: IfNotPresent
 
 imagePullSecrets:
   - name: creditforce
@@ -23,11 +23,9 @@ envFrom:
       name: dataprotection
   - secretRef:
       name: notificationconnection
-  - secretRef:
-      name: security
 
-nameOverride: "api-auth-app"
-fullnameOverride: "api-auth"
+nameOverride: "api-subscription-worker-app"
+fullnameOverride: "api-subscription-worker"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -36,7 +34,7 @@ serviceAccount:
   annotations:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "api-auth"
+  name: "api-subscription-worker"
 
 podAnnotations: {}
 
@@ -62,14 +60,14 @@ ingress:
 
   className: nginx
   hosts:  
-    - host: api-auth
+    - host: api-subscription-worker
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - api-auth
-      secretName: api-auth-tls
+        - api-subscription-worker
+      secretName: api-subscription-worker-tls
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious

@@ -1,4 +1,4 @@
-# Default values for creditengine.
+# Default values for api-subscription.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -9,8 +9,8 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/api-security
-  tag: 19627
+  repository: acrcreditforce.azurecr.io/api-subscription
+  tag: 19642
   pullPolicy: Always
 
 imagePullSecrets:
@@ -24,10 +24,10 @@ envFrom:
   - secretRef:
       name: notificationconnection
   - secretRef:
-      name: security
+      name: creditengine
 
-nameOverride: "api-auth-app"
-fullnameOverride: "api-auth"
+nameOverride: "api-subscription"
+fullnameOverride: "api-subscription"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -36,7 +36,7 @@ serviceAccount:
   annotations:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "api-auth"
+  name: "api-subscription"
 
 podAnnotations: {}
 
@@ -56,22 +56,26 @@ service:
   port: 80
 
 ingress:
-  enabled: false
-  annotations:
-    # kubernetes.io/ingress.class: nginx
+  enabled: true
+  annotations: {}
+  className: nginx
+  host: "api-subscription"               # Simple, no array
+  tls:
+    enabled: true                         # Simple flag
+    secretName: "api-subscription-tls" # Simple secret name
 
   className: nginx
   hosts:  
-    - host: api-auth
+    - host: api-subscription
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - api-auth
-      secretName: api-auth-tls
+        - api-subscription
+      secretName: api-subscription-tls
 
-resources:  
+resources: 
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following

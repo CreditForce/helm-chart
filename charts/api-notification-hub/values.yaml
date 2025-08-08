@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrcreditforce.azurecr.io/api-notification
-  tag: 18161
+  tag: 19634
   pullPolicy: Always
 
 imagePullSecrets:

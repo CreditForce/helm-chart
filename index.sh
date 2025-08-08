@@ -45,7 +45,10 @@ for chrt in api-creditcollection \
             api-auth  \
             web-security \
             api-mobile-collect \
-            api-mobile-proxy-collect
+            api-mobile-proxy-collect \
+            api-subcription  \
+            api-subcription-worker  \
+            web-subcription  
             
 
 do
@@ -74,7 +77,8 @@ for pckg in base \
             base-suite \
             notification-hub \
             security \
-            mobile-collect
+            mobile-collect \
+            subcription 
 do
   helm dependency update charts/$pckg
   helm package charts/$pckg --destination .deploy
