@@ -18,11 +18,7 @@ imagePullSecrets:
 
 envFrom:
   - secretRef:
-      name: busconnection
-  - secretRef:
-      name: dataprotection
-  - secretRef:
-      name: notificationconnection
+      name: subscription
 
 nameOverride: "api-subscription-worker-app"
 fullnameOverride: "api-subscription-worker"
@@ -75,11 +71,11 @@ resources:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
-    cpu: 200m
-    memory: 256Mi
-  requests:
-    cpu: 100m
+    cpu: 250m
     memory: 128Mi
+  requests:
+    cpu: 20m
+    memory: 64Mi
 
 autoscaling:
   enabled: true
