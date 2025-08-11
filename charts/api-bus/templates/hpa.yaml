@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "creditflow.fullname" . }}
+  name: {{ include "api-bus.fullname" . }}
   labels:
-    {{- include "creditflow.labels" . | nindent 4 }}
+    {{- include "api-bus.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "creditflow.fullname" . }}
+    name: {{ include "api-bus.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

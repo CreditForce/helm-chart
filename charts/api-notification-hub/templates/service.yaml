@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "api-notification.fullname" . }}
+  name: {{ include "api-notification-hub.fullname" . }}
   labels:
-    {{- include "api-notification.labels" . | nindent 4 }}
+    {{- include "api-notification-hub.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "api-notification.selectorLabels" . | nindent 4 }}
+    {{- include "api-notification-hub.selectorLabels" . | nindent 4 }}

@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "security-manager.fullname" . }}
+  name: {{ include "web-security.fullname" . }}
   labels:
-    {{- include "security-manager.labels" . | nindent 4 }}
+    {{- include "web-security.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "security-manager.selectorLabels" . | nindent 6 }}
+      {{- include "web-security.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "security-manager.selectorLabels" . | nindent 8 }}
+        {{- include "web-security.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "security-manager.serviceAccountName" . }}
+      serviceAccountName: {{ include "web-security.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
