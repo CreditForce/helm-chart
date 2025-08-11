@@ -1,12 +1,30 @@
+global:
+  domain: "localdomain"
+  certificateName: # opcional, puede quedar vacío para usar los secretName específicos
+
 api-origin:
   enabled: true
-
+  ingress:
+    enabled: true
+    host: "api-origin"
+    tls:
+      enabled: true
+      secretName: api-origin-tls
+	  
 api-store:
   enabled: true
+  ingress:
+    enabled: true
+    host: "api-store"
+    tls:
+      enabled: true
+      secretName: api-store-tls
 
 web-origin:
   enabled: true
-
-global:
-  domain: "localdomain"
-  certificateName: 
+  ingress:
+    enabled: true
+    host: "web-origin"
+    tls:
+      enabled: true
+      secretName: web-origin-tls

@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "api-creditorigination.fullname" . }}
+  name: {{ include "api-origin.fullname" . }}
   labels:
-    {{- include "api-creditorigination.labels" . | nindent 4 }}
+    {{- include "api-origin.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "api-creditorigination.fullname" . }}
+    name: {{ include "api-origin.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

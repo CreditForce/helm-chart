@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "api-creditstore.fullname" . }}
+  name: {{ include "api-store.fullname" . }}
   labels:
-    {{- include "api-creditstore.labels" . | nindent 4 }}
+    {{- include "api-store.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "api-creditstore.selectorLabels" . | nindent 6 }}
+      {{- include "api-store.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "api-creditstore.selectorLabels" . | nindent 8 }}
+        {{- include "api-store.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "api-creditstore.serviceAccountName" . }}
+      serviceAccountName: {{ include "api-store.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
