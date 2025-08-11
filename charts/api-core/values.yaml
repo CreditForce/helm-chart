@@ -56,20 +56,14 @@ service:
   port: 80
 
 ingress:
-  enabled: false
-  annotations:
-    # kubernetes.io/ingress.class: nginx
-
+  enabled: true
+  annotations: {}
   className: nginx
-  hosts:  
-    - host: api-core
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  host: "api-core"               # Simple, no array
   tls:
-    - hosts:
-        - api-core
-      secretName: api-core-tls
+    enabled: true                         # Simple flag
+    secretName: "api-core-tls" # Simple secret name
+
 
 resources: 
   # We usually recommend not to specify default resources and to leave this as a conscious

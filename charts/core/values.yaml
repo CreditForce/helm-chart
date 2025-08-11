@@ -1,9 +1,21 @@
+global:
+  domain: "localdomain"
+  certificateName: # opcional, puede quedar vacío para usar los secretName específicos
+
 api-core:
   enabled: true
+  ingress:
+    enabled: true
+    host: "api-core"
+    tls:
+      enabled: true
+      secretName: api-core-tls
 
 web-core:
   enabled: true
-
-global:
-  domain: "localdomain"
-  certificateName: 
+  ingress:
+    enabled: true
+    host: "web-core"
+    tls:
+      enabled: true
+      secretName: web-core-tls

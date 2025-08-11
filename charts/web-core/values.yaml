@@ -57,19 +57,12 @@ service:
 
 ingress:
   enabled: true
-  annotations:
-    # kubernetes.io/ingress.class: nginx
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
+  annotations: {}
   className: nginx
-  hosts:
-    - host: web-core
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  host: "web-core"               # Simple, no array
   tls:
-    - hosts:
-        - web-core
-      secretName: web-core-tls
+    enabled: true                         # Simple flag
+    secretName: "web-core-tls" # Simple secret name
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious

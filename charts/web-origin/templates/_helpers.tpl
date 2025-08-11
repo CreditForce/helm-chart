@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "origination-manager.name" -}}
+{{- define "web-origin.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "origination-manager.fullname" -}}
+{{- define "web-origin.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "origination-manager.chart" -}}
+{{- define "web-origin.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "origination-manager.labels" -}}
-helm.sh/chart: {{ include "origination-manager.chart" . }}
-{{ include "origination-manager.selectorLabels" . }}
+{{- define "web-origin.labels" -}}
+helm.sh/chart: {{ include "web-origin.chart" . }}
+{{ include "web-origin.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "origination-manager.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "origination-manager.name" . }}
+{{- define "web-origin.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "web-origin.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "origination-manager.serviceAccountName" -}}
+{{- define "web-origin.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "origination-manager.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "web-origin.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

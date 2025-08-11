@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "api-creditstore.name" -}}
+{{- define "api-store.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "api-creditstore.fullname" -}}
+{{- define "api-store.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "api-creditstore.chart" -}}
+{{- define "api-store.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "api-creditstore.labels" -}}
-helm.sh/chart: {{ include "api-creditstore.chart" . }}
-{{ include "api-creditstore.selectorLabels" . }}
+{{- define "api-store.labels" -}}
+helm.sh/chart: {{ include "api-store.chart" . }}
+{{ include "api-store.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "api-creditstore.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "api-creditstore.name" . }}
+{{- define "api-store.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "api-store.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "api-creditstore.serviceAccountName" -}}
+{{- define "api-store.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "api-creditstore.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "api-store.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
