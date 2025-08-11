@@ -18,11 +18,7 @@ imagePullSecrets:
 
 envFrom:
   - secretRef:
-      name: busconnection
-  - secretRef:
-      name: dataprotection
-  - secretRef:
-      name: notificationconnection
+      name: subscription
 
 nameOverride: "api-subscription-worker-app"
 fullnameOverride: "api-subscription-worker"
