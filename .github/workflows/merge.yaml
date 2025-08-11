@@ -64,9 +64,9 @@ jobs:
                       web-security \
                       api-mobile-collect \
                       api-mobile-proxy-collect \
-                      api-subcription  \
-                      api-subcription-worker  \
-                      web-subcription  
+                      api-subscription  \
+                      api-subscription-worker  \
+                      web-subscription  
           do
             echo -e "\nPacking: $chrt..."
             helm lint charts/$chrt
@@ -95,7 +95,7 @@ jobs:
                       notification-hub \
                       security \
                       mobile-collect \
-                      web-subcription
+                      subscription
           do
             echo -e "\nPacking: $pckg..."
             helm dependency update charts/$pckg
