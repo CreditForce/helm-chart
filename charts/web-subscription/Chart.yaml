@@ -1,8 +1,8 @@
 apiVersion: v2
-description: CreditForce web core chart for Kubernetes
+description: CreditForce web subscription chart for Kubernetes
 name: web-subscription
 sources:
   - https://creditforce.github.io/helm-chart/
-icon:  https://www.credit-force.com/wp-content/uploads/2021/04/FAVICON-300x300.png
-version: 1.1.5
-appVersion: "0.0.1"
+icon:  https://images8.webydo.com/96/9628253/3958/F6AD13C0-3367-06E4-3434-7E46130909F9.png
+version: 1.0.1
+appVersion: "1.0.1"
