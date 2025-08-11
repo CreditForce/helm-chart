@@ -4,5 +4,5 @@ name: web-core
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://www.credit-force.com/wp-content/uploads/2021/04/FAVICON-300x300.png
-version: 1.1.5
+version: 1.2.1
 appVersion: "0.0.1"
