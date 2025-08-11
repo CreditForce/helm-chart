@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "api-notification-engine.fullname" . }}
+  name: {{ include "engine-notification-hub.fullname" . }}
   labels:
-    {{- include "api-notification-engine.labels" . | nindent 4 }}
+    {{- include "engine-notification-hub.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "api-notification-engine.fullname" . }}
+    name: {{ include "engine-notification-hub.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
