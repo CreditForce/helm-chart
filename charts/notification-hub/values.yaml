@@ -1,9 +1,15 @@
-api-notification-hub:
-  enabled: true
-
-engine-notification-hub:
-  enabled: true
-
 global:
   domain: "localdomain"
-  certificateName: 
+  certificateName: # opcional, puede quedar vacío para usar los secretName específicos
+
+api-notification-hub:
+  enabled: true
+  
+engine-notification-hub:
+  enabled: true
+  ingress:
+    enabled: true
+    host: "engine-notification-hub"
+    tls:
+      enabled: true
+      secretName: engine-notification-hub-tls
