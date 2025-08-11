@@ -24,7 +24,7 @@ envFrom:
   - secretRef:
       name: notificationconnection
   - secretRef:
-      name: creditengine
+      name: subscription
 
 nameOverride: "api-subscription"
 fullnameOverride: "api-subscription"
