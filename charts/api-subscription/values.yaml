@@ -70,10 +70,6 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls:
-    - hosts:
-        - api-subscription
-      secretName: api-subscription-tls
 
 resources: 
   # We usually recommend not to specify default resources and to leave this as a conscious
