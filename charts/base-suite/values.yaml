@@ -1,18 +1,42 @@
+global:
+  domain: "localdomain"
+  certificateName: # opcional, puede quedar vacío para usar los secretName específicos
+
 api-bus:
   enabled: true
+  ingress:
+    enabled: true
+    host: "api-bus"
+    tls:
+      enabled: true
+      secretName: api-bus-tls
 
 api-notification-hub:
   enabled: true
-
+  
 engine-notification-hub:
   enabled: true
+  ingress:
+    enabled: true
+    host: "engine-notification-hub"
+    tls:
+      enabled: true
+      secretName: engine-notification-hub-tls
 
 api-auth:
   enabled: true
+  ingress:
+    enabled: true
+    host: "api-auth"
+    tls:
+      enabled: true
+      secretName: api-auth-tls
 
 web-security:
   enabled: true
-
-global:
-  domain: "localdomain"
-  certificateName: 
+  ingress:
+    enabled: true
+    host: "web-security"
+    tls:
+      enabled: true
+      secretName: web-security-tls
