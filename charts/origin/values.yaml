@@ -10,7 +10,7 @@ api-origin:
     tls:
       enabled: true
       secretName: api-origin-tls
-	  
+
 api-store:
   enabled: true
   ingress:
