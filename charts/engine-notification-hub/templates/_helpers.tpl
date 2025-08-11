@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "api-notification-engine.name" -}}
+{{- define "engine-notification-hub.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "api-notification-engine.fullname" -}}
+{{- define "engine-notification-hub.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "api-notification-engine.chart" -}}
+{{- define "engine-notification-hub.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "api-notification-engine.labels" -}}
-helm.sh/chart: {{ include "api-notification-engine.chart" . }}
-{{ include "api-notification-engine.selectorLabels" . }}
+{{- define "engine-notification-hub.labels" -}}
+helm.sh/chart: {{ include "engine-notification-hub.chart" . }}
+{{ include "engine-notification-hub.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "api-notification-engine.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "api-notification-engine.name" . }}
+{{- define "engine-notification-hub.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "engine-notification-hub.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "api-notification-engine.serviceAccountName" -}}
+{{- define "engine-notification-hub.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "api-notification-engine.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "engine-notification-hub.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
