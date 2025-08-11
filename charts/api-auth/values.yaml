@@ -56,21 +56,14 @@ service:
   port: 80
 
 ingress:
-  enabled: false
-  annotations:
-    # kubernetes.io/ingress.class: nginx
-
+  enabled: true
+  annotations: {}
   className: nginx
-  hosts:  
-    - host: api-auth
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  host: "api-auth"               # Simple, no array
   tls:
-    - hosts:
-        - api-auth
-      secretName: api-auth-tls
-
+    enabled: true                         # Simple flag
+    secretName: "api-auth-tls" # Simple secret name
+    
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
