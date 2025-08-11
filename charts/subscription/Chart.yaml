@@ -1,6 +1,6 @@
 apiVersion: v2
 name: subscription
-version: 1.0.1
+version: 1.0.2
 description: CreditForce subscription Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,16 +10,16 @@ appVersion: "1.0.1"
 dependencies:
 
   - name: api-subscription
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../api-subscription/"
     condition: api-subscription.enabled
 
   - name: api-subscription-worker
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../api-subscription-worker/"
     condition: api-subscription-worker.enabled
 
   - name: web-subscription
-    version: 1.0.1
+    version: 1.0.2
     repository: "file://../web-subscription/"
     condition: web-subscription.enabled
