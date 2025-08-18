@@ -1,12 +1,21 @@
+global:
+  domain: "localdomain"
+  certificateName: # opcional, puede quedar vacío para usar los secretName específicos
+
 api-rules:
   enabled: true
+  ingress:
+    enabled: true
+    host: "api-rules"
+    tls:
+      enabled: true
+      secretName: api-rules-tls
 
 api-rules-engine:
   enabled: true
-
-rules-manager:
-  enabled: true
-
-global:
-  domain: "localdomain"
-  certificateName: 
+  ingress:
+    enabled: true
+    host: "api-rules-engine"
+    tls:
+      enabled: true
+      secretName: api-rules-engine-tls

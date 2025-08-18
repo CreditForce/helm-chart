@@ -9,8 +9,8 @@ global:
 replicas: 1
 
 image:
-  repository: creditforce.azurecr.io/workflow-api-dashboard
-  tag: 19720
+  repository: acrcreditforce.azurecr.io/cf-origin
+  tag: 19726
   pullPolicy: Always
 
 imagePullSecrets:
@@ -18,10 +18,18 @@ imagePullSecrets:
 
 envFrom:
   - secretRef:
+      name: busconnection
+  - secretRef:
+      name: dataprotection
+  - secretRef:
+      name: notificationconnection
+  - secretRef:
+      name: creditstore
+  - secretRef:
       name: workflow
 
-nameOverride: "workflow-api-dashboard-app"
-fullnameOverride: "workflow-api-dashboard"
+nameOverride: "web-cf-origin-app"
+fullnameOverride: "web-cf-origin"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -30,7 +38,7 @@ serviceAccount:
   annotations:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "workflow-api-dashboard"
+  name: "web-cf-origin"
 
 podAnnotations: {}
 
@@ -53,11 +61,10 @@ ingress:
   enabled: true
   annotations: {}
   className: nginx
-  host: "workflow-api-dashboard"               # Simple, no array
+  host: "web-cf-origin"               # Simple, no array
   tls:
     enabled: true                         # Simple flag
-    secretName: "workflow-api-dashboard-tls"  # Simple secret name
-
+    secretName: "web-cf-origin-tls" # Simple secret name
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -65,11 +72,11 @@ resources:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
-    cpu: 400m
-    memory: 700Mi
+    cpu: 100m
+    memory: 128Mi
   requests:
     cpu: 200m
-    memory: 384Mi
+    memory: 256Mi
 
 autoscaling:
   enabled: true

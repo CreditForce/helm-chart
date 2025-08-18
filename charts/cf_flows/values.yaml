@@ -1,0 +1,30 @@
+global:
+  domain: "localdomain"
+  certificateName: # opcional, puede quedar vacío para usar los secretName específicos
+
+api-origin:
+  enabled: true
+  ingress:
+    enabled: true
+    host: "api-origin"
+    tls:
+      enabled: true
+      secretName: api-origin-tls
+
+api-cf-store:
+  enabled: true
+  ingress:
+    enabled: true
+    host: "api-cf-store"
+    tls:
+      enabled: true
+      secretName: api-cf-store-tls
+
+web-cf-origin:
+  enabled: true
+  ingress:
+    enabled: true
+    host: "web-cf-origin"
+    tls:
+      enabled: true
+      secretName: web-cf-origin-tls
