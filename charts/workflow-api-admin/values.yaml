@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/workflow-api-admin
-  tag: 9760
+  tag: 19717
   pullPolicy: Always
 
 imagePullSecrets:
@@ -51,19 +51,12 @@ service:
 
 ingress:
   enabled: true
-  annotations:
-    # kubernetes.io/ingress.class: nginx
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
+  annotations: {}
   className: nginx
-  hosts:  
-    - host: workflow-api-admin
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  host: "workflow-api-admin"               # Simple, no array
   tls:
-    - hosts:
-        - workflow-api-admin
-      secretName: workflow-api-admin-tls
+    enabled: true                         # Simple flag
+    secretName: "workflow-api-admin-tls"  # Simple secret name
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -79,8 +72,8 @@ resources:
 
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 4
+  minReplicas: 1
+  maxReplicas: 2
   targetCPUUtilizationPercentage: 70
   targetMemoryUtilizationPercentage: 70
 

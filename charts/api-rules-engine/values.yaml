@@ -9,8 +9,8 @@ global:
 replicas: 1
 
 image:
-  repository: creditforce.azurecr.io/api-rules-engine
-  tag: 9754
+  repository: acrcreditforce.azurecr.io/api-rules-engine
+  tag: 19729
   pullPolicy: Always
 
 imagePullSecrets:
@@ -57,19 +57,12 @@ service:
 
 ingress:
   enabled: true
-  annotations:
-    # kubernetes.io/ingress.class: nginx
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
+  annotations: {}
   className: nginx
-  hosts:  
-    - host: api-rules-engine
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  host: "api-rules-engine"               # Simple, no array
   tls:
-    - hosts:
-        - api-rules-engine
-      secretName: api-rules-engine-tls
+    enabled: true                         # Simple flag
+    secretName: "api-rules-engine-tls"  # Simple secret name
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -85,8 +78,8 @@ resources:
 
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 6
+  minReplicas: 1
+  maxReplicas: 2
   targetCPUUtilizationPercentage: 70
   targetMemoryUtilizationPercentage: 70
 

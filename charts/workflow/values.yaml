@@ -1,36 +1,75 @@
+global:
+  domain: "localdomain"
+  certificateName: # opcional, puede quedar vacío para usar los secretName específicos
+
 workflow-api-admin:
   enabled: true
+  ingress:
+    enabled: true
+    host: "workflow-api-admin"
+    tls:
+      enabled: true
+      secretName: workflow-api-admin-tls
 
 workflow-api-auth:
   enabled: true
+  ingress:
+    enabled: true
+    host: "workflow-api-auth"
+    tls:
+      enabled: true
+      secretName: workflow-api-auth-tls
 
 workflow-api-dashboard:
   enabled: true
+  ingress:
+    enabled: true
+    host: "workflow-api-dashboard"
+    tls:
+      enabled: true
+      secretName: workflow-api-dashboard-tls
 
 workflow-api-designer:
   enabled: true
+  ingress:
+    enabled: true
+    host: "workflow-api-designer"
+    tls:
+      enabled: true
+      secretName: workflow-api-designer-tls
 
 workflow-api-engine:
   enabled: true
+  ingress:
+    enabled: true
+    host: "workflow-api-engine"
+    tls:
+      enabled: true
+      secretName: workflow-api-engine-tls
 
 workflow-api-scripts:
   enabled: true
+  ingress:
+    enabled: true
+    host: "workflow-api-scripts"
+    tls:
+      enabled: true
+      secretName: workflow-api-scripts-tls
 
 workflow-api-interaction:
   enabled: true
+  ingress:
+    enabled: true
+    host: "workflow-api-interaction"
+    tls:
+      enabled: true
+      secretName: workflow-api-interaction-tls
 
 workflow-base-web:
   enabled: true
-
-workflow-dashboard:
-  enabled: true
-
-workflow-dashboard-simulator:
-  enabled: true
-
-workflow-admin:
-  enabled: true
-
-global:
-  domain: "localdomain"
-  certificateName:
+  ingress:
+    enabled: true
+    host: "workflow-base-web"
+    tls:
+      enabled: true
+      secretName: workflow-base-web-tls

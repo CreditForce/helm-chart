@@ -9,8 +9,8 @@ global:
 replicas: 1
 
 image:
-  repository: creditforce.azurecr.io/workflow-api-dashboard
-  tag: 19720
+  repository: acrcreditforce.azurecr.io/api-cf-creditstore
+  tag: 19727
   pullPolicy: Always
 
 imagePullSecrets:
@@ -18,10 +18,16 @@ imagePullSecrets:
 
 envFrom:
   - secretRef:
-      name: workflow
+      name: busconnection
+  - secretRef:
+      name: dataprotection
+  - secretRef:
+      name: notificationconnection
+  - secretRef:
+      name: creditstore
 
-nameOverride: "workflow-api-dashboard-app"
-fullnameOverride: "workflow-api-dashboard"
+nameOverride: "api-cf-store-app"
+fullnameOverride: "api-cf-store"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -30,7 +36,7 @@ serviceAccount:
   annotations:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "workflow-api-dashboard"
+  name: "api-cf-store"
 
 podAnnotations: {}
 
@@ -53,11 +59,10 @@ ingress:
   enabled: true
   annotations: {}
   className: nginx
-  host: "workflow-api-dashboard"               # Simple, no array
+  host: "api-cf-store"               # Simple, no array
   tls:
     enabled: true                         # Simple flag
-    secretName: "workflow-api-dashboard-tls"  # Simple secret name
-
+    secretName: "api-cf-store-tls"  # Simple secret name
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -66,10 +71,10 @@ resources:
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
     cpu: 400m
-    memory: 700Mi
+    memory: 512Mi
   requests:
     cpu: 200m
-    memory: 384Mi
+    memory: 256Mi
 
 autoscaling:
   enabled: true

@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: creditforce.azurecr.io/workflow-api-engine
-  tag: 9764
+  tag: 19722
   pullPolicy: Always
 
 imagePullSecrets:
@@ -51,19 +51,13 @@ service:
 
 ingress:
   enabled: true
-  annotations:
-    # kubernetes.io/ingress.class: nginx
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
+  annotations: {}
   className: nginx
-  hosts:  
-    - host: workflow-api-engine
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  host: "workflow-api-engine"               # Simple, no array
   tls:
-    - hosts:
-        - workflow-api-engine
-      secretName: workflow-api-engine-tls
+    enabled: true                         # Simple flag
+    secretName: "workflow-api-engine-tls"  # Simple secret name
+
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious

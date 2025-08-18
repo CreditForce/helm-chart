@@ -9,8 +9,8 @@ global:
 replicas: 1
 
 image:
-  repository: creditforce.azurecr.io/api-rules
-  tag: 9752
+  repository: acrcreditforce.azurecr.io/api-rules
+  tag: 16337
   pullPolicy: Always
 
 imagePullSecrets:
@@ -57,19 +57,12 @@ service:
 
 ingress:
   enabled: false
-  annotations:
-    # kubernetes.io/ingress.class: nginx
-
+  annotations: {}
   className: nginx
-  hosts:  
-    - host: api-rules
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  host: "api-rules"               # Simple, no array
   tls:
-    - hosts:
-        - api-rules
-      secretName: api-rules-tls
+    enabled: true                         # Simple flag
+    secretName: "api-rules-tls"  # Simple secret name
 
 resources:  
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -85,8 +78,8 @@ resources:
 
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 4
+  minReplicas: 1
+  maxReplicas: 2
   targetCPUUtilizationPercentage: 70
   targetMemoryUtilizationPercentage: 70
 
