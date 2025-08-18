@@ -98,7 +98,7 @@ jobs:
                       security \
                       mobile-collect \
                       subscription \
-                      cf_flows
+                      cf-flows
           do
             echo -e "\nPacking: $pckg..."
             helm dependency update charts/$pckg
