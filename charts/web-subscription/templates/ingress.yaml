@@ -10,14 +10,9 @@ metadata:
   name: {{ $fullName }}
   labels:
     {{- include "web-subscription.labels" . | nindent 4 }}
-  {{- if or .Values.ingress.annotations (not .Values.global.certificateName) }}
+  {{- if .Values.ingress.annotations }}
   annotations:
-    {{- if .Values.ingress.annotations }}
     {{- toYaml .Values.ingress.annotations | nindent 4 }}
-    {{- end }}
-    {{- if not .Values.global.certificateName }}
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    {{- end }}
   {{- end }}
 
 spec:
