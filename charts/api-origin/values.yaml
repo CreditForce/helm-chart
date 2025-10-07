@@ -9,12 +9,12 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/api-creditorigination 
-  tag: 20461
+  repository: acrdevelopment01.azurecr.io/api-creditorigination 
+  tag: 20589
   pullPolicy: Always
 
 imagePullSecrets:
-  - name: creditforce
+  - name: creditforcedevlopment
 
 envFrom:
   - secretRef:
