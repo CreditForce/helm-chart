@@ -9,12 +9,12 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/security-manager
-  tag: 19628
+  repository: acrcacrdevelopment01reditforce.azurecr.io/security-manager
+  tag: 20130
   pullPolicy: Always
 
 imagePullSecrets:
-  - name: creditforce
+  - name: creditforcedevlopment
 
 envFrom:
   - secretRef:
