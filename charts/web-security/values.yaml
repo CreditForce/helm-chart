@@ -9,7 +9,7 @@ global:
 replicas: 1
 
 image:
-  repository: acrcacrdevelopment01reditforce.azurecr.io/security-manager
+  repository: acrdevelopment01.azurecr.io/security-manager
   tag: 20130
   pullPolicy: Always
 
