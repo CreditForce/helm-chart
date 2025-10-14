@@ -15,6 +15,6 @@ dependencies:
     condition: api-core.enabled
 
   - name: web-core
-    version: 1.2.4
+    version: 1.2.5
     repository: "file://../web-core/"
     condition: web-core.enabled
