@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/app-selfie
-  tag: 20726
+  tag: 20727
   pullPolicy: Always
 
 imagePullSecrets:
@@ -19,6 +19,10 @@ imagePullSecrets:
 envFrom:
   - secretRef:
       name: busconnection
+  - secretRef:
+      name: dataprotection
+  - secretRef:
+      name: selfie
 
 nameOverride: "web-selfie-app"
 fullnameOverride: "web-selfie"
