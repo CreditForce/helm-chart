@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/creditengine
-  tag: 20670
+  tag: 20698
   pullPolicy: Always
 
 imagePullSecrets:
