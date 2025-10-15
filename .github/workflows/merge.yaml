@@ -68,7 +68,8 @@ jobs:
                       api-subscription-worker  \
                       web-subscription  \
                       api-cf-store  \
-                      web-cf-origin
+                      web-cf-origin \
+                      web-selfie
           do
             echo -e "\nPacking: $chrt..."
             helm lint charts/$chrt

@@ -50,7 +50,8 @@ for chrt in api-creditcollection \
             api-subscription-worker  \
             web-subscription  \
             api-cf-store  \
-            web-cf-origin
+            web-cf-origin  \
+            web-selfie
             
 
 do
