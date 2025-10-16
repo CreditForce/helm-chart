@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/productmodeler
-  tag: 20718
+  tag: 20768
   pullPolicy: Always
 
 imagePullSecrets:
