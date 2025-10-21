@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/app-selfie
-  tag: 20727
+  tag: 20797
   pullPolicy: Always
 
 imagePullSecrets:
