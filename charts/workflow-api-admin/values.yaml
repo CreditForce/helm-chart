@@ -9,7 +9,7 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/workflow-api-admin
+  repository: acrdevelopment01.azurecr.io/workflow-api-admin
   tag: 20991
   pullPolicy: Always
 
