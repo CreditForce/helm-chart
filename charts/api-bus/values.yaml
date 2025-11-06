@@ -10,11 +10,11 @@ replicas: 1
 
 image:
   repository: acrcreditforce.azurecr.io/creditflow
-  tag: 19629
+  tag: 21044
   pullPolicy: IfNotPresent
 
 imagePullSecrets:
-  - name: creditforce
+  - name: creditforcedevlopment
 
 envFrom:
   - secretRef:
