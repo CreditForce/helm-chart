@@ -9,7 +9,7 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/api-notification-engine
+  repository: acrdevelopment01.azurecr.io/api-notification-engine
   tag: 21046
   pullPolicy: IfNotPresent
 
