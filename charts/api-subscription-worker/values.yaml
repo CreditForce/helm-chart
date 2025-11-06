@@ -10,8 +10,8 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/api-subscription-worker
-  tag: 20946
-  pullPolicy: IfNotPresent
+  tag: 21052
+  pullPolicy: Always
 
 imagePullSecrets:
   - name: creditforcedevlopment
