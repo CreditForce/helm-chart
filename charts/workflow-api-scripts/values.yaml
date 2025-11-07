@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/workflow-api-scripts
-  tag: 20996
+  tag: 20452
   pullPolicy: Always
 
 imagePullSecrets:
