@@ -4,5 +4,5 @@ name: api-store
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://images8.webydo.com/96/9628253/3958/F6AD13C0-3367-06E4-3434-7E46130909F9.png
-version: 1.2.4
+version: 1.2.5
 appVersion: "1.0.1"
