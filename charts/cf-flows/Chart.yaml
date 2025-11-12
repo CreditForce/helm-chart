@@ -10,7 +10,7 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-origin
-    version: 1.1.7
+    version: 1.1.8
     repository: "file://../api-origin/"
     condition: api-origin.enabled
 
