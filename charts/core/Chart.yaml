@@ -1,6 +1,6 @@
 apiVersion: v2
 name: core
-version: 1.3.9
+version: 1.3.10
 description: CreditForce Core Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
@@ -10,11 +10,11 @@ appVersion: "0.0.1"
 dependencies:
 
   - name: api-core
-    version: 1.2.10
+    version: 1.2.11
     repository: "file://../api-core/"
     condition: api-core.enabled
 
   - name: web-core
-    version: 1.3.5
+    version: 1.3.6
     repository: "file://../web-core/"
     condition: web-core.enabled
