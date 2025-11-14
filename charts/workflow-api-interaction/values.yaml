@@ -9,12 +9,12 @@ global:
 replicas: 1
 
 image:
-  repository: acrcreditforce.azurecr.io/workflow-api-interaction
-  tag: 20447
+  repository: acrdevelopment01.azurecr.io/workflow-api-interaction
+  tag: 21202
   pullPolicy: Always
 
 imagePullSecrets:
-  - name: creditforce
+  - name: creditforcedevlopment
 
 envFrom:
   - secretRef:
