@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/creditstore
-  tag: 21215
+  tag: 21222
   pullPolicy: Always
 
 imagePullSecrets:
