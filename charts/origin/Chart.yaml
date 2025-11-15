@@ -1,6 +1,6 @@
 apiVersion: v2
 name: origin
-version: 1.5.7
+version: 1.5.9
 description: CreditForce Origin Helm chart for Kubernetes 
 sources:
   - https://creditforce.github.io/helm-chart/
