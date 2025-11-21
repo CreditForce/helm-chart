@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/api-creditorigination 
-  tag: 21217
+  tag: 21277
   pullPolicy: Always
 
 imagePullSecrets:
