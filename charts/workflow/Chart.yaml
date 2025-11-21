@@ -20,7 +20,7 @@ dependencies:
     condition: workflow-api-auth.enabled
 
   - name:  workflow-api-dashboard
-    version: 1.0.
+    version: 1.0.9
     repository: "file://../workflow-api-dashboard/"
     condition:  workflow-api-dashboard.enabled  
 
