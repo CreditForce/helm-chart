@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/workflow-api-interaction
-  tag: 21202
+  tag: 21285
   pullPolicy: Always
 
 imagePullSecrets:

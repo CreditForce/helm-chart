@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrdevelopment01.azurecr.io/api-rules
-  tag: 21028
+  tag: 21279
   pullPolicy: Always
 
 imagePullSecrets:
