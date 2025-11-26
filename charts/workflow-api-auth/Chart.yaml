@@ -4,5 +4,5 @@ name: workflow-api-auth
 sources:
   - https://creditforce.github.io/helm-chart/
 icon:  https://avatars.githubusercontent.com/u/66394013
-version: 1.0.8
+version: 1.0.9
 appVersion: "0.0.1"
