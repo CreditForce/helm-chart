@@ -25,11 +25,11 @@ dependencies:
     condition: engine-notification-hub.enabled
 
   - name: api-auth
-    version: 1.1.4
+    version: 1.1.5
     repository: "file://../api-auth/"
     condition: api-auth.enabled
 
   - name: web-security
-    version: 1.1.5
+    version: 1.1.6
     repository: "file://../web-security/"
     condition: web-security.enabled
