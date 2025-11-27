@@ -9,12 +9,12 @@ global:
 replicas: 1
 
 image:
-  repository: acrdevelopment01.azurecr.io/api-notification-engine
-  tag: 21046
+  repository: acrcreditforce.azurecr.io/api-notification-engine
+  tag: 19633
   pullPolicy: IfNotPresent
 
 imagePullSecrets:
-  - name: creditforcedevlopment
+  - name: creditforce
 
 envFrom:
   - secretRef:
