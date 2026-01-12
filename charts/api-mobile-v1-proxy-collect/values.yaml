@@ -16,13 +16,13 @@ envFrom:
   - secretRef:
       name: mobile
 
-nameOverride: "api-mobile-proxy-collectv1"
-fullnameOverride: "api-mobile-proxy-collectv1"
+nameOverride: "api-mobile-v1-proxy-collect"
+fullnameOverride: "api-mobile-v1-proxy-collect"
 
 serviceAccount:
   create: true
   annotations: {}
-  name: "api-mobile-proxy-collectv1"
+  name: "api-mobile-v1-proxy-collect"
 
 podAnnotations: {}
 
@@ -38,10 +38,10 @@ ingress:
   enabled: true
   annotations: {}
   className: nginx
-  host: "api-mobile-proxy-collectv1"           # Simple string
+  host: "api-mobile-v1-proxy-collect"           # Simple string
   tls:
     enabled: true                           # Simple flag
-    secretName: "api-mobile-proxy-collectv1-tls"  # Simple string
+    secretName: "api-mobile-v1-proxy-collect-tls"  # Simple string
 
 resources:
   limits:

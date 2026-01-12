@@ -20,12 +20,12 @@ api-mobile-proxy-collect:
       enabled: true
       secretName: proxy-mobile-collect-tls
 
-api-mobile-proxy-collectv1:
+api-mobile-v1-proxy-collect:
   enabled: false
   ingress:
     enabled: false
-    host: "proxy-mobile-collectv1"
+    host: "proxy-v1-mobile-collect"
     tls:
       enabled: false
-      secretName: api-mobile-proxy-collectv1-tls
+      secretName: api-mobile-v1-proxy-collect-tls
 
