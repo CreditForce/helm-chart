@@ -5,8 +5,8 @@ global:
 replicas: 1
 
 image:
-  repository: acrqa01.azurecr.io/api-mobile-proxy-collect
-  tag: 21659
+  repository: acrdevelopment01.azurecr.io/api-mobile-proxy-collect
+  tag: 21660
   pullPolicy: Always
 
 imagePullSecrets:
@@ -45,7 +45,7 @@ ingress:
 
 resources:
   limits:
-    cpu: 400m
+    cpu: 100m
     memory: 256Mi
   requests:
     cpu: 250m
