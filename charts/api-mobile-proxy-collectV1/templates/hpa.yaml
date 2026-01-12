@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "api-mobile-proxy-collectV1.fullname" . }}
+  name: {{ include "api-mobile-proxy-collectv1.fullname" . }}
   labels:
-    {{- include "api-mobile-proxy-collectV1.labels" . | nindent 4 }}
+    {{- include "api-mobile-proxy-collectv1.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "api-mobile-proxy-collectV1.fullname" . }}
+    name: {{ include "api-mobile-proxy-collectv1.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
