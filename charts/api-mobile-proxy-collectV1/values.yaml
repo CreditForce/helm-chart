@@ -1,0 +1,65 @@
+global:
+  domain: "localdomain"
+  certificateName:
+
+replicas: 1
+
+image:
+  repository: acrqa01.azurecr.io/api-mobile-proxy-collect
+  tag: 21659
+  pullPolicy: Always
+
+imagePullSecrets:
+  - name: creditforce
+
+envFrom:
+  - secretRef:
+      name: mobile
+
+nameOverride: "api-mobile-proxy-collectV1"
+fullnameOverride: "api-mobile-proxy-collectV1"
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: "api-mobile-proxy-collectV1"
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  annotations: {}
+  className: nginx
+  host: "api-mobile-proxy-collectV1"           # Simple string
+  tls:
+    enabled: true                           # Simple flag
+    secretName: "api-mobile-proxy-collectV1-tls"  # Simple string
+
+resources:
+  limits:
+    cpu: 400m
+    memory: 256Mi
+  requests:
+    cpu: 250m
+    memory: 128Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 70
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

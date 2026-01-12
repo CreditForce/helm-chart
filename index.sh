@@ -51,7 +51,8 @@ for chrt in api-creditcollection \
             web-subscription  \
             api-cf-store  \
             web-cf-origin  \
-            web-selfie
+            web-selfie  \
+            api-mobile-proxy-collectV1
             
 
 do
