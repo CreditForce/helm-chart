@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "api-mobile-proxy-collectV1.fullname" . }}
+  name: {{ include "api-mobile-proxy-collectv1.fullname" . }}
   labels:
-    {{- include "api-mobile-proxy-collectV1.labels" . | nindent 4 }}
+    {{- include "api-mobile-proxy-collectv1.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "api-mobile-proxy-collectV1.selectorLabels" . | nindent 6 }}
+      {{- include "api-mobile-proxy-collectv1.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "api-mobile-proxy-collectV1.selectorLabels" . | nindent 8 }}
+        {{- include "api-mobile-proxy-collectv1.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "api-mobile-proxy-collectV1.serviceAccountName" . }}
+      serviceAccountName: {{ include "api-mobile-proxy-collectv1.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
