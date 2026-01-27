@@ -2,142 +2,117 @@ name: merge
 
 on:
   pull_request:
-    branches:
+    branches: 
       - main
     types: [closed]
-
-permissions:
-  contents: write
 
 jobs:
   release:
     if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
+    - uses: actions/checkout@v1
     - name: Install Helm
       run: |
-        wget https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz
-        tar -zxf helm-v3.10.1-linux-amd64.tar.gz
-        sudo mv linux-amd64/helm /usr/local/bin/helm
-        helm version
-
+         wget https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz
+         tar -zxf helm-v3.10.1-linux-amd64.tar.gz
+      shell: bash
     - name: Install Helm Chart Releaser
       run: |
-        wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
-        tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
-        sudo mv cr /usr/local/bin/cr
-        cr version
-
-    - name: Build Charts
+         wget https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz
+         tar -zxf chart-releaser_1.4.1_linux_amd64.tar.gz
+         ls -la
+      shell: bash 
+    - name: Build Charts..
       run: |
-        mkdir -p .deploy
-        for chrt in api-creditcollection \
-                    api-creditengine \
-                    api-creditorigination \
-                    api-creditstore \
-                    api-notification \
-                    api-notification-engine \
-                    api-rules \
-                    api-rules-engine \
-                    api-security \
-                    creditcollection \
-                    creditflow \
-                    creditstore \
-                    customerservice \
-                    origination-manager \
-                    productmodeler \
-                    rules-manager \
-                    security-manager \
-                    workflow-admin \
-                    workflow-api-admin \
-                    workflow-api-auth \
-                    workflow-api-dashboard \
-                    workflow-api-designer \
-                    workflow-api-engine \
-                    workflow-api-scripts \
-                    workflow-api-interaction \
-                    workflow-base-web \
-                    workflow-dashboard \
-                    workflow-dashboard-simulator \
-                    api-core \
-                    web-core \
-                    api-origin \
-                    web-origin \
-                    api-bus \
-                    api-notification-hub \
-                    engine-notification-hub \
-                    api-auth \
-                    web-security \
-                    api-mobile-collect \
-                    api-mobile-proxy-collect \
-                    api-subscription \
-                    api-subscription-worker \
-                    web-subscription \
-                    api-cf-store \
-                    web-cf-origin \
-                    web-selfie
-        do
-          echo -e "\n📦 Packing: $chrt..."
-          helm lint charts/$chrt
-          helm package charts/$chrt --destination .deploy
-        done
-
-    - name: Upload Charts
-      run: |
-        cr upload \
-          -o creditforce \
-          -r helm-chart \
-          -p .deploy \
-          --skip-existing \
-          -t "$GITHUB_TOKEN"
-
-    - name: Build Packages
-      run: |
-        helm repo add creditforce https://creditforce.github.io/helm-chart/
-        for pckg in base \
-                    collection \
-                    origination \
-                    portfolio \
-                    rules \
-                    store \
-                    workflow \
-                    core \
-                    origin \
-                    base-suite \
-                    notification-hub \
-                    security \
-                    mobile-collect \
-                    subscription \
-                    cf-flows
-        do
-          echo -e "\n📦 Packing: $pckg..."
-          helm dependency update charts/$pckg
-          helm lint charts/$pckg
-          helm package charts/$pckg --destination .deploy
-        done
-
-    - name: Upload Packages & Update Index
+          for chrt in api-creditcollection \
+                      api-creditengine \
+                      api-creditorigination \
+                      api-creditstore \
+                      api-notification \
+                      api-notification-engine \
+                      api-rules \
+                      api-rules-engine \
+                      api-security \
+                      creditcollection \
+                      creditflow \
+                      creditstore \
+                      customerservice \
+                      origination-manager \
+                      productmodeler \
+                      rules-manager \
+                      security-manager \
+                      workflow-admin \
+                      workflow-api-admin \
+                      workflow-api-auth \
+                      workflow-api-dashboard \
+                      workflow-api-designer \
+                      workflow-api-engine \
+                      workflow-api-scripts \
+                      workflow-api-interaction \
+                      workflow-base-web \
+                      workflow-dashboard \
+                      workflow-dashboard-simulator \
+                      api-core \
+                      web-core \
+                      api-origin \
+                      web-origin \
+                      api-bus \
+                      api-notification-hub \
+                      engine-notification-hub \
+                      api-auth \
+                      web-security \
+                      api-mobile-collect \
+                      api-mobile-proxy-collect \
+                      api-subscription  \
+                      api-subscription-worker  \
+                      web-subscription  \
+                      api-cf-store  \
+                      web-cf-origin \
+                      web-selfie
+          do
+            echo -e "\nPacking: $chrt..."
+            helm lint charts/$chrt
+            helm package charts/$chrt --destination .deploy
+          done
+      shell: bash
+    - name: Upload Charts...
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
       run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-
-        cr upload \
-          -o creditforce \
-          -r helm-chart \
-          -p .deploy \
-          --skip-existing \
-          -t "$GITHUB_TOKEN"
-
-        cr index \
-          -i ./index.yaml \
-          -p .deploy \
-          --owner creditforce \
-          --git-repo helm-chart \
-          --push \
-          -t "$GITHUB_TOKEN"
+          ./cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
+      shell: bash
+    - name: Build Packages..
+      run: |
+          helm repo add creditforce https://creditforce.github.io/helm-chart/ 
+          for pckg in base \
+                      collection \
+                      origination \
+                      portfolio \
+                      rules \
+                      store \
+                      workflow \
+                      core \
+                      origin \
+                      base-suite \
+                      notification-hub \
+                      security \
+                      mobile-collect \
+                      subscription \
+                      cf-flows
+          do
+            echo -e "\nPacking: $pckg..."
+            helm dependency update charts/$pckg
+            helm lint charts/$pckg
+            helm package charts/$pckg --destination .deploy
+          done
+    - name: Upload Packages...
+      env:
+        GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
+        GH_USERNAME: ${{ secrets.GH_USERNAME }}
+        GH_EMAIL: ${{ secrets.GH_EMAIL }}
+      run: |
+        git config user.name $GH_USERNAME
+        git config user.email $GH_EMAIL
+        ./cr upload -o creditforce -r helm-chart -p .deploy --skip-existing -t $GHP_TOKEN
+        ./cr index -i ./index.yaml -p .deploy --owner creditforce --git-repo helm-chart --push -t $GHP_TOKEN
