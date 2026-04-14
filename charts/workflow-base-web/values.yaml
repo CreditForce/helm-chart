@@ -9,12 +9,12 @@ global:
 replicas: 1
 
 image:
-  repository: acrdevelopment01.azurecr.io/workflow-base-web
-  tag: 21416
+  repository: acrcreditforce.azurecr.io/workflow-base-web
+  tag: 22486
   pullPolicy: Always
 
 imagePullSecrets:
-  - name: creditforcedevlopment
+  - name: creditforce
 
 envFrom:
   - secretRef:
