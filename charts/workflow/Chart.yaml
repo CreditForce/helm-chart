@@ -45,6 +45,6 @@ dependencies:
     condition:  workflow-api-interaction.enabled  
 
   - name:  workflow-base-web
-    version: 1.2.29
+    version: 1.2.30
     repository: "file://../workflow-base-web/"
     condition:  workflow-base-web.enabled  
