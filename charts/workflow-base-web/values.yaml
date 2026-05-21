@@ -10,7 +10,7 @@ replicas: 1
 
 image:
   repository: acrcreditforce.azurecr.io/workflow-base-web
-  tag: 22880
+  tag: 22899
   pullPolicy: Always
 
 imagePullSecrets:
